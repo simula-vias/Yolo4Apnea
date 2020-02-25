@@ -80,7 +80,7 @@ def get_predictions():
 
 
 
-def predict_edf(file):
+def predict_edf(file,output_png,output_xml):
     signal = readEdfFile(file)
     #generate_image_from_signal(signal)
     files = ""
@@ -110,7 +110,8 @@ def predict_edf(file):
                 apnea_prediction[index] = line.CONFIDENCE
 
     print(apnea_prediction)
-    plot_events(signal,predictions)
+    if output_png:
+        plot_events(signal,predictions)
     #Delete the temporary files
     #for image in glob.iglob(f"tmp{os.sep}*"):
     #    os.remove(f"{curdir}{os.sep}{image}")
@@ -120,14 +121,12 @@ def predict_edf(file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Predict Apnea events on .edf file ')
-    parser.add_argument('file',metavar="FILENAME", help='path to a .edf file to analyze')
+    #parser.add_argument('file',metavar="FILENAME", help='path to a .edf file to analyze')
     parser.add_argument('-p', help='Output png predictions to out/', action="store_true")
     parser.add_argument("-x",'-xml', help='Output png predictions to out/', action="store_true")
 
 
     args = parser.parse_args()
     
-    #test_file = "shhs1-200001.edf"
-    #predict_edf(test_file)
-
-    #os.system(("./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg"))
+    args.file = "shhs1-200001.edf"
+    predict_edf(args.file,output_png=args.p,output_xml=args.p)
