@@ -2,8 +2,11 @@ import os
 import pyedflib
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 import glob
 import re
+import argparse
+
 from PIL import Image
 
 
@@ -35,9 +38,25 @@ def generate_image_from_signal(signal):
     fig.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
 
     for i in range(0,len(signal),OVERLAP):
-        print(i)
         ax.set_xlim(i,i + XLIM)
         fig.savefig(f"tmp/{i}.png")
+
+def plot_events(signal,events):
+    fig, ax = plt.subplots(figsize=(10,10))
+    ax.plot(signal.index, signal["ABDO_RES"])
+    ax.set_ylim(-1, 1)
+    ax.grid(False)
+    fig.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
+
+    for line in events.itertuples():
+        ax.set_xlim(line.PRED_START-100,line.PRED_END +100)
+        print(line.CONFIDENCE)
+        test = ax.axvspan(line.PRED_START, line.PRED_END, alpha=line.CONFIDENCE/100, color='red')
+        fig.savefig(f"../out/{line.PRED_START}.png")
+        test.remove()
+
+
+
 
 def get_predictions():
     predictions = pd.DataFrame(columns=['IMG_START', 'PRED_START', 'PRED_END','CONFIDENCE'])
@@ -59,9 +78,11 @@ def get_predictions():
                 predictions = predictions.append({'IMG_START':start_value, "PRED_START":apnea_start,"PRED_END" : apnea_width,"CONFIDENCE" :confidence }, ignore_index=True)
     return predictions
 
+
+
 def predict_edf(file):
     signal = readEdfFile(file)
-    generate_image_from_signal(signal)
+    #generate_image_from_signal(signal)
     files = ""
     curdir = os.getcwd()
 
@@ -74,20 +95,39 @@ def predict_edf(file):
         f.write(files)
     
 
-    os.system(("./darknet detector test ../obj.data yolo-obj.cfg yolo-obj_10000.weights -ext_output < generate.txt > predictions.txt"))
+    #os.system(("./darknet detector test ../obj.data yolo-obj.cfg yolo-obj_10000.weights -ext_output < generate.txt > predictions.txt"))
 
     predictions = get_predictions()
-    print(predictions)
 
+    threshold = 30
+    predictions = predictions[predictions.CONFIDENCE > threshold]
+    apnea_prediction = np.zeros(int(predictions.PRED_END.max()))
+
+
+    for line in predictions.itertuples():
+        for index in range(int(line.PRED_START), int(line.PRED_END)):
+            if apnea_prediction[index] < line.CONFIDENCE:
+                apnea_prediction[index] = line.CONFIDENCE
+
+    print(apnea_prediction)
+    plot_events(signal,predictions)
     #Delete the temporary files
-    for image in glob.iglob(f"tmp{os.sep}*"):
-        os.remove(f"{curdir}{os.sep}{image}")
+    #for image in glob.iglob(f"tmp{os.sep}*"):
+    #    os.remove(f"{curdir}{os.sep}{image}")
 
-    os.remove("generate.txt")
+    #os.remove("generate.txt")
 
 
 if __name__ == "__main__":
-    test_file = "shhs1-200001.edf"
-    predict_edf(test_file)
+    parser = argparse.ArgumentParser(description='Predict Apnea events on .edf file ')
+    parser.add_argument('file',metavar="FILENAME", help='path to a .edf file to analyze')
+    parser.add_argument('-p', help='Output png predictions to out/', action="store_true")
+    parser.add_argument("-x",'-xml', help='Output png predictions to out/', action="store_true")
+
+
+    args = parser.parse_args()
+    
+    #test_file = "shhs1-200001.edf"
+    #predict_edf(test_file)
 
     #os.system(("./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg"))
