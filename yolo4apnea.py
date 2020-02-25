@@ -9,9 +9,23 @@ import argparse
 
 from PIL import Image
 
-
 XLIM = 90 * 10
 OVERLAP = 45 * 10
+out_folder = "out"
+tmp_folder = "tmp"
+
+def setup():
+    path = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(path)
+    if not os.path.isdir('darknet'):
+        print("Please install darknet")
+        exit(-1)
+    if not os.path.isdir(out_folder):
+        os.makedirs(out_folder)
+    if not os.path.isdir(tmp_folder):
+        os.makedirs(tmp_folder)
+
+
 
 def readEdfFile(file):
     print(os.getcwd())
@@ -55,9 +69,6 @@ def plot_events(signal,events):
         fig.savefig(f"../out/{line.PRED_START}.png")
         test.remove()
 
-
-
-
 def get_predictions():
     predictions = pd.DataFrame(columns=['IMG_START', 'PRED_START', 'PRED_END','CONFIDENCE'])
     image_width = Image.open("../tmp/0.png").size[0]
@@ -80,6 +91,7 @@ def get_predictions():
 
 
 
+
 def predict_edf(file,output_png,output_xml):
     signal = readEdfFile(file)
     #generate_image_from_signal(signal)
@@ -93,7 +105,6 @@ def predict_edf(file,output_png,output_xml):
     os.chdir("darknet")
     with open("generate.txt","w") as f:
         f.write(files)
-    
 
     #os.system(("./darknet detector test ../obj.data yolo-obj.cfg yolo-obj_10000.weights -ext_output < generate.txt > predictions.txt"))
 
@@ -120,13 +131,15 @@ def predict_edf(file,output_png,output_xml):
 
 
 if __name__ == "__main__":
+    setup()
+
     parser = argparse.ArgumentParser(description='Predict Apnea events on .edf file ')
-    #parser.add_argument('file',metavar="FILENAME", help='path to a .edf file to analyze')
+    parser.add_argument('file',metavar="FILENAME", help='path to a .edf file to analyze')
     parser.add_argument('-p', help='Output png predictions to out/', action="store_true")
-    parser.add_argument("-x",'-xml', help='Output png predictions to out/', action="store_true")
+    parser.add_argument("-x",'-xml', help='Output predictions annotations to xml file', action="store_true")
 
 
     args = parser.parse_args()
     
-    args.file = "shhs1-200001.edf"
+    #args.file = "shhs1-200001.edf"
     predict_edf(args.file,output_png=args.p,output_xml=args.p)
