@@ -2,10 +2,13 @@ import os
 import pyedflib
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
 import numpy as np
 import glob
 import re
 import argparse
+import progressbar
+import shutil
 
 from PIL import Image
 
@@ -14,22 +17,43 @@ OVERLAP = 45 * 10
 out_folder = "out"
 tmp_folder = "tmp"
 
+
+"""
+Checks whether Darknet is installed,
+creates required folders if needed, 
+and creates a obj.data that works for the current machine
+
+Returns:
+    None -- Only Side effects
+"""
 def setup():
     path = os.path.dirname(os.path.abspath(__file__))
     os.chdir(path)
     if not os.path.isdir('darknet'):
         print("Please install darknet")
         exit(-1)
-    if not os.path.isdir(out_folder):
-        os.makedirs(out_folder)
+
+    if os.path.isdir(out_folder):
+        shutil.rmtree(out_folder)
+
+    os.makedirs(out_folder)
+
     if not os.path.isdir(tmp_folder):
         os.makedirs(tmp_folder)
+        
+    obj_data = f"classes= 1\nnames = {path}{os.sep}obj.names"
+
+    with open("obj.data","w+") as f:
+        f.write(obj_data)
 
 
+"""
+Reads EDF file from SHHS dataset. Will need adjustments to work for other signals
 
+Returns:
+    DataFrame -- Dataframe of thorax and abdominal signals, with index in deciseconds since start of recording
+"""
 def readEdfFile(file):
-    print(os.getcwd())
-    print(f"reading file {file}")
     try:
         edf  = pyedflib.EdfReader(file)
         cols = edf.getSignalLabels()
@@ -44,6 +68,12 @@ def readEdfFile(file):
 
     return signals
 
+"""
+Plots images from the signal dataframe in a predictable way. Starts a new image for every OVERLAP/10 seconds to map the whole recording
+
+Returns:
+    None -- outputs images in tmp/ folder
+"""
 def generate_image_from_signal(signal):
     fig, ax = plt.subplots(figsize=(10,10))
     ax.plot(signal.index, signal["ABDO_RES"])
@@ -51,31 +81,58 @@ def generate_image_from_signal(signal):
     ax.grid(False)
     fig.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
 
-    for i in range(0,len(signal),OVERLAP):
-        ax.set_xlim(i,i + XLIM)
-        fig.savefig(f"tmp/{i}.png")
+    print("Creating images for analysis")
+    j = 0
+    with progressbar.ProgressBar(max_value=len(signal)) as prog:
+        for i in range(0,len(signal),OVERLAP):
+            ax.set_xlim(i,i + XLIM)
+            prog.update(i)
+            j+=1
+            #fig.savefig(f"tmp/{i}.png")
+    print(f"DONE\nCreated {j} images")
+"""
+Plots the signal of the events that yolo predicted with signal before and after the event
 
+Returns:
+    None -- Outputs prediction images in /out folder
+"""
 def plot_events(signal,events):
     fig, ax = plt.subplots(figsize=(10,10))
     ax.plot(signal.index, signal["ABDO_RES"])
     ax.set_ylim(-1, 1)
-    ax.grid(False)
-    fig.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
+    ax.set_xlabel("Time (Deciseconds)")
+    #ax.grid(False)
+    #fig.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
 
     for line in events.itertuples():
-        ax.set_xlim(line.PRED_START-100,line.PRED_END +100)
-        print(line.CONFIDENCE)
-        test = ax.axvspan(line.PRED_START, line.PRED_END, alpha=line.CONFIDENCE/100, color='red')
-        fig.savefig(f"../out/{line.PRED_START}.png")
-        test.remove()
+        ax.set_xlim(line.PRED_START-400,line.PRED_END + 400)
+        #marking = ax.axvspan(line.PRED_START, line.PRED_END, alpha=line.CONFIDENCE/100, color='red')
+        ax.plot([line.PRED_START,line.PRED_END],[-0.6,-0.6],linewidth=3,color="r")
+        ax.plot([line.PRED_START,line.PRED_START],[-0.5,-0.7],linewidth=3,color="r")
+        ax.plot([line.PRED_END,line.PRED_END],[-0.5,-0.7],linewidth=3,color="r")
+        ax.text(line.PRED_START-20, -0.75, line.PRED_START, family="serif")
+        ax.text(line.PRED_END-20, -0.75, line.PRED_END, family="serif")
 
+        extra = Rectangle((0, 0), 1, 1, fc="w", fill=False, edgecolor='none', linewidth=0)
+        leg = ax.legend([f"Prediction of apnea",f"Start = {line.PRED_START}",f"End = {line.PRED_END}",f"Confidence = {line.CONFIDENCE}"],loc="upper right")
+        leg._legend_box.align = "right"
+
+        fig.savefig(f"../out/{line.PRED_START}.png")
+        #marking.remove()
+
+"""
+Analyses predictions.txt to convert yolos prediction to a dataframe for easier processing
+converts pixelvalues from prediction to correct event-time since start of recording
+
+Returns:
+    Dataframe -- Dataframe with info about when the image starts,when the prediction starts, when the prediction ends, and confidence in prediction
+"""
 def get_predictions():
     predictions = pd.DataFrame(columns=['IMG_START', 'PRED_START', 'PRED_END','CONFIDENCE'])
     image_width = Image.open("../tmp/0.png").size[0]
     pixel_duration = image_width/XLIM
 
-    print(pixel_duration)
-    with open("predictions.txt","r") as f:
+    with open("../predictions.txt","r") as f:
         for line in f:
             line = line[0:-1]
             new_image = re.search(r"tmp\/(\d+).png:",line)
@@ -89,28 +146,49 @@ def get_predictions():
                 predictions = predictions.append({'IMG_START':start_value, "PRED_START":apnea_start,"PRED_END" : apnea_width,"CONFIDENCE" :confidence }, ignore_index=True)
     return predictions
 
+"""
+Prints a formatted version of the prediction to the terminal
+"""
+def print_predictions(predictions,confidence):
+    pred = predictions[["PRED_START","PRED_END","CONFIDENCE"]]
+    print(f"\n{pred.to_string(index=False)}")
+    print(f"\nFound {len(pred)} events with confidence over {confidence}")
 
+"""
+Reads edf file
+generates images of the whole signal
+runs darknet/yolo on all images, and outputs to predictions.txt
+converts predictions to dataframe
+outputs to terminal/generates images according to flags set when running program
+deletes tmp files
+"""
+def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=False):
+    if not threshold:
+        threshold = 0
 
-
-def predict_edf(file,output_png,output_xml):
     signal = readEdfFile(file)
-    #generate_image_from_signal(signal)
+    if not replay:
+        generate_image_from_signal(signal)
+
     files = ""
     curdir = os.getcwd()
 
-    for image in glob.iglob(f"tmp{os.sep}*"):
-        files += f"{curdir}{os.sep}{image}\n"
+    #for image in glob.iglob(f"tmp{os.sep}*"):
+    #    files += f"{curdir}{os.sep}{image}\n"
 
 
     os.chdir("darknet")
-    with open("generate.txt","w") as f:
-        f.write(files)
+    #with open("generate.txt","w") as f:
+    #    f.write(files)
 
-    #os.system(("./darknet detector test ../obj.data yolo-obj.cfg yolo-obj_10000.weights -ext_output < generate.txt > predictions.txt"))
-
+    print("Running YOLO on signal. This may take a long time depending on GPU/CPU and length of recording")
+    if not demo and not replay:
+        #os.system(("./darknet detector test ../obj.data ../yolo-obj.cfg ../yolo-obj_last.weights -ext_output < generate.txt > predictions.txt"))
+        pass
+    
+    print("Done")
     predictions = get_predictions()
 
-    threshold = 30
     predictions = predictions[predictions.CONFIDENCE > threshold]
     apnea_prediction = np.zeros(int(predictions.PRED_END.max()))
 
@@ -120,9 +198,11 @@ def predict_edf(file,output_png,output_xml):
             if apnea_prediction[index] < line.CONFIDENCE:
                 apnea_prediction[index] = line.CONFIDENCE
 
-    print(apnea_prediction)
     if output_png:
         plot_events(signal,predictions)
+
+
+    print_predictions(predictions,threshold)
     #Delete the temporary files
     #for image in glob.iglob(f"tmp{os.sep}*"):
     #    os.remove(f"{curdir}{os.sep}{image}")
@@ -134,12 +214,25 @@ if __name__ == "__main__":
     setup()
 
     parser = argparse.ArgumentParser(description='Predict Apnea events on .edf file ')
-    parser.add_argument('file',metavar="FILENAME", help='path to a .edf file to analyze')
+    parser.add_argument('file', help='path to a .edf file to analyze')
     parser.add_argument('-p', help='Output png predictions to out/', action="store_true")
     parser.add_argument("-x",'-xml', help='Output predictions annotations to xml file', action="store_true")
-
+    parser.add_argument("-t",'--thresh','-threshold', help='Output predictions annotations to xml file',type=int)
 
     args = parser.parse_args()
     
-    #args.file = "shhs1-200001.edf"
-    predict_edf(args.file,output_png=args.p,output_xml=args.p)
+    demo = False
+    replay = False
+    if args.file=="demo":
+        print("### DEMO MODE ###")
+        print("Uses precalculated predictions for computers without (GPU assisted) darknet.")
+        args.file = "shhs1-200001.edf"
+        demo=True
+
+    if args.file=="replay":
+        print("### Replaying last calculation with new flags ###")
+        print("Uses predictions already calculated for creating output")
+        args.file = "shhs1-200001.edf"
+        replay=True
+    
+    predict_edf(args.file,output_png=args.p,output_xml=args.p, threshold=args.thresh,demo=demo,replay=replay)

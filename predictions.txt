@@ -1,0 +1,87 @@
+batch = 1, time_steps = 1, train = 0 
+
+ seen 64, trained: 1030 K-images (16 Kilo-batches_64) 
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/0.png: Predicted in 115960.063000 milli-seconds.
+apnea: 29%	(left_x:  177   top_y:  -21   width:  325   height: 1024)
+apnea: 25%	(left_x:  258   top_y:   -6   width:  794   height:  999)
+apnea: 33%	(left_x:  655   top_y:  -19   width:  319   height: 1025)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/100350.png: Predicted in 115451.074000 milli-seconds.
+apnea: 98%	(left_x:  347   top_y:  -98   width:  635   height: 1176)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/100800.png: Predicted in 114927.194000 milli-seconds.
+apnea: 77%	(left_x:  173   top_y:  -44   width:  806   height: 1071)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/101250.png: Predicted in 115344.316000 milli-seconds.
+apnea: 83%	(left_x:  126   top_y:  -14   width:  889   height: 1017)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/101700.png: Predicted in 114947.685000 milli-seconds.
+apnea: 68%	(left_x:  121   top_y:   -2   width:  907   height:  994)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/102150.png: Predicted in 114775.564000 milli-seconds.
+apnea: 61%	(left_x:  146   top_y:  -35   width:  858   height: 1060)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/102600.png: Predicted in 114704.275000 milli-seconds.
+apnea: 79%	(left_x:  119   top_y:    2   width:  903   height:  988)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/103050.png: Predicted in 117417.986000 milli-seconds.
+apnea: 70%	(left_x:  133   top_y:   -8   width:  879   height: 1002)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/10350.png: Predicted in 115215.084000 milli-seconds.
+apnea: 72%	(left_x:   52   top_y:  -53   width: 1037   height: 1085)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/103500.png: Predicted in 115259.602000 milli-seconds.
+apnea: 52%	(left_x:  171   top_y:   -9   width:  800   height: 1009)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/103950.png: Predicted in 115410.659000 milli-seconds.
+apnea: 74%	(left_x:  158   top_y:   -8   width:  827   height: 1008)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/104400.png: Predicted in 114573.409000 milli-seconds.
+apnea: 56%	(left_x:  165   top_y:    5   width:  813   height:  979)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/104850.png: Predicted in 114211.096000 milli-seconds.
+apnea: 80%	(left_x:  157   top_y:    6   width:  821   height:  977)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/105300.png: Predicted in 114528.966000 milli-seconds.
+apnea: 72%	(left_x:  150   top_y:   -2   width:  839   height:  995)
+apnea: 26%	(left_x:  164   top_y:  -76   width:  205   height: 1133)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/105750.png: Predicted in 113731.908000 milli-seconds.
+apnea: 60%	(left_x:  142   top_y:  -30   width:  857   height: 1049)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/106200.png: Predicted in 113671.594000 milli-seconds.
+apnea: 71%	(left_x:  163   top_y:  -34   width:  819   height: 1059)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/106650.png: Predicted in 113581.900000 milli-seconds.
+apnea: 69%	(left_x:  167   top_y:  -30   width:  816   height: 1045)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/107100.png: Predicted in 114004.805000 milli-seconds.
+apnea: 79%	(left_x:  151   top_y:  -27   width:  842   height: 1043)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/107550.png: Predicted in 114453.386000 milli-seconds.
+apnea: 64%	(left_x:  124   top_y:   -4   width:  901   height: 1003)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/10800.png: Predicted in 114659.202000 milli-seconds.
+apnea: 78%	(left_x:  127   top_y:  -88   width:  902   height: 1152)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/108000.png: Predicted in 114475.798000 milli-seconds.
+apnea: 51%	(left_x:  180   top_y:  -51   width:  790   height: 1087)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/108450.png: Predicted in 114577.572000 milli-seconds.
+apnea: 71%	(left_x:  117   top_y:  -18   width:  909   height: 1027)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/108900.png: Predicted in 114411.236000 milli-seconds.
+apnea: 62%	(left_x:  135   top_y:  -34   width:  874   height: 1054)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/109350.png: Predicted in 114240.109000 milli-seconds.
+apnea: 61%	(left_x:  173   top_y:  -35   width:  800   height: 1058)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/109800.png: Predicted in 114314.483000 milli-seconds.
+apnea: 65%	(left_x:  134   top_y:  -41   width:  876   height: 1078)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/110250.png: Predicted in 114212.257000 milli-seconds.
+apnea: 69%	(left_x:  146   top_y:   -9   width:  854   height: 1008)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/110700.png: Predicted in 114191.719000 milli-seconds.
+apnea: 57%	(left_x:  148   top_y:  -30   width:  855   height: 1048)
+apnea: 30%	(left_x:  216   top_y:  -48   width:  242   height: 1082)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/111150.png: Predicted in 114109.615000 milli-seconds.
+apnea: 67%	(left_x:  184   top_y:  -48   width:  775   height: 1083)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/111600.png: Predicted in 114220.542000 milli-seconds.
+apnea: 71%	(left_x:  141   top_y:   15   width:  862   height:  963)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/112050.png: Predicted in 114071.079000 milli-seconds.
+apnea: 65%	(left_x:  113   top_y:    9   width:  919   height:  975)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/11250.png: Predicted in 113996.904000 milli-seconds.
+apnea: 67%	(left_x:  157   top_y:  -71   width:  689   height: 1118)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/112500.png: Predicted in 114131.087000 milli-seconds.
+apnea: 67%	(left_x:  136   top_y:  -13   width:  871   height: 1016)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/112950.png: Predicted in 114079.891000 milli-seconds.
+apnea: 62%	(left_x:  127   top_y:    6   width:  890   height:  981)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/113400.png: Predicted in 114120.713000 milli-seconds.
+apnea: 71%	(left_x:  144   top_y:   -9   width:  852   height: 1008)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/113850.png: Predicted in 114086.270000 milli-seconds.
+apnea: 73%	(left_x:  136   top_y:   28   width:  869   height:  934)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/114300.png: Predicted in 114425.514000 milli-seconds.
+apnea: 46%	(left_x:  137   top_y:   10   width:  866   height:  973)
+apnea: 36%	(left_x:  218   top_y:  -12   width:  238   height: 1006)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/114750.png: Predicted in 114229.095000 milli-seconds.
+apnea: 67%	(left_x:  139   top_y:   -1   width:  861   height:  997)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/115200.png: Predicted in 114065.986000 milli-seconds.
+apnea: 55%	(left_x:  126   top_y:  -10   width:  893   height: 1015)
+Enter Image Path: /mnt/c/Users/sondr/Documents/INF/Master/src/Yolo4Apnea/tmp/115650.png: Predicted in 114181.521000 milli-seconds.
+apnea: 76%	(left_x:  133   top_y:  -16   width:  878   height: 1020)
+Enter Image Path: 

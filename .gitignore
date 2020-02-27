@@ -141,3 +141,4 @@ out/
 *.edf
 *.png
 tmp/
+obj.data
