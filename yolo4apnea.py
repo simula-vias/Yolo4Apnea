@@ -88,7 +88,7 @@ def generate_image_from_signal(signal):
             ax.set_xlim(i,i + XLIM)
             prog.update(i)
             j+=1
-            #fig.savefig(f"tmp/{i}.png")
+            fig.savefig(f"tmp/{i}.png")
     print(f"DONE\nCreated {j} images")
 """
 Plots the signal of the events that yolo predicted with signal before and after the event
@@ -127,12 +127,17 @@ converts pixelvalues from prediction to correct event-time since start of record
 Returns:
     Dataframe -- Dataframe with info about when the image starts,when the prediction starts, when the prediction ends, and confidence in prediction
 """
-def get_predictions():
+def get_predictions(demo):
     predictions = pd.DataFrame(columns=['IMG_START', 'PRED_START', 'PRED_END','CONFIDENCE'])
     image_width = Image.open("../tmp/0.png").size[0]
     pixel_duration = image_width/XLIM
 
-    with open("../predictions.txt","r") as f:
+    predictions_file = "./predictions.txt"
+
+    if demo:
+        predictions_file="../demo/predictions.txt"
+
+    with open(predictions_file,"r") as f:
         for line in f:
             line = line[0:-1]
             new_image = re.search(r"tmp\/(\d+).png:",line)
@@ -173,21 +178,21 @@ def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=Fals
     files = ""
     curdir = os.getcwd()
 
-    #for image in glob.iglob(f"tmp{os.sep}*"):
-    #    files += f"{curdir}{os.sep}{image}\n"
+    for image in glob.iglob(f"tmp{os.sep}*"):
+        files += f"{curdir}{os.sep}{image}\n"
 
 
     os.chdir("darknet")
-    #with open("generate.txt","w") as f:
-    #    f.write(files)
+    with open("generate.txt","w+") as f:
+        f.write(files)
 
     print("Running YOLO on signal. This may take a long time depending on GPU/CPU and length of recording")
     if not demo and not replay:
-        #os.system(("./darknet detector test ../obj.data ../yolo-obj.cfg ../yolo-obj_last.weights -ext_output < generate.txt > predictions.txt"))
+        os.system(("./darknet detector test ../obj.data ../yolo-obj.cfg ../yolo-obj_last.weights -ext_output < generate.txt > predictions.txt"))
         pass
     
     print("Done")
-    predictions = get_predictions()
+    predictions = get_predictions(demo)
 
     predictions = predictions[predictions.CONFIDENCE > threshold]
     apnea_prediction = np.zeros(int(predictions.PRED_END.max()))
@@ -204,10 +209,10 @@ def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=Fals
 
     print_predictions(predictions,threshold)
     #Delete the temporary files
-    #for image in glob.iglob(f"tmp{os.sep}*"):
-    #    os.remove(f"{curdir}{os.sep}{image}")
+    for image in glob.iglob(f"tmp{os.sep}*"):
+        os.remove(f"{curdir}{os.sep}{image}")
 
-    #os.remove("generate.txt")
+    os.remove("generate.txt")
 
 
 if __name__ == "__main__":
@@ -226,7 +231,8 @@ if __name__ == "__main__":
     if args.file=="demo":
         print("### DEMO MODE ###")
         print("Uses precalculated predictions for computers without (GPU assisted) darknet.")
-        args.file = "shhs1-200001.edf"
+        args.file = f"demo/{os.sep}shhs2-200116.edf"
+        shutil.copyfile(f"demo/{os.sep}predictions.txt",f"darknet{os.sep}predictions.txt")
         demo=True
 
     if args.file=="replay":

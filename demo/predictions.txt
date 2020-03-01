@@ -1,0 +1,2026 @@
+net.optimized_memory = 0 
+batch = 1, time_steps = 1, train = 0 
+
+ seen 64, trained: 1030 K-images (16 Kilo-batches_64) 
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/127350.png: Predicted in 31.830000 milli-seconds.
+apnea: 91%	(left_x:  160   top_y:  -67   width:  245   height: 1115)
+apnea: 60%	(left_x:  763   top_y:  -87   width:  220   height: 1158)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/198900.png: Predicted in 31.299000 milli-seconds.
+apnea: 69%	(left_x:  186   top_y:  -10   width:  769   height: 1005)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/99450.png: Predicted in 31.544000 milli-seconds.
+apnea: 82%	(left_x:  270   top_y:   -4   width:  280   height:  992)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/153900.png: Predicted in 32.038000 milli-seconds.
+apnea: 50%	(left_x:  135   top_y:  -36   width:  875   height: 1057)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/7200.png: Predicted in 32.100000 milli-seconds.
+apnea: 66%	(left_x:   80   top_y:   -5   width:  977   height:  973)
+apnea: 56%	(left_x:  146   top_y:  -53   width:  261   height: 1076)
+apnea: 59%	(left_x:  673   top_y:   19   width:  255   height:  934)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/306900.png: Predicted in 31.930000 milli-seconds.
+apnea: 64%	(left_x:  146   top_y:  -12   width:  224   height: 1004)
+apnea: 30%	(left_x:  205   top_y:  -49   width:  725   height: 1085)
+apnea: 40%	(left_x:  504   top_y:  -19   width:  262   height: 1022)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/8550.png: Predicted in 32.200000 milli-seconds.
+apnea: 95%	(left_x:  111   top_y:  -33   width:  350   height: 1042)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/343800.png: Predicted in 31.857000 milli-seconds.
+apnea: 92%	(left_x:  200   top_y:   -7   width:  254   height:  991)
+apnea: 77%	(left_x:  585   top_y:  -57   width:  250   height: 1098)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/205200.png: Predicted in 31.656000 milli-seconds.
+apnea: 61%	(left_x:  152   top_y:  -51   width:  843   height: 1085)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/160200.png: Predicted in 31.873000 milli-seconds.
+apnea: 86%	(left_x:  201   top_y:  -38   width:  610   height: 1057)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/112500.png: Predicted in 31.493000 milli-seconds.
+apnea: 82%	(left_x:  274   top_y:    4   width:  282   height:  972)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/71550.png: Predicted in 32.386000 milli-seconds.
+apnea: 67%	(left_x:  124   top_y:  -37   width:  901   height: 1057)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/308250.png: Predicted in 32.311000 milli-seconds.
+apnea: 69%	(left_x:  373   top_y:   22   width:  230   height:  936)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/252000.png: Predicted in 32.511000 milli-seconds.
+apnea: 62%	(left_x:  221   top_y:  -21   width:  565   height: 1023)
+apnea: 49%	(left_x:  238   top_y:   19   width:  243   height:  937)
+apnea: 46%	(left_x:  724   top_y:  -67   width:  209   height: 1117)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/9000.png: Predicted in 31.835000 milli-seconds.
+apnea: 95%	(left_x:  132   top_y:  -59   width:  590   height: 1082)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/216450.png: Predicted in 32.144000 milli-seconds.
+apnea: 47%	(left_x:  171   top_y:  -28   width:  807   height: 1037)
+apnea: 27%	(left_x:  206   top_y:  -23   width:  261   height: 1025)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/47700.png: Predicted in 31.230000 milli-seconds.
+apnea: 30%	(left_x:  155   top_y:  -77   width:  239   height: 1132)
+apnea: 52%	(left_x:  158   top_y:  -31   width:  828   height: 1049)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/293850.png: Predicted in 32.047000 milli-seconds.
+apnea: 48%	(left_x:  131   top_y:  -85   width:  888   height: 1157)
+apnea: 63%	(left_x:  210   top_y:    5   width:  252   height:  971)
+apnea: 37%	(left_x:  697   top_y:  -52   width:  256   height: 1091)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/211050.png: Predicted in 31.441000 milli-seconds.
+apnea: 91%	(left_x:  191   top_y:   -0   width:  328   height:  985)
+apnea: 25%	(left_x:  770   top_y:  -28   width:  213   height: 1040)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/184500.png: Predicted in 32.407000 milli-seconds.
+apnea: 98%	(left_x:  308   top_y:   21   width:  204   height:  937)
+apnea: 70%	(left_x:  737   top_y:  -37   width:  247   height: 1062)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/347850.png: Predicted in 32.385000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/260550.png: Predicted in 31.824000 milli-seconds.
+apnea: 99%	(left_x:  190   top_y:  -76   width:  295   height: 1143)
+apnea: 91%	(left_x:  651   top_y:   13   width:  306   height:  961)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/42300.png: Predicted in 32.147000 milli-seconds.
+apnea: 65%	(left_x:   89   top_y:  -78   width:  962   height: 1138)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/64800.png: Predicted in 31.973000 milli-seconds.
+apnea: 67%	(left_x:  116   top_y:  -20   width:  918   height: 1025)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/169200.png: Predicted in 31.485000 milli-seconds.
+apnea: 67%	(left_x:  213   top_y:    2   width:  145   height:  962)
+apnea: 83%	(left_x:  270   top_y:    3   width:  600   height:  988)
+apnea: 39%	(left_x:  575   top_y:  -61   width:  280   height: 1109)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/31500.png: Predicted in 32.151000 milli-seconds.
+apnea: 81%	(left_x:  180   top_y:  -40   width:  783   height: 1069)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/174150.png: Predicted in 31.859000 milli-seconds.
+apnea: 55%	(left_x:  192   top_y:    6   width:  765   height:  974)
+apnea: 31%	(left_x:  573   top_y:   22   width:  327   height:  941)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/67500.png: Predicted in 31.736000 milli-seconds.
+apnea: 64%	(left_x:  146   top_y:  -64   width:  854   height: 1112)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/94050.png: Predicted in 32.378000 milli-seconds.
+apnea: 96%	(left_x:  196   top_y:  -27   width:  266   height: 1033)
+apnea: 59%	(left_x:  656   top_y:  -85   width:  321   height: 1151)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/285300.png: Predicted in 31.537000 milli-seconds.
+apnea: 92%	(left_x:  272   top_y:   21   width:  320   height:  936)
+apnea: 32%	(left_x:  701   top_y:  -57   width:  252   height: 1103)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/83700.png: Predicted in 32.091000 milli-seconds.
+apnea: 26%	(left_x:   54   top_y:  -10   width:  239   height:  996)
+apnea: 94%	(left_x:  352   top_y:  -21   width:  609   height: 1024)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/228150.png: Predicted in 31.613000 milli-seconds.
+apnea: 80%	(left_x:  163   top_y:    4   width:  815   height:  978)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/202050.png: Predicted in 31.505000 milli-seconds.
+apnea: 44%	(left_x:  152   top_y:  -71   width:  702   height: 1123)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/179550.png: Predicted in 31.854000 milli-seconds.
+apnea: 40%	(left_x:  288   top_y:   17   width:  249   height:  951)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/290250.png: Predicted in 32.190000 milli-seconds.
+apnea: 32%	(left_x:   81   top_y:   26   width:  210   height:  918)
+apnea: 57%	(left_x:  423   top_y:  -48   width:  296   height: 1076)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/137700.png: Predicted in 32.091000 milli-seconds.
+apnea: 72%	(left_x:  223   top_y:   -4   width:  686   height:  994)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/256050.png: Predicted in 32.101000 milli-seconds.
+apnea: 68%	(left_x:  135   top_y:  -82   width:  885   height: 1158)
+apnea: 67%	(left_x:  748   top_y:  -38   width:  241   height: 1052)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/112950.png: Predicted in 31.100000 milli-seconds.
+apnea: 45%	(left_x:  379   top_y:   27   width:  212   height:  926)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/164250.png: Predicted in 32.260000 milli-seconds.
+apnea: 69%	(left_x:  152   top_y:   -5   width:  832   height:  994)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/16650.png: Predicted in 32.010000 milli-seconds.
+apnea: 85%	(left_x:  229   top_y:  -25   width:  675   height: 1028)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/187200.png: Predicted in 32.506000 milli-seconds.
+apnea: 98%	(left_x:  336   top_y:  -14   width:  315   height: 1018)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/369900.png: Predicted in 31.993000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/29250.png: Predicted in 31.675000 milli-seconds.
+apnea: 85%	(left_x:  151   top_y:  -38   width:  541   height: 1051)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/196200.png: Predicted in 32.016000 milli-seconds.
+apnea: 45%	(left_x:  240   top_y:  -50   width:  682   height: 1081)
+apnea: 75%	(left_x:  283   top_y:   47   width:  262   height:  882)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/296100.png: Predicted in 31.849000 milli-seconds.
+apnea: 97%	(left_x:  168   top_y:  -67   width:  237   height: 1114)
+apnea: 85%	(left_x:  614   top_y:  -47   width:  401   height: 1080)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/11250.png: Predicted in 32.020000 milli-seconds.
+apnea: 62%	(left_x:  130   top_y:  -13   width:  885   height: 1006)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/329400.png: Predicted in 32.349000 milli-seconds.
+apnea: 88%	(left_x:  304   top_y:   34   width:  236   height:  909)
+apnea: 88%	(left_x:  649   top_y:  -17   width:  333   height: 1019)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/366300.png: Predicted in 31.579000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/95400.png: Predicted in 31.628000 milli-seconds.
+apnea: 72%	(left_x:  146   top_y:  -26   width:  855   height: 1036)
+apnea: 28%	(left_x:  206   top_y:    9   width:  271   height:  961)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/38700.png: Predicted in 32.340000 milli-seconds.
+apnea: 62%	(left_x:  121   top_y:  -24   width:  768   height: 1034)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/269100.png: Predicted in 31.790000 milli-seconds.
+apnea: 98%	(left_x:  256   top_y:  -52   width:  304   height: 1079)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/166500.png: Predicted in 31.501000 milli-seconds.
+apnea: 53%	(left_x:  170   top_y:  -51   width:  808   height: 1085)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/371250.png: Predicted in 32.382000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/62550.png: Predicted in 32.841000 milli-seconds.
+apnea: 92%	(left_x:  144   top_y:  -43   width:  855   height: 1080)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/35550.png: Predicted in 33.056000 milli-seconds.
+apnea: 63%	(left_x:  166   top_y:  -44   width:  810   height: 1068)
+apnea: 38%	(left_x:  192   top_y:  -32   width:  303   height: 1039)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/141300.png: Predicted in 31.977000 milli-seconds.
+apnea: 72%	(left_x:  174   top_y:  -39   width:  806   height: 1068)
+apnea: 37%	(left_x:  225   top_y:    1   width:  212   height:  974)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/189900.png: Predicted in 33.166000 milli-seconds.
+apnea: 68%	(left_x:   68   top_y:  -26   width:  239   height: 1016)
+apnea: 52%	(left_x:  234   top_y:  -73   width:  689   height: 1129)
+apnea: 33%	(left_x:  399   top_y:   19   width:  201   height:  934)
+apnea: 38%	(left_x:  686   top_y:  -73   width:  259   height: 1134)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/2250.png: Predicted in 33.271000 milli-seconds.
+apnea: 89%	(left_x:  135   top_y:  -51   width:  278   height: 1069)
+apnea: 42%	(left_x:  674   top_y:  -35   width:  296   height: 1052)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/240300.png: Predicted in 32.375000 milli-seconds.
+apnea: 46%	(left_x:  191   top_y:  -39   width:  762   height: 1058)
+apnea: 32%	(left_x:  275   top_y:   19   width:  271   height:  944)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/230400.png: Predicted in 33.183000 milli-seconds.
+apnea: 78%	(left_x:  243   top_y:  -89   width:  670   height: 1157)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/157950.png: Predicted in 32.158000 milli-seconds.
+apnea: 48%	(left_x:  154   top_y:  -61   width:  241   height: 1097)
+apnea: 61%	(left_x:  657   top_y:  -69   width:  321   height: 1120)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/280350.png: Predicted in 32.925000 milli-seconds.
+apnea: 43%	(left_x:  185   top_y:   -2   width:  293   height:  990)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/316350.png: Predicted in 31.881000 milli-seconds.
+apnea: 98%	(left_x:  125   top_y:  -40   width:  605   height: 1059)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/251550.png: Predicted in 33.157000 milli-seconds.
+apnea: 41%	(left_x:  178   top_y:   -8   width:  641   height: 1009)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/123300.png: Predicted in 32.960000 milli-seconds.
+apnea: 97%	(left_x:  266   top_y:   -7   width:  286   height:  997)
+apnea: 32%	(left_x:  685   top_y:  -75   width:  270   height: 1128)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/72900.png: Predicted in 33.661000 milli-seconds.
+apnea: 78%	(left_x:  172   top_y:  -23   width:  804   height: 1031)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/194400.png: Predicted in 32.529000 milli-seconds.
+apnea: 83%	(left_x:  174   top_y:  -68   width:  658   height: 1119)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/162900.png: Predicted in 31.658000 milli-seconds.
+apnea: 59%	(left_x:  166   top_y:  -78   width:  815   height: 1137)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/73800.png: Predicted in 32.059000 milli-seconds.
+apnea: 65%	(left_x:  155   top_y:  -61   width:  220   height: 1104)
+apnea: 61%	(left_x:  549   top_y:   -3   width:  367   height:  991)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/160650.png: Predicted in 31.831000 milli-seconds.
+apnea: 71%	(left_x:  129   top_y:    7   width:  882   height:  971)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/335250.png: Predicted in 31.891000 milli-seconds.
+apnea: 80%	(left_x:  212   top_y:  -24   width:  573   height: 1024)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/54000.png: Predicted in 31.993000 milli-seconds.
+apnea: 72%	(left_x:  113   top_y:  -43   width:  915   height: 1070)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/309150.png: Predicted in 32.510000 milli-seconds.
+apnea: 91%	(left_x:  264   top_y:  -15   width:  297   height: 1009)
+apnea: 47%	(left_x:  692   top_y:  -98   width:  263   height: 1182)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/190350.png: Predicted in 32.473000 milli-seconds.
+apnea: 95%	(left_x:  204   top_y:  -33   width:  734   height: 1048)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/141750.png: Predicted in 32.110000 milli-seconds.
+apnea: 94%	(left_x:  188   top_y:    7   width:  753   height:  972)
+apnea: 30%	(left_x:  264   top_y:  -21   width:  322   height: 1022)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/94950.png: Predicted in 31.812000 milli-seconds.
+apnea: 56%	(left_x:  152   top_y:  -24   width:  844   height: 1036)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/275400.png: Predicted in 32.310000 milli-seconds.
+apnea: 85%	(left_x:  413   top_y:  -27   width:  300   height: 1042)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/50400.png: Predicted in 32.129000 milli-seconds.
+apnea: 73%	(left_x:  198   top_y:  -66   width:  737   height: 1105)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/365400.png: Predicted in 32.488000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/213300.png: Predicted in 32.259000 milli-seconds.
+apnea: 47%	(left_x:  182   top_y:  -66   width:  782   height: 1116)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/281700.png: Predicted in 32.854000 milli-seconds.
+apnea: 82%	(left_x:  203   top_y:    1   width:  595   height:  983)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/247050.png: Predicted in 31.795000 milli-seconds.
+apnea: 77%	(left_x:  184   top_y:   19   width:  770   height:  951)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/261000.png: Predicted in 32.087000 milli-seconds.
+apnea: 89%	(left_x:  163   top_y:   42   width:  524   height:  897)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/121500.png: Predicted in 32.332000 milli-seconds.
+apnea: 66%	(left_x:  234   top_y:    8   width:  684   height:  968)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/249750.png: Predicted in 32.008000 milli-seconds.
+apnea: 99%	(left_x:  178   top_y:   -8   width:  644   height: 1010)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/18000.png: Predicted in 33.184000 milli-seconds.
+apnea: 78%	(left_x:  158   top_y:  -34   width:  193   height: 1047)
+apnea: 89%	(left_x:  502   top_y:  -30   width:  453   height: 1033)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/272250.png: Predicted in 33.204000 milli-seconds.
+apnea: 30%	(left_x:  285   top_y:   11   width:  269   height:  953)
+apnea: 81%	(left_x:  676   top_y:  -80   width:  288   height: 1140)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/6750.png: Predicted in 32.611000 milli-seconds.
+apnea: 65%	(left_x:  156   top_y:  -31   width:  840   height: 1039)
+apnea: 58%	(left_x:  187   top_y:  -24   width:  335   height: 1027)
+apnea: 61%	(left_x:  672   top_y:    4   width:  261   height:  973)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/118350.png: Predicted in 32.114000 milli-seconds.
+apnea: 76%	(left_x:  229   top_y:  -25   width:  685   height: 1037)
+apnea: 39%	(left_x:  487   top_y:  -29   width:  303   height: 1043)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/157500.png: Predicted in 33.112000 milli-seconds.
+apnea: 86%	(left_x:  175   top_y:    0   width:  786   height:  985)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/242100.png: Predicted in 32.857000 milli-seconds.
+apnea: 62%	(left_x:  162   top_y:  -30   width:  824   height: 1046)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/300150.png: Predicted in 32.501000 milli-seconds.
+apnea: 97%	(left_x:  232   top_y:   11   width:  222   height:  956)
+apnea: 82%	(left_x:  673   top_y:    3   width:  253   height:  982)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/188100.png: Predicted in 32.350000 milli-seconds.
+apnea: 97%	(left_x:  253   top_y:  -20   width:  352   height: 1016)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/167400.png: Predicted in 32.356000 milli-seconds.
+apnea: 69%	(left_x:  250   top_y:  -11   width:  645   height: 1004)
+apnea: 45%	(left_x:  595   top_y:    7   width:  286   height:  965)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/234000.png: Predicted in 32.125000 milli-seconds.
+apnea: 68%	(left_x:  156   top_y:  -21   width:  831   height: 1027)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/262350.png: Predicted in 32.549000 milli-seconds.
+apnea: 95%	(left_x:  273   top_y:   15   width:  610   height:  954)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/144450.png: Predicted in 31.671000 milli-seconds.
+apnea: 44%	(left_x:  258   top_y:  -19   width:  622   height: 1025)
+apnea: 67%	(left_x:  517   top_y:  -13   width:  279   height: 1003)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/81450.png: Predicted in 32.299000 milli-seconds.
+apnea: 72%	(left_x:  144   top_y:  -47   width:  855   height: 1083)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/301950.png: Predicted in 31.771000 milli-seconds.
+apnea: 62%	(left_x:  100   top_y:   14   width:  951   height:  959)
+apnea: 46%	(left_x:  207   top_y:  -19   width:  258   height: 1014)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/5400.png: Predicted in 31.894000 milli-seconds.
+apnea: 34%	(left_x:  191   top_y:  -22   width:  305   height: 1039)
+apnea: 79%	(left_x:  697   top_y:  -26   width:  258   height: 1036)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/43650.png: Predicted in 31.943000 milli-seconds.
+apnea: 62%	(left_x:  164   top_y:  -84   width:  821   height: 1145)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/165600.png: Predicted in 32.004000 milli-seconds.
+apnea: 77%	(left_x:  211   top_y:  -22   width:  727   height: 1032)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/198000.png: Predicted in 32.264000 milli-seconds.
+apnea: 68%	(left_x:  187   top_y:  -64   width:  771   height: 1107)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/103500.png: Predicted in 31.537000 milli-seconds.
+apnea: 96%	(left_x:  235   top_y:  -45   width:  532   height: 1070)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/24300.png: Predicted in 31.584000 milli-seconds.
+apnea: 96%	(left_x:  185   top_y:  -54   width:  779   height: 1089)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/382950.png: Predicted in 32.209000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/158400.png: Predicted in 32.052000 milli-seconds.
+apnea: 90%	(left_x:  192   top_y:  -39   width:  306   height: 1053)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/26100.png: Predicted in 32.239000 milli-seconds.
+apnea: 61%	(left_x:  161   top_y:  -29   width:  823   height: 1035)
+apnea: 26%	(left_x:  204   top_y:  -45   width:  273   height: 1065)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/303300.png: Predicted in 31.593000 milli-seconds.
+apnea: 31%	(left_x:  160   top_y:  -41   width:  235   height: 1054)
+apnea: 33%	(left_x:  162   top_y:  -21   width:  526   height: 1019)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/232200.png: Predicted in 32.217000 milli-seconds.
+apnea: 60%	(left_x:  135   top_y:  -12   width:  883   height: 1010)
+apnea: 28%	(left_x:  211   top_y:  -16   width:  261   height: 1010)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/90450.png: Predicted in 32.359000 milli-seconds.
+apnea: 55%	(left_x:  170   top_y:  -56   width:  819   height: 1099)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/76050.png: Predicted in 31.844000 milli-seconds.
+apnea: 76%	(left_x:  137   top_y:  -65   width:  871   height: 1114)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/126000.png: Predicted in 31.923000 milli-seconds.
+apnea: 28%	(left_x:  155   top_y:   -9   width:  839   height:  999)
+apnea: 90%	(left_x:  164   top_y:  -72   width:  224   height: 1121)
+apnea: 67%	(left_x:  663   top_y:  -38   width:  308   height: 1064)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/151650.png: Predicted in 31.216000 milli-seconds.
+apnea: 37%	(left_x:  172   top_y:   20   width:  800   height:  944)
+apnea: 29%	(left_x:  593   top_y:   17   width:  268   height:  949)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/133650.png: Predicted in 31.803000 milli-seconds.
+apnea: 92%	(left_x:  235   top_y:   24   width:  661   height:  948)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/54900.png: Predicted in 32.319000 milli-seconds.
+apnea: 64%	(left_x:  144   top_y:  -31   width:  862   height: 1061)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/247500.png: Predicted in 31.978000 milli-seconds.
+apnea: 39%	(left_x:  155   top_y:    5   width:  834   height:  976)
+apnea: 32%	(left_x:  573   top_y:  -29   width:  328   height: 1046)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/11700.png: Predicted in 31.941000 milli-seconds.
+apnea: 97%	(left_x:  152   top_y:  -23   width:  353   height: 1027)
+apnea: 67%	(left_x:  748   top_y:  -19   width:  238   height: 1012)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/190800.png: Predicted in 32.240000 milli-seconds.
+apnea: 43%	(left_x:  139   top_y:  -85   width:  871   height: 1149)
+apnea: 44%	(left_x:  185   top_y:   12   width:  292   height:  958)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/81000.png: Predicted in 31.957000 milli-seconds.
+apnea: 32%	(left_x:  174   top_y:   -9   width:  800   height: 1001)
+apnea: 65%	(left_x:  202   top_y:  -26   width:  268   height: 1036)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/298800.png: Predicted in 32.088000 milli-seconds.
+apnea: 94%	(left_x:  160   top_y:  -46   width:  229   height: 1073)
+apnea: 75%	(left_x:  527   top_y:  -63   width:  214   height: 1110)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/138150.png: Predicted in 32.260000 milli-seconds.
+apnea: 56%	(left_x:  133   top_y:  -21   width:  252   height: 1033)
+apnea: 73%	(left_x:  701   top_y:  -94   width:  240   height: 1172)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/34200.png: Predicted in 31.721000 milli-seconds.
+apnea: 87%	(left_x:  138   top_y:  -49   width:  865   height: 1084)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/111150.png: Predicted in 32.057000 milli-seconds.
+apnea: 77%	(left_x:  189   top_y:  -24   width:  298   height: 1026)
+apnea: 26%	(left_x:  231   top_y:   22   width:  695   height:  941)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/378900.png: Predicted in 32.055000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/129150.png: Predicted in 32.282000 milli-seconds.
+apnea: 45%	(left_x:  225   top_y:  -10   width:  222   height: 1002)
+apnea: 96%	(left_x:  634   top_y:    3   width:  346   height:  984)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/276750.png: Predicted in 32.038000 milli-seconds.
+apnea: 83%	(left_x:  142   top_y:  -29   width:  726   height: 1046)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/450.png: Predicted in 32.623000 milli-seconds.
+apnea: 30%	(left_x:  119   top_y:  -39   width:  892   height: 1046)
+apnea: 56%	(left_x:  127   top_y: -122   width:  298   height: 1237)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/217800.png: Predicted in 31.696000 milli-seconds.
+apnea: 83%	(left_x:  167   top_y:  -46   width:  812   height: 1076)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/79200.png: Predicted in 32.032000 milli-seconds.
+apnea: 56%	(left_x:  279   top_y:   -0   width:  277   height:  991)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/84150.png: Predicted in 32.581000 milli-seconds.
+apnea: 55%	(left_x:  159   top_y:   -5   width:  832   height:  994)
+apnea: 39%	(left_x:  203   top_y:  -27   width:  275   height: 1034)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/226350.png: Predicted in 31.431000 milli-seconds.
+apnea: 69%	(left_x:  162   top_y:   -6   width:  823   height:  992)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/31050.png: Predicted in 31.723000 milli-seconds.
+apnea: 57%	(left_x:  191   top_y:  -63   width:  614   height: 1108)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/201600.png: Predicted in 32.061000 milli-seconds.
+apnea: 69%	(left_x:  106   top_y:  -21   width:  933   height: 1024)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/231750.png: Predicted in 32.459000 milli-seconds.
+apnea: 60%	(left_x:  151   top_y:  -38   width:  847   height: 1060)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/294300.png: Predicted in 31.828000 milli-seconds.
+apnea: 93%	(left_x:  212   top_y:  -48   width:  582   height: 1072)
+apnea: 64%	(left_x:  730   top_y:  -53   width:  194   height: 1087)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/346500.png: Predicted in 32.283000 milli-seconds.
+apnea: 91%	(left_x:  173   top_y:  -48   width:  497   height: 1065)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/123750.png: Predicted in 31.503000 milli-seconds.
+apnea: 97%	(left_x:  217   top_y:  -22   width:  553   height: 1022)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/49500.png: Predicted in 31.909000 milli-seconds.
+apnea: 33%	(left_x:   60   top_y:  -71   width:  452   height: 1118)
+apnea: 78%	(left_x:  248   top_y:    7   width:  342   height:  963)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/361800.png: Predicted in 31.209000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/175050.png: Predicted in 31.747000 milli-seconds.
+apnea: 72%	(left_x:  174   top_y:  -34   width:  795   height: 1054)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/256950.png: Predicted in 32.009000 milli-seconds.
+apnea: 99%	(left_x:  207   top_y:  -47   width:  585   height: 1073)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/199800.png: Predicted in 32.407000 milli-seconds.
+apnea: 90%	(left_x:  141   top_y:  -13   width:  856   height: 1010)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/38250.png: Predicted in 31.844000 milli-seconds.
+apnea: 66%	(left_x:  156   top_y:  -43   width:  826   height: 1070)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/223200.png: Predicted in 31.657000 milli-seconds.
+apnea: 55%	(left_x:  164   top_y:  -12   width:  820   height: 1008)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/173700.png: Predicted in 31.950000 milli-seconds.
+apnea: 48%	(left_x:  209   top_y:  -44   width:  713   height: 1076)
+apnea: 61%	(left_x:  495   top_y:  -65   width:  307   height: 1111)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/206550.png: Predicted in 31.575000 milli-seconds.
+apnea: 95%	(left_x:  178   top_y:   -7   width:  784   height:  995)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/341100.png: Predicted in 32.004000 milli-seconds.
+apnea: 74%	(left_x:  235   top_y:   42   width:  208   height:  889)
+apnea: 26%	(left_x:  242   top_y:  -13   width:  634   height: 1018)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/364500.png: Predicted in 32.340000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/1350.png: Predicted in 31.148000 milli-seconds.
+apnea: 91%	(left_x:  132   top_y:    9   width:  871   height:  966)
+apnea: 31%	(left_x:  161   top_y:  -57   width:  357   height: 1091)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/119700.png: Predicted in 32.194000 milli-seconds.
+apnea: 58%	(left_x:  201   top_y:    8   width:  593   height:  971)
+apnea: 49%	(left_x:  533   top_y:  -33   width:  230   height: 1044)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/19350.png: Predicted in 31.569000 milli-seconds.
+apnea: 48%	(left_x:  136   top_y:  -20   width:  874   height: 1018)
+apnea: 47%	(left_x:  193   top_y:   -6   width:  283   height:  988)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/46350.png: Predicted in 32.052000 milli-seconds.
+apnea: 83%	(left_x:  115   top_y:  -77   width:  914   height: 1137)
+apnea: 27%	(left_x:  163   top_y:  -18   width:  209   height: 1004)
+apnea: 27%	(left_x:  707   top_y:  -20   width:  232   height: 1023)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/68850.png: Predicted in 31.970000 milli-seconds.
+apnea: 68%	(left_x:  151   top_y:  -11   width:  847   height: 1006)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/383850.png: Predicted in 32.186000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/180900.png: Predicted in 32.394000 milli-seconds.
+apnea: 83%	(left_x:  215   top_y:  -48   width:  581   height: 1086)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/249300.png: Predicted in 31.777000 milli-seconds.
+apnea: 43%	(left_x:  138   top_y:  -21   width:  872   height: 1027)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/41400.png: Predicted in 32.233000 milli-seconds.
+apnea: 62%	(left_x:  155   top_y:  -62   width:  691   height: 1100)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/225900.png: Predicted in 32.090000 milli-seconds.
+apnea: 47%	(left_x:  144   top_y:  -18   width:  864   height: 1019)
+apnea: 37%	(left_x:  198   top_y:   -1   width:  277   height:  978)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/136800.png: Predicted in 31.769000 milli-seconds.
+apnea: 86%	(left_x:  600   top_y:   -8   width:  408   height:  997)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/116100.png: Predicted in 32.017000 milli-seconds.
+apnea: 81%	(left_x:  192   top_y:  -47   width:  761   height: 1078)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/314550.png: Predicted in 32.368000 milli-seconds.
+apnea: 46%	(left_x:   61   top_y:    4   width:  266   height:  966)
+apnea: 82%	(left_x:  444   top_y:   11   width:  268   height:  959)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/75150.png: Predicted in 31.544000 milli-seconds.
+apnea: 81%	(left_x:  185   top_y:    0   width:  762   height:  984)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/240750.png: Predicted in 31.697000 milli-seconds.
+apnea: 67%	(left_x:  149   top_y:   18   width:  849   height:  951)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/189000.png: Predicted in 32.118000 milli-seconds.
+apnea: 44%	(left_x:  227   top_y:   44   width:  231   height:  890)
+apnea: 67%	(left_x:  244   top_y:  -11   width:  632   height: 1004)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/52650.png: Predicted in 32.171000 milli-seconds.
+apnea: 84%	(left_x:  156   top_y:  -31   width:  831   height: 1051)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/153450.png: Predicted in 31.535000 milli-seconds.
+apnea: 92%	(left_x:  248   top_y:    9   width:  643   height:  969)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/60300.png: Predicted in 32.114000 milli-seconds.
+apnea: 66%	(left_x:  117   top_y:   21   width:  601   height:  969)
+apnea: 83%	(left_x:  144   top_y:  -29   width:  251   height: 1041)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/271350.png: Predicted in 32.333000 milli-seconds.
+apnea: 82%	(left_x:  283   top_y:   -9   width:  276   height:  995)
+apnea: 51%	(left_x:  697   top_y: -105   width:  263   height: 1196)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/356400.png: Predicted in 31.964000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/302400.png: Predicted in 30.965000 milli-seconds.
+apnea: 90%	(left_x:  169   top_y:  -37   width:  801   height: 1061)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/324900.png: Predicted in 31.926000 milli-seconds.
+apnea: 72%	(left_x:  382   top_y:   46   width:  224   height:  892)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/28800.png: Predicted in 32.381000 milli-seconds.
+apnea: 74%	(left_x:  104   top_y:  -70   width:  936   height: 1129)
+apnea: 33%	(left_x:  136   top_y: -116   width:  271   height: 1216)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/216900.png: Predicted in 31.611000 milli-seconds.
+apnea: 38%	(left_x:  153   top_y:  -57   width:  840   height: 1102)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/16200.png: Predicted in 31.786000 milli-seconds.
+apnea: 74%	(left_x:  161   top_y:   -3   width:  817   height:  991)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/299250.png: Predicted in 32.227000 milli-seconds.
+apnea: 72%	(left_x:  444   top_y:   18   width:  245   height:  943)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/87300.png: Predicted in 32.224000 milli-seconds.
+apnea: 39%	(left_x:  130   top_y:  -41   width:  894   height: 1068)
+apnea: 73%	(left_x:  150   top_y:  -35   width:  224   height: 1048)
+apnea: 32%	(left_x:  689   top_y:  -44   width:  260   height: 1068)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/348300.png: Predicted in 31.980000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/197100.png: Predicted in 32.275000 milli-seconds.
+apnea: 44%	(left_x:  121   top_y:   21   width:  891   height:  949)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/105300.png: Predicted in 32.181000 milli-seconds.
+apnea: 73%	(left_x:  209   top_y:   27   width:  253   height:  922)
+apnea: 30%	(left_x:  245   top_y:  -26   width:  667   height: 1036)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/270450.png: Predicted in 31.891000 milli-seconds.
+apnea: 70%	(left_x:  452   top_y:  -35   width:  209   height: 1057)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/358650.png: Predicted in 31.736000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/54450.png: Predicted in 31.840000 milli-seconds.
+apnea: 92%	(left_x:  165   top_y:  -29   width:  673   height: 1049)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/218700.png: Predicted in 32.108000 milli-seconds.
+apnea: 63%	(left_x:  148   top_y:  -43   width:  846   height: 1073)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/53550.png: Predicted in 32.483000 milli-seconds.
+apnea: 74%	(left_x:  163   top_y:  -50   width:  821   height: 1083)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/117900.png: Predicted in 31.968000 milli-seconds.
+apnea: 65%	(left_x:  151   top_y:   -3   width:  548   height:  981)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/326250.png: Predicted in 31.762000 milli-seconds.
+apnea: 57%	(left_x:  234   top_y:   16   width:  204   height:  944)
+apnea: 41%	(left_x:  265   top_y:    7   width:  608   height:  971)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/58950.png: Predicted in 32.496000 milli-seconds.
+apnea: 94%	(left_x:  158   top_y:   28   width:  492   height:  921)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/3600.png: Predicted in 32.190000 milli-seconds.
+apnea: 25%	(left_x:  374   top_y:  -59   width:  692   height: 1094)
+apnea: 25%	(left_x:  691   top_y:    7   width:  242   height:  968)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/96750.png: Predicted in 31.817000 milli-seconds.
+apnea: 56%	(left_x:  132   top_y:   10   width:  878   height:  973)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/261450.png: Predicted in 32.011000 milli-seconds.
+apnea: 29%	(left_x:  158   top_y: -110   width:  512   height: 1208)
+apnea: 94%	(left_x:  362   top_y:    9   width:  238   height:  967)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/17550.png: Predicted in 32.146000 milli-seconds.
+apnea: 54%	(left_x:  113   top_y:  -92   width:  768   height: 1159)
+apnea: 82%	(left_x:  125   top_y:  -73   width:  305   height: 1122)
+apnea: 34%	(left_x:  622   top_y:  -54   width:  229   height: 1084)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/135000.png: Predicted in 32.176000 milli-seconds.
+apnea: 95%	(left_x:  197   top_y:    5   width:  592   height:  976)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/288450.png: Predicted in 32.261000 milli-seconds.
+apnea: 94%	(left_x:  213   top_y:  -35   width:  263   height: 1051)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/125100.png: Predicted in 31.901000 milli-seconds.
+apnea: 98%	(left_x:  237   top_y:  -32   width:  666   height: 1049)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/48600.png: Predicted in 31.699000 milli-seconds.
+apnea: 57%	(left_x:  177   top_y:  -37   width:  795   height: 1055)
+apnea: 34%	(left_x:  193   top_y:   -6   width:  288   height:  987)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/149400.png: Predicted in 31.974000 milli-seconds.
+apnea: 66%	(left_x:  191   top_y:  -13   width:  760   height: 1006)
+apnea: 43%	(left_x:  231   top_y:   -9   width:  235   height:  993)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/191250.png: Predicted in 31.570000 milli-seconds.
+apnea: 94%	(left_x:  168   top_y:  -16   width:  804   height: 1014)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/261900.png: Predicted in 31.366000 milli-seconds.
+apnea: 96%	(left_x:  224   top_y:  -43   width:  528   height: 1070)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/149850.png: Predicted in 32.185000 milli-seconds.
+apnea: 72%	(left_x:  129   top_y:  -14   width:  880   height: 1017)
+apnea: 33%	(left_x:  169   top_y:  -44   width:  220   height: 1067)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/176850.png: Predicted in 32.325000 milli-seconds.
+apnea: 61%	(left_x:  227   top_y: -125   width:  708   height: 1229)
+apnea: 46%	(left_x:  319   top_y:   10   width:  224   height:  948)
+apnea: 44%	(left_x:  704   top_y: -110   width:  230   height: 1196)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/337050.png: Predicted in 31.977000 milli-seconds.
+apnea: 43%	(left_x:  164   top_y:   10   width:  812   height:  967)
+apnea: 72%	(left_x:  170   top_y:  -79   width:  231   height: 1130)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/279450.png: Predicted in 32.145000 milli-seconds.
+apnea: 60%	(left_x:  194   top_y:  -50   width:  750   height: 1092)
+apnea: 70%	(left_x:  203   top_y:  -13   width:  244   height: 1003)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/175950.png: Predicted in 31.787000 milli-seconds.
+apnea: 97%	(left_x:  190   top_y:    1   width:  761   height:  992)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/66150.png: Predicted in 31.912000 milli-seconds.
+apnea: 69%	(left_x:  147   top_y:  -34   width:  853   height: 1054)
+apnea: 26%	(left_x:  203   top_y:   -6   width:  267   height:  991)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/367650.png: Predicted in 32.178000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/289800.png: Predicted in 31.924000 milli-seconds.
+apnea: 86%	(left_x:  228   top_y:   34   width:  194   height:  914)
+apnea: 48%	(left_x:  544   top_y:  -80   width:  239   height: 1137)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/161100.png: Predicted in 32.250000 milli-seconds.
+apnea: 77%	(left_x:  179   top_y:   -7   width:  789   height:  997)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/282150.png: Predicted in 31.990000 milli-seconds.
+apnea: 67%	(left_x:  374   top_y:  -11   width:  199   height:  998)
+apnea: 77%	(left_x:  682   top_y:  -80   width:  287   height: 1149)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/258300.png: Predicted in 32.319000 milli-seconds.
+apnea: 91%	(left_x:  163   top_y:  -64   width:  201   height: 1112)
+apnea: 26%	(left_x:  206   top_y:    1   width:  721   height:  999)
+apnea: 79%	(left_x:  587   top_y:  -55   width:  275   height: 1099)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/158850.png: Predicted in 31.719000 milli-seconds.
+apnea: 98%	(left_x:  190   top_y:   31   width:  749   height:  926)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/268650.png: Predicted in 32.129000 milli-seconds.
+apnea: 37%	(left_x:  136   top_y:   12   width:  249   height:  958)
+apnea: 70%	(left_x:  407   top_y:   -5   width:  193   height:  992)
+apnea: 37%	(left_x:  704   top_y:  -28   width:  250   height: 1047)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/20250.png: Predicted in 31.364000 milli-seconds.
+apnea: 50%	(left_x:  162   top_y: -110   width:  831   height: 1191)
+apnea: 42%	(left_x:  223   top_y:  -41   width:  252   height: 1064)
+apnea: 31%	(left_x:  696   top_y:  -79   width:  243   height: 1141)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/180000.png: Predicted in 32.303000 milli-seconds.
+apnea: 82%	(left_x:  228   top_y:   -5   width:  689   height:  993)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/146700.png: Predicted in 31.605000 milli-seconds.
+apnea: 82%	(left_x:  132   top_y:  -64   width:  298   height: 1101)
+apnea: 77%	(left_x:  659   top_y:  -49   width:  291   height: 1072)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/349200.png: Predicted in 32.097000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/86850.png: Predicted in 32.277000 milli-seconds.
+apnea: 78%	(left_x:  171   top_y:  -83   width:  670   height: 1145)
+apnea: 53%	(left_x:  618   top_y:  -39   width:  235   height: 1064)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/281250.png: Predicted in 31.538000 milli-seconds.
+apnea: 50%	(left_x:  238   top_y:    7   width:  674   height:  976)
+apnea: 84%	(left_x:  378   top_y:   -5   width:  249   height:  994)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/161550.png: Predicted in 31.698000 milli-seconds.
+apnea: 96%	(left_x:   88   top_y:    1   width:  517   height:  978)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/13950.png: Predicted in 32.225000 milli-seconds.
+apnea: 89%	(left_x:  171   top_y:  -36   width:  805   height: 1058)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/29700.png: Predicted in 32.328000 milli-seconds.
+apnea: 92%	(left_x:  219   top_y: -102   width:  713   height: 1190)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/381150.png: Predicted in 31.795000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/297000.png: Predicted in 32.022000 milli-seconds.
+apnea: 93%	(left_x:  201   top_y:  -16   width:  248   height: 1013)
+apnea: 79%	(left_x:  574   top_y:  -63   width:  200   height: 1106)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/12150.png: Predicted in 32.126000 milli-seconds.
+apnea: 100%	(left_x:  241   top_y:  -20   width:  475   height: 1017)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/171000.png: Predicted in 31.819000 milli-seconds.
+apnea: 71%	(left_x:  286   top_y:    9   width:  260   height:  955)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/374400.png: Predicted in 31.808000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/382500.png: Predicted in 32.364000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/17100.png: Predicted in 31.150000 milli-seconds.
+apnea: 81%	(left_x:  144   top_y: -109   width:  260   height: 1188)
+apnea: 43%	(left_x:  193   top_y:    2   width:  743   height:  985)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/325350.png: Predicted in 31.834000 milli-seconds.
+apnea: 59%	(left_x:  243   top_y:  -39   width:  520   height: 1052)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/180450.png: Predicted in 32.175000 milli-seconds.
+apnea: 97%	(left_x:  187   top_y:   19   width:  277   height:  940)
+apnea: 61%	(left_x:  768   top_y:   -4   width:  214   height:  999)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/44550.png: Predicted in 32.344000 milli-seconds.
+apnea: 85%	(left_x:   94   top_y:  -13   width:  946   height: 1021)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/192150.png: Predicted in 32.249000 milli-seconds.
+apnea: 38%	(left_x:  653   top_y:  -59   width:  306   height: 1091)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/138600.png: Predicted in 31.738000 milli-seconds.
+apnea: 68%	(left_x:  202   top_y:  -19   width:  740   height: 1032)
+apnea: 26%	(left_x:  218   top_y:   30   width:  221   height:  916)
+apnea: 41%	(left_x:  561   top_y:  -37   width:  326   height: 1060)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/150750.png: Predicted in 32.223000 milli-seconds.
+apnea: 81%	(left_x:  184   top_y:  -41   width:  195   height: 1064)
+apnea: 67%	(left_x:  570   top_y:  -60   width:  290   height: 1106)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/47250.png: Predicted in 31.916000 milli-seconds.
+apnea: 96%	(left_x:  136   top_y:  -11   width:  865   height: 1006)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/84600.png: Predicted in 32.091000 milli-seconds.
+apnea: 59%	(left_x:  135   top_y:  -13   width:  883   height: 1014)
+apnea: 37%	(left_x:  216   top_y:  -12   width:  242   height:  998)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/292950.png: Predicted in 31.887000 milli-seconds.
+apnea: 74%	(left_x:  180   top_y:   20   width:  629   height:  952)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/67050.png: Predicted in 31.536000 milli-seconds.
+apnea: 60%	(left_x:  165   top_y:  -37   width:  820   height: 1058)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/99000.png: Predicted in 32.225000 milli-seconds.
+apnea: 46%	(left_x:  174   top_y:  -16   width:  803   height: 1016)
+apnea: 33%	(left_x:  657   top_y:  -49   width:  315   height: 1081)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/280800.png: Predicted in 31.111000 milli-seconds.
+apnea: 89%	(left_x:  252   top_y:   26   width:  626   height:  941)
+apnea: 28%	(left_x:  491   top_y:  -37   width:  285   height: 1053)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/220500.png: Predicted in 31.858000 milli-seconds.
+apnea: 80%	(left_x:  150   top_y:  -26   width:  848   height: 1038)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/214200.png: Predicted in 31.859000 milli-seconds.
+apnea: 73%	(left_x:  141   top_y:   -7   width:  869   height:  999)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/358200.png: Predicted in 31.958000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/177750.png: Predicted in 31.196000 milli-seconds.
+apnea: 39%	(left_x:  143   top_y:  -43   width:  867   height: 1069)
+apnea: 43%	(left_x:  207   top_y:   -4   width:  249   height:  986)
+apnea: 27%	(left_x:  691   top_y:  -78   width:  260   height: 1135)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/295650.png: Predicted in 32.463000 milli-seconds.
+apnea: 70%	(left_x:  297   top_y:   57   width:  245   height:  860)
+apnea: 78%	(left_x:  667   top_y:  -16   width:  265   height: 1014)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/148950.png: Predicted in 31.641000 milli-seconds.
+apnea: 81%	(left_x:  154   top_y:  -29   width:  839   height: 1044)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/378000.png: Predicted in 31.630000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/96300.png: Predicted in 31.655000 milli-seconds.
+apnea: 87%	(left_x:  190   top_y:  -19   width:  757   height: 1019)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/258750.png: Predicted in 31.764000 milli-seconds.
+apnea: 58%	(left_x:  137   top_y:  -58   width:  249   height: 1101)
+apnea: 49%	(left_x:  537   top_y:  -34   width:  221   height: 1054)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/342450.png: Predicted in 31.883000 milli-seconds.
+apnea: 98%	(left_x:  157   top_y:  -90   width:  226   height: 1165)
+apnea: 89%	(left_x:  578   top_y:  -21   width:  317   height: 1018)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/58500.png: Predicted in 32.097000 milli-seconds.
+apnea: 99%	(left_x:  120   top_y:  -14   width:  325   height: 1007)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/139050.png: Predicted in 32.118000 milli-seconds.
+apnea: 72%	(left_x:  127   top_y:  -10   width:  590   height: 1006)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/148050.png: Predicted in 32.516000 milli-seconds.
+apnea: 95%	(left_x:  211   top_y:  -42   width:  741   height: 1072)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/131850.png: Predicted in 32.176000 milli-seconds.
+apnea: 82%	(left_x:  224   top_y:   11   width:  565   height:  963)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/229500.png: Predicted in 31.644000 milli-seconds.
+apnea: 57%	(left_x:  128   top_y:   -3   width:  888   height:  991)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/300600.png: Predicted in 31.697000 milli-seconds.
+apnea: 83%	(left_x:  158   top_y:  -36   width:  242   height: 1048)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/339300.png: Predicted in 32.146000 milli-seconds.
+apnea: 61%	(left_x:  181   top_y:  -70   width:  654   height: 1124)
+apnea: 47%	(left_x:  632   top_y: -107   width:  227   height: 1196)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/347400.png: Predicted in 32.179000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/212850.png: Predicted in 31.880000 milli-seconds.
+apnea: 53%	(left_x:  167   top_y:  -27   width:  816   height: 1042)
+apnea: 26%	(left_x:  208   top_y:    1   width:  264   height:  974)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/74250.png: Predicted in 32.449000 milli-seconds.
+apnea: 83%	(left_x:  147   top_y:  -37   width:  844   height: 1060)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/322200.png: Predicted in 31.909000 milli-seconds.
+apnea: 63%	(left_x:  159   top_y:  -32   width:  820   height: 1046)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/97650.png: Predicted in 31.284000 milli-seconds.
+apnea: 67%	(left_x:  142   top_y:  -42   width:  866   height: 1069)
+apnea: 26%	(left_x:  687   top_y:  -51   width:  266   height: 1088)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/88650.png: Predicted in 32.340000 milli-seconds.
+apnea: 49%	(left_x:  125   top_y:   11   width:  898   height:  964)
+apnea: 35%	(left_x:  209   top_y:  -21   width:  249   height: 1020)
+apnea: 30%	(left_x:  684   top_y:  -57   width:  263   height: 1100)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/235350.png: Predicted in 31.735000 milli-seconds.
+apnea: 61%	(left_x:  144   top_y:  -21   width:  863   height: 1029)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/312750.png: Predicted in 31.652000 milli-seconds.
+apnea: 88%	(left_x:  204   top_y:  -32   width:  272   height: 1038)
+apnea: 79%	(left_x:  666   top_y:  -19   width:  250   height: 1024)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/111600.png: Predicted in 32.145000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/25650.png: Predicted in 32.354000 milli-seconds.
+apnea: 95%	(left_x:  172   top_y:  -64   width:  806   height: 1108)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/147600.png: Predicted in 31.622000 milli-seconds.
+apnea: 94%	(left_x:  193   top_y:  -11   width:  291   height: 1003)
+apnea: 43%	(left_x:  788   top_y:  -10   width:  195   height: 1014)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/307800.png: Predicted in 31.787000 milli-seconds.
+apnea: 26%	(left_x:   57   top_y:   15   width:  253   height:  937)
+apnea: 27%	(left_x:  241   top_y:  -41   width:  652   height: 1072)
+apnea: 62%	(left_x:  526   top_y:   25   width:  231   height:  929)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/283050.png: Predicted in 31.692000 milli-seconds.
+apnea: 97%	(left_x:  170   top_y:  -36   width:  238   height: 1057)
+apnea: 96%	(left_x:  593   top_y:  -16   width:  244   height: 1021)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/7650.png: Predicted in 32.101000 milli-seconds.
+apnea: 38%	(left_x:  141   top_y: -100   width:  278   height: 1176)
+apnea: 66%	(left_x:  163   top_y:  -80   width:  661   height: 1137)
+apnea: 26%	(left_x:  791   top_y:  -33   width:  199   height: 1037)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/373950.png: Predicted in 32.154000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/205650.png: Predicted in 31.460000 milli-seconds.
+apnea: 46%	(left_x:  210   top_y:  -54   width:  274   height: 1084)
+apnea: 34%	(left_x:  210   top_y:  -21   width:  733   height: 1023)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/248850.png: Predicted in 31.755000 milli-seconds.
+apnea: 86%	(left_x:  169   top_y:  -25   width:  797   height: 1040)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/277200.png: Predicted in 31.946000 milli-seconds.
+apnea: 39%	(left_x:  160   top_y:   -0   width:  824   height:  994)
+apnea: 87%	(left_x:  161   top_y:  -93   width:  227   height: 1169)
+apnea: 65%	(left_x:  669   top_y:   -9   width:  275   height:  994)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/195750.png: Predicted in 31.294000 milli-seconds.
+apnea: 60%	(left_x:  156   top_y:  -44   width:  540   height: 1067)
+apnea: 27%	(left_x:  355   top_y:    6   width:  263   height:  970)
+apnea: 32%	(left_x:  782   top_y:    3   width:  199   height:  978)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/257850.png: Predicted in 32.556000 milli-seconds.
+apnea: 60%	(left_x:  170   top_y:  -38   width:  676   height: 1064)
+apnea: 30%	(left_x:  631   top_y:  -86   width:  217   height: 1155)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/10800.png: Predicted in 31.699000 milli-seconds.
+apnea: 89%	(left_x:  204   top_y:  -11   width:  741   height: 1004)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/233550.png: Predicted in 32.154000 milli-seconds.
+apnea: 83%	(left_x:  146   top_y:  -30   width:  849   height: 1039)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/224100.png: Predicted in 31.579000 milli-seconds.
+apnea: 61%	(left_x:  147   top_y:  -21   width:  851   height: 1024)
+apnea: 38%	(left_x:  211   top_y:  -22   width:  249   height: 1021)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/168300.png: Predicted in 32.242000 milli-seconds.
+apnea: 71%	(left_x:  152   top_y:   18   width:  842   height:  950)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/279000.png: Predicted in 31.911000 milli-seconds.
+apnea: 71%	(left_x:  134   top_y:  -57   width:  872   height: 1096)
+apnea: 64%	(left_x:  709   top_y:  -73   width:  215   height: 1131)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/265050.png: Predicted in 31.668000 milli-seconds.
+apnea: 93%	(left_x:  243   top_y:  -68   width:  326   height: 1122)
+apnea: 25%	(left_x:  681   top_y:  -92   width:  277   height: 1170)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/292050.png: Predicted in 32.577000 milli-seconds.
+apnea: 31%	(left_x:  205   top_y:    7   width:  721   height:  967)
+apnea: 46%	(left_x:  221   top_y:    9   width:  213   height:  956)
+apnea: 69%	(left_x:  587   top_y:  -39   width:  292   height: 1051)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/32400.png: Predicted in 31.700000 milli-seconds.
+apnea: 89%	(left_x:  135   top_y:  -34   width:  722   height: 1055)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/176400.png: Predicted in 32.219000 milli-seconds.
+apnea: 45%	(left_x:  114   top_y:  -56   width:  628   height: 1095)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/376200.png: Predicted in 32.517000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/235800.png: Predicted in 32.295000 milli-seconds.
+apnea: 74%	(left_x:  149   top_y:  -43   width:  850   height: 1066)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/324450.png: Predicted in 32.060000 milli-seconds.
+apnea: 66%	(left_x:  202   top_y:  -25   width:  595   height: 1026)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/122850.png: Predicted in 32.237000 milli-seconds.
+apnea: 27%	(left_x:  202   top_y:  -78   width:  742   height: 1140)
+apnea: 32%	(left_x:  373   top_y:   49   width:  236   height:  888)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/252450.png: Predicted in 31.533000 milli-seconds.
+apnea: 97%	(left_x:  231   top_y:   13   width:  201   height:  956)
+apnea: 35%	(left_x:  766   top_y:  -15   width:  225   height: 1016)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/130950.png: Predicted in 31.930000 milli-seconds.
+apnea: 85%	(left_x:  255   top_y:  -15   width:  628   height: 1020)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/207450.png: Predicted in 32.404000 milli-seconds.
+apnea: 71%	(left_x:  242   top_y:   -2   width:  671   height:  987)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/311850.png: Predicted in 31.971000 milli-seconds.
+apnea: 49%	(left_x:   70   top_y:   26   width:  263   height:  920)
+apnea: 63%	(left_x:  604   top_y:  -54   width:  244   height: 1093)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/222300.png: Predicted in 32.281000 milli-seconds.
+apnea: 70%	(left_x:  142   top_y:  -36   width:  864   height: 1059)
+apnea: 49%	(left_x:  185   top_y:  -20   width:  196   height: 1013)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/367200.png: Predicted in 32.477000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/130500.png: Predicted in 31.233000 milli-seconds.
+apnea: 38%	(left_x:  141   top_y:  -54   width:  247   height: 1102)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/337950.png: Predicted in 31.574000 milli-seconds.
+apnea: 28%	(left_x:  189   top_y:  -23   width:  295   height: 1017)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/170550.png: Predicted in 31.848000 milli-seconds.
+apnea: 67%	(left_x:  188   top_y:    7   width:  767   height:  966)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/317250.png: Predicted in 32.345000 milli-seconds.
+apnea: 85%	(left_x:  130   top_y:  -16   width:  883   height: 1019)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/304200.png: Predicted in 31.462000 milli-seconds.
+apnea: 91%	(left_x:  196   top_y:  -15   width:  744   height: 1014)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/3150.png: Predicted in 31.770000 milli-seconds.
+apnea: 33%	(left_x:   65   top_y:  -89   width:  253   height: 1136)
+apnea: 46%	(left_x:  277   top_y:  -57   width:  598   height: 1091)
+apnea: 45%	(left_x:  452   top_y:  -42   width:  248   height: 1062)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/228600.png: Predicted in 31.392000 milli-seconds.
+apnea: 63%	(left_x:  137   top_y:   -5   width:  870   height:  996)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/181350.png: Predicted in 31.564000 milli-seconds.
+apnea: 86%	(left_x:  186   top_y:  -32   width:  765   height: 1056)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/117000.png: Predicted in 31.922000 milli-seconds.
+apnea: 56%	(left_x:  181   top_y:  -22   width:  651   height: 1031)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/245700.png: Predicted in 32.275000 milli-seconds.
+apnea: 67%	(left_x:  125   top_y:  -26   width:  893   height: 1034)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/55350.png: Predicted in 32.572000 milli-seconds.
+apnea: 79%	(left_x:  131   top_y:  -38   width:  874   height: 1052)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/284400.png: Predicted in 31.679000 milli-seconds.
+apnea: 46%	(left_x:  192   top_y:  -72   width:  626   height: 1129)
+apnea: 57%	(left_x:  699   top_y:  -56   width:  226   height: 1092)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/286650.png: Predicted in 32.160000 milli-seconds.
+apnea: 67%	(left_x:  256   top_y:   15   width:  345   height:  957)
+apnea: 39%	(left_x:  774   top_y:  -15   width:  211   height: 1019)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/314100.png: Predicted in 32.115000 milli-seconds.
+apnea: 76%	(left_x:  141   top_y:  -42   width:  221   height: 1071)
+apnea: 88%	(left_x:  508   top_y:  -44   width:  319   height: 1063)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/323100.png: Predicted in 31.513000 milli-seconds.
+apnea: 83%	(left_x:  497   top_y:  -41   width:  468   height: 1066)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/152100.png: Predicted in 31.828000 milli-seconds.
+apnea: 42%	(left_x:  112   top_y:  -40   width:  635   height: 1062)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/107100.png: Predicted in 32.263000 milli-seconds.
+apnea: 92%	(left_x:  189   top_y:  -13   width:  628   height: 1002)
+apnea: 34%	(left_x:  611   top_y:  -80   width:  222   height: 1143)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/325800.png: Predicted in 31.663000 milli-seconds.
+apnea: 91%	(left_x:  143   top_y:  -12   width:  856   height: 1012)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/244800.png: Predicted in 31.449000 milli-seconds.
+apnea: 63%	(left_x:  151   top_y:  -22   width:  845   height: 1026)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/219150.png: Predicted in 32.237000 milli-seconds.
+apnea: 71%	(left_x:  138   top_y:  -31   width:  868   height: 1048)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/208800.png: Predicted in 31.650000 milli-seconds.
+apnea: 95%	(left_x:  179   top_y:  -24   width:  316   height: 1030)
+apnea: 90%	(left_x:  740   top_y:  -14   width:  248   height: 1002)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/53100.png: Predicted in 32.358000 milli-seconds.
+apnea: 55%	(left_x:  191   top_y:  -57   width:  768   height: 1102)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/310500.png: Predicted in 31.765000 milli-seconds.
+apnea: 94%	(left_x:  278   top_y:  -24   width:  292   height: 1025)
+apnea: 75%	(left_x:  758   top_y:    1   width:  219   height:  988)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/0.png: Predicted in 31.420000 milli-seconds.
+apnea: 57%	(left_x:  102   top_y:   33   width:  798   height:  911)
+apnea: 41%	(left_x:  133   top_y:  -95   width:  280   height: 1167)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/110700.png: Predicted in 32.529000 milli-seconds.
+apnea: 39%	(left_x:  189   top_y:  -24   width:  285   height: 1030)
+apnea: 61%	(left_x:  668   top_y: -104   width:  305   height: 1194)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/199350.png: Predicted in 31.563000 milli-seconds.
+apnea: 30%	(left_x:  224   top_y:   -5   width:  708   height:  991)
+apnea: 44%	(left_x:  302   top_y:   54   width:  237   height:  873)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/284850.png: Predicted in 32.551000 milli-seconds.
+apnea: 45%	(left_x:  169   top_y:  -73   width:  235   height: 1121)
+apnea: 28%	(left_x:  215   top_y:  -40   width:  557   height: 1064)
+apnea: 40%	(left_x:  791   top_y:  -67   width:  178   height: 1114)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/375750.png: Predicted in 31.571000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/317700.png: Predicted in 32.103000 milli-seconds.
+apnea: 60%	(left_x:  205   top_y:   35   width:  729   height:  912)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/170100.png: Predicted in 32.675000 milli-seconds.
+apnea: 83%	(left_x:  187   top_y:   11   width:  768   height:  970)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/266850.png: Predicted in 31.607000 milli-seconds.
+apnea: 89%	(left_x:  218   top_y:  -26   width:  246   height: 1030)
+apnea: 29%	(left_x:  273   top_y:  -34   width:  599   height: 1045)
+apnea: 47%	(left_x:  613   top_y: -112   width:  244   height: 1205)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/177300.png: Predicted in 32.492000 milli-seconds.
+apnea: 70%	(left_x:  170   top_y:  -13   width:  805   height: 1013)
+apnea: 56%	(left_x:  200   top_y:   23   width:  255   height:  933)
+apnea: 26%	(left_x:  694   top_y:  -75   width:  239   height: 1133)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/48150.png: Predicted in 31.997000 milli-seconds.
+apnea: 61%	(left_x:  152   top_y:  -60   width:  846   height: 1099)
+apnea: 32%	(left_x:  207   top_y:  -45   width:  269   height: 1065)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/15300.png: Predicted in 31.648000 milli-seconds.
+apnea: 43%	(left_x:  155   top_y:  -26   width:  837   height: 1032)
+apnea: 28%	(left_x:  699   top_y:  -49   width:  228   height: 1075)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/143550.png: Predicted in 32.027000 milli-seconds.
+apnea: 90%	(left_x:  210   top_y:  -27   width:  262   height: 1029)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/230850.png: Predicted in 30.890000 milli-seconds.
+apnea: 62%	(left_x:  186   top_y:    3   width:  775   height:  976)
+apnea: 39%	(left_x:  197   top_y:  -58   width:  288   height: 1087)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/350100.png: Predicted in 31.911000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/291600.png: Predicted in 31.445000 milli-seconds.
+apnea: 65%	(left_x:  171   top_y:  -58   width:  805   height: 1103)
+apnea: 88%	(left_x:  177   top_y:  -78   width:  192   height: 1134)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/316800.png: Predicted in 31.360000 milli-seconds.
+apnea: 98%	(left_x:  387   top_y:  -23   width:  547   height: 1026)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/132300.png: Predicted in 31.968000 milli-seconds.
+apnea: 84%	(left_x:  354   top_y:   20   width:  603   height:  948)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/65700.png: Predicted in 32.027000 milli-seconds.
+apnea: 70%	(left_x:  152   top_y:  -55   width:  841   height: 1090)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/164700.png: Predicted in 32.156000 milli-seconds.
+apnea: 86%	(left_x:  169   top_y:  -17   width:  657   height: 1020)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/105750.png: Predicted in 32.295000 milli-seconds.
+apnea: 67%	(left_x:  158   top_y:  -32   width:  830   height: 1049)
+apnea: 35%	(left_x:  172   top_y:  -43   width:  208   height: 1062)
+apnea: 33%	(left_x:  651   top_y:   -7   width:  314   height:  996)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/283950.png: Predicted in 32.248000 milli-seconds.
+apnea: 88%	(left_x:  390   top_y:   17   width:  213   height:  949)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/18900.png: Predicted in 31.812000 milli-seconds.
+apnea: 89%	(left_x:  133   top_y:  -52   width:  876   height: 1084)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/372150.png: Predicted in 32.399000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/23400.png: Predicted in 31.997000 milli-seconds.
+apnea: 79%	(left_x:  117   top_y:  -29   width:  591   height: 1044)
+apnea: 32%	(left_x:  704   top_y:  -50   width:  236   height: 1060)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/45900.png: Predicted in 31.615000 milli-seconds.
+apnea: 97%	(left_x:  640   top_y:  -76   width:  312   height: 1132)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/56250.png: Predicted in 32.281000 milli-seconds.
+apnea: 61%	(left_x:  139   top_y:  -56   width:  874   height: 1091)
+apnea: 30%	(left_x:  187   top_y:  -58   width:  298   height: 1095)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/255150.png: Predicted in 31.859000 milli-seconds.
+apnea: 98%	(left_x:  133   top_y:  -68   width:  289   height: 1121)
+apnea: 63%	(left_x:  769   top_y:   -8   width:  216   height: 1010)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/356850.png: Predicted in 32.546000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/364050.png: Predicted in 31.217000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/122400.png: Predicted in 31.622000 milli-seconds.
+apnea: 80%	(left_x:  138   top_y:  -45   width:  725   height: 1082)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/185850.png: Predicted in 32.063000 milli-seconds.
+apnea: 87%	(left_x:  305   top_y:    8   width:  223   height:  960)
+apnea: 45%	(left_x:  771   top_y:   64   width:  219   height:  853)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/366750.png: Predicted in 32.144000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/132750.png: Predicted in 31.690000 milli-seconds.
+apnea: 92%	(left_x:  198   top_y:  -48   width:  298   height: 1078)
+apnea: 49%	(left_x:  768   top_y:   -8   width:  220   height: 1009)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/90900.png: Predicted in 32.081000 milli-seconds.
+apnea: 97%	(left_x:  209   top_y:   24   width:  709   height:  943)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/6300.png: Predicted in 32.225000 milli-seconds.
+apnea: 83%	(left_x:  271   top_y:   -5   width:  291   height:  986)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/370800.png: Predicted in 31.878000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/89550.png: Predicted in 32.498000 milli-seconds.
+apnea: 70%	(left_x:  171   top_y:   -1   width:  804   height:  985)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/59850.png: Predicted in 31.914000 milli-seconds.
+apnea: 99%	(left_x:  608   top_y:   -6   width:  251   height:  985)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/273150.png: Predicted in 32.186000 milli-seconds.
+apnea: 78%	(left_x:  145   top_y:  -36   width:  241   height: 1056)
+apnea: 40%	(left_x:  473   top_y:  -36   width:  199   height: 1055)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/298350.png: Predicted in 31.375000 milli-seconds.
+apnea: 97%	(left_x:  175   top_y: -107   width:  199   height: 1194)
+apnea: 89%	(left_x:  596   top_y:  -20   width:  300   height: 1020)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/15750.png: Predicted in 31.145000 milli-seconds.
+apnea: 82%	(left_x:  159   top_y:  -13   width:  824   height: 1000)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/130050.png: Predicted in 31.547000 milli-seconds.
+apnea: 89%	(left_x:  212   top_y:    4   width:  725   height:  988)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/210150.png: Predicted in 31.785000 milli-seconds.
+apnea: 62%	(left_x:  195   top_y:  -18   width:  750   height: 1012)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/290700.png: Predicted in 32.458000 milli-seconds.
+apnea: 93%	(left_x:  252   top_y:  -34   width:  669   height: 1058)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/306000.png: Predicted in 31.548000 milli-seconds.
+apnea: 31%	(left_x:  187   top_y:    2   width:  779   height:  981)
+apnea: 77%	(left_x:  194   top_y:  -26   width:  308   height: 1027)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/232650.png: Predicted in 31.825000 milli-seconds.
+apnea: 68%	(left_x:  162   top_y:    8   width:  816   height:  969)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/360000.png: Predicted in 32.013000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/80100.png: Predicted in 31.949000 milli-seconds.
+apnea: 58%	(left_x:  144   top_y:  -43   width:  857   height: 1071)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/241650.png: Predicted in 31.913000 milli-seconds.
+apnea: 70%	(left_x:  148   top_y:   -9   width:  845   height: 1003)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/49050.png: Predicted in 32.432000 milli-seconds.
+apnea: 52%	(left_x:  149   top_y:   -5   width:  842   height:  996)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/377550.png: Predicted in 32.530000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/292500.png: Predicted in 32.301000 milli-seconds.
+apnea: 91%	(left_x:  166   top_y: -106   width:  212   height: 1191)
+apnea: 64%	(left_x:  589   top_y:  -40   width:  281   height: 1057)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/200250.png: Predicted in 31.903000 milli-seconds.
+apnea: 37%	(left_x:  257   top_y:    5   width:  324   height:  968)
+apnea: 60%	(left_x:  680   top_y: -146   width:  285   height: 1278)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/305550.png: Predicted in 31.859000 milli-seconds.
+apnea: 73%	(left_x:  275   top_y:   23   width:  259   height:  933)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/155700.png: Predicted in 31.869000 milli-seconds.
+apnea: 43%	(left_x:  164   top_y:  -96   width:  824   height: 1170)
+apnea: 45%	(left_x:  196   top_y:   -7   width:  272   height:  988)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/127800.png: Predicted in 32.300000 milli-seconds.
+apnea: 99%	(left_x:  223   top_y:   -0   width:  705   height:  990)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/5850.png: Predicted in 31.292000 milli-seconds.
+apnea: 99%	(left_x:  200   top_y:  -69   width:  472   height: 1103)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/106650.png: Predicted in 32.559000 milli-seconds.
+apnea: 39%	(left_x:  176   top_y:  -35   width:  795   height: 1057)
+apnea: 69%	(left_x:  289   top_y:   35   width:  283   height:  909)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/315000.png: Predicted in 31.827000 milli-seconds.
+apnea: 96%	(left_x:  285   top_y:   -3   width:  585   height: 1000)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/154350.png: Predicted in 31.518000 milli-seconds.
+apnea: 35%	(left_x:  190   top_y:  -38   width:  762   height: 1059)
+apnea: 64%	(left_x:  277   top_y:    4   width:  285   height:  972)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/212400.png: Predicted in 31.809000 milli-seconds.
+apnea: 57%	(left_x:  142   top_y:  -48   width:  866   height: 1079)
+apnea: 27%	(left_x:  207   top_y:   10   width:  265   height:  962)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/165150.png: Predicted in 31.921000 milli-seconds.
+apnea: 81%	(left_x:  371   top_y:  -22   width:  223   height: 1015)
+apnea: 45%	(left_x:  685   top_y: -118   width:  272   height: 1224)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/128250.png: Predicted in 31.331000 milli-seconds.
+apnea: 97%	(left_x:  194   top_y:  -59   width:  271   height: 1097)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/302850.png: Predicted in 31.570000 milli-seconds.
+apnea: 34%	(left_x:  189   top_y:   34   width:  763   height:  913)
+apnea: 41%	(left_x:  606   top_y:  -15   width:  273   height: 1016)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/264150.png: Predicted in 32.228000 milli-seconds.
+apnea: 81%	(left_x:  302   top_y:   21   width:  212   height:  931)
+apnea: 71%	(left_x:  624   top_y:  -12   width:  352   height: 1013)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/362250.png: Predicted in 31.456000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/328050.png: Predicted in 31.544000 milli-seconds.
+apnea: 92%	(left_x:  189   top_y:  -40   width:  627   height: 1064)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/30600.png: Predicted in 32.010000 milli-seconds.
+apnea: 80%	(left_x:  109   top_y:  -46   width:  923   height: 1070)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/221850.png: Predicted in 31.854000 milli-seconds.
+apnea: 46%	(left_x:  153   top_y:  -56   width:  696   height: 1101)
+apnea: 74%	(left_x:  689   top_y:  -51   width:  243   height: 1086)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/189450.png: Predicted in 31.544000 milli-seconds.
+apnea: 31%	(left_x:   67   top_y:  -41   width:  240   height: 1054)
+apnea: 86%	(left_x:  525   top_y:  -28   width:  283   height: 1033)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/175500.png: Predicted in 32.754000 milli-seconds.
+apnea: 49%	(left_x:  154   top_y:  -24   width:  691   height: 1038)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/133200.png: Predicted in 31.527000 milli-seconds.
+apnea: 93%	(left_x:  249   top_y:  -62   width:  315   height: 1108)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/345600.png: Predicted in 31.652000 milli-seconds.
+apnea: 89%	(left_x:  152   top_y:  -55   width:  279   height: 1088)
+apnea: 52%	(left_x:  187   top_y:   23   width:  619   height:  942)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/57150.png: Predicted in 32.564000 milli-seconds.
+apnea: 99%	(left_x:  137   top_y:  -55   width:  565   height: 1090)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/259200.png: Predicted in 31.784000 milli-seconds.
+apnea: 81%	(left_x:  301   top_y:   18   width:  213   height:  943)
+apnea: 75%	(left_x:  769   top_y:   -2   width:  215   height:  986)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/262800.png: Predicted in 32.359000 milli-seconds.
+apnea: 94%	(left_x:  210   top_y:   -9   width:  723   height: 1008)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/69750.png: Predicted in 31.972000 milli-seconds.
+apnea: 67%	(left_x:  135   top_y:   -6   width:  877   height: 1002)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/12600.png: Predicted in 31.538000 milli-seconds.
+apnea: 38%	(left_x:  195   top_y:  -40   width:  768   height: 1055)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/247950.png: Predicted in 32.246000 milli-seconds.
+apnea: 91%	(left_x:  173   top_y:  -58   width:  338   height: 1097)
+apnea: 41%	(left_x:  769   top_y:  -45   width:  214   height: 1071)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/82800.png: Predicted in 31.535000 milli-seconds.
+apnea: 59%	(left_x:  143   top_y:    4   width:  858   height:  982)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/333900.png: Predicted in 32.479000 milli-seconds.
+apnea: 81%	(left_x:  161   top_y:  -87   width:  254   height: 1144)
+apnea: 68%	(left_x:  543   top_y:  -72   width:  193   height: 1130)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/27000.png: Predicted in 32.160000 milli-seconds.
+apnea: 83%	(left_x:  197   top_y:  -96   width:  767   height: 1172)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/243900.png: Predicted in 31.932000 milli-seconds.
+apnea: 70%	(left_x:  153   top_y:    3   width:  839   height:  983)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/58050.png: Predicted in 31.862000 milli-seconds.
+apnea: 74%	(left_x:  232   top_y:  -75   width:  688   height: 1116)
+apnea: 72%	(left_x:  636   top_y:   12   width:  312   height:  953)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/364950.png: Predicted in 31.837000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/234900.png: Predicted in 32.031000 milli-seconds.
+apnea: 85%	(left_x:  143   top_y:  -40   width:  857   height: 1065)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/172350.png: Predicted in 31.847000 milli-seconds.
+apnea: 45%	(left_x:  211   top_y:  -36   width:  732   height: 1056)
+apnea: 77%	(left_x:  222   top_y:    4   width:  247   height:  966)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/362700.png: Predicted in 32.228000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/24750.png: Predicted in 32.139000 milli-seconds.
+apnea: 55%	(left_x:  162   top_y:  -42   width:  821   height: 1067)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/103950.png: Predicted in 31.643000 milli-seconds.
+apnea: 71%	(left_x:  393   top_y:  -74   width:  360   height: 1126)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/227250.png: Predicted in 32.076000 milli-seconds.
+apnea: 60%	(left_x:  166   top_y:   -7   width:  813   height:  999)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/159300.png: Predicted in 32.248000 milli-seconds.
+apnea: 35%	(left_x:  158   top_y:  -62   width:  227   height: 1107)
+apnea: 28%	(left_x:  174   top_y:    6   width:  798   height:  970)
+apnea: 72%	(left_x:  678   top_y:  -64   width:  282   height: 1110)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/63450.png: Predicted in 31.732000 milli-seconds.
+apnea: 70%	(left_x:   92   top_y:  -38   width:  965   height: 1059)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/275850.png: Predicted in 31.948000 milli-seconds.
+apnea: 97%	(left_x:  354   top_y:  -55   width:  296   height: 1089)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/185400.png: Predicted in 31.549000 milli-seconds.
+apnea: 83%	(left_x:  129   top_y:  -15   width:  240   height: 1011)
+apnea: 31%	(left_x:  520   top_y:    0   width:  242   height:  983)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/62100.png: Predicted in 31.712000 milli-seconds.
+apnea: 92%	(left_x:  488   top_y:  -63   width:  503   height: 1098)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/333000.png: Predicted in 32.077000 milli-seconds.
+apnea: 98%	(left_x:  272   top_y:  -13   width:  291   height: 1000)
+apnea: 68%	(left_x:  749   top_y:  -19   width:  230   height: 1027)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/114750.png: Predicted in 31.718000 milli-seconds.
+apnea: 76%	(left_x:  206   top_y:  -32   width:  743   height: 1047)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/242550.png: Predicted in 31.959000 milli-seconds.
+apnea: 70%	(left_x:  168   top_y:  -34   width:  812   height: 1053)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/32850.png: Predicted in 32.354000 milli-seconds.
+apnea: 50%	(left_x:   73   top_y:  -17   width:  255   height: 1013)
+apnea: 52%	(left_x:  279   top_y:  -31   width:  600   height: 1041)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/223650.png: Predicted in 32.067000 milli-seconds.
+apnea: 70%	(left_x:  138   top_y:  -23   width:  862   height: 1027)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/154800.png: Predicted in 32.408000 milli-seconds.
+apnea: 93%	(left_x:  184   top_y:  -40   width:  636   height: 1057)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/315450.png: Predicted in 30.873000 milli-seconds.
+apnea: 85%	(left_x:  164   top_y:  -87   width:  204   height: 1155)
+apnea: 94%	(left_x:  557   top_y:  -63   width:  323   height: 1109)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/344250.png: Predicted in 32.038000 milli-seconds.
+apnea: 41%	(left_x:   73   top_y:   -4   width:  234   height:  976)
+apnea: 40%	(left_x:  244   top_y:  -55   width:  647   height: 1095)
+apnea: 83%	(left_x:  505   top_y:  -42   width:  273   height: 1062)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/30150.png: Predicted in 31.036000 milli-seconds.
+apnea: 86%	(left_x:  145   top_y:  -35   width:  852   height: 1054)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/334800.png: Predicted in 31.579000 milli-seconds.
+apnea: 89%	(left_x:  286   top_y:    9   width:  263   height:  956)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/208350.png: Predicted in 32.013000 milli-seconds.
+apnea: 98%	(left_x:  381   top_y:  -17   width:  547   height: 1024)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/41850.png: Predicted in 32.249000 milli-seconds.
+apnea: 86%	(left_x:   43   top_y:  -56   width: 1056   height: 1092)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/295200.png: Predicted in 31.691000 milli-seconds.
+apnea: 65%	(left_x:  151   top_y:  -74   width:  252   height: 1128)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/76500.png: Predicted in 32.105000 milli-seconds.
+apnea: 95%	(left_x:  169   top_y:    2   width:  645   height:  980)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/124650.png: Predicted in 32.116000 milli-seconds.
+apnea: 43%	(left_x:  178   top_y:    7   width:  621   height:  978)
+apnea: 35%	(left_x:  364   top_y:    4   width:  277   height:  974)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/352800.png: Predicted in 31.362000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/209250.png: Predicted in 31.890000 milli-seconds.
+apnea: 95%	(left_x:  257   top_y:  -66   width:  645   height: 1111)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/27450.png: Predicted in 31.825000 milli-seconds.
+apnea: 72%	(left_x:  208   top_y:  -93   width:  739   height: 1162)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/81900.png: Predicted in 32.246000 milli-seconds.
+apnea: 77%	(left_x:  176   top_y:  -34   width:  801   height: 1053)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/268200.png: Predicted in 31.467000 milli-seconds.
+apnea: 91%	(left_x:  214   top_y:   25   width:  226   height:  923)
+apnea: 90%	(left_x:  587   top_y:   -7   width:  242   height:  998)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/68400.png: Predicted in 32.008000 milli-seconds.
+apnea: 72%	(left_x:  145   top_y:  -48   width:  857   height: 1079)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/351450.png: Predicted in 31.993000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/77850.png: Predicted in 32.229000 milli-seconds.
+apnea: 66%	(left_x:  153   top_y:  -27   width:  842   height: 1042)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/36450.png: Predicted in 31.440000 milli-seconds.
+apnea: 50%	(left_x:  137   top_y:  -30   width:  865   height: 1056)
+apnea: 33%	(left_x:  150   top_y:  -44   width:  233   height: 1075)
+apnea: 31%	(left_x:  574   top_y:    4   width:  304   height:  978)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/330750.png: Predicted in 32.410000 milli-seconds.
+apnea: 93%	(left_x:  287   top_y:  -25   width:  284   height: 1028)
+apnea: 89%	(left_x:  694   top_y:  -13   width:  252   height: 1014)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/152550.png: Predicted in 31.482000 milli-seconds.
+apnea: 95%	(left_x:  247   top_y:   13   width:  645   height:  969)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/72000.png: Predicted in 32.009000 milli-seconds.
+apnea: 70%	(left_x:  190   top_y:  -45   width:  766   height: 1078)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/336150.png: Predicted in 32.638000 milli-seconds.
+apnea: 33%	(left_x:  167   top_y:  -54   width:  672   height: 1087)
+apnea: 53%	(left_x:  276   top_y:  -34   width:  269   height: 1045)
+apnea: 87%	(left_x:  688   top_y:    1   width:  242   height:  982)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/357300.png: Predicted in 31.755000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/305100.png: Predicted in 32.275000 milli-seconds.
+apnea: 66%	(left_x:  218   top_y:  -27   width:  268   height: 1030)
+apnea: 41%	(left_x:  768   top_y:  -65   width:  216   height: 1110)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/198450.png: Predicted in 32.163000 milli-seconds.
+apnea: 54%	(left_x:  202   top_y:  -21   width:  744   height: 1021)
+apnea: 31%	(left_x:  280   top_y:    9   width:  266   height:  961)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/166950.png: Predicted in 31.674000 milli-seconds.
+apnea: 89%	(left_x:  185   top_y:  -24   width:  641   height: 1033)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/288000.png: Predicted in 31.978000 milli-seconds.
+apnea: 85%	(left_x:  147   top_y:  -40   width:  844   height: 1070)
+apnea: 45%	(left_x:  718   top_y: -109   width:  222   height: 1196)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/267300.png: Predicted in 31.208000 milli-seconds.
+apnea: 95%	(left_x:  151   top_y:  -86   width:  215   height: 1157)
+apnea: 28%	(left_x:  205   top_y:  -73   width:  741   height: 1131)
+apnea: 42%	(left_x:  716   top_y:  -98   width:  219   height: 1179)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/369450.png: Predicted in 31.887000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/163800.png: Predicted in 32.228000 milli-seconds.
+apnea: 85%	(left_x:  210   top_y:  -21   width:  725   height: 1031)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/327600.png: Predicted in 32.091000 milli-seconds.
+apnea: 85%	(left_x:  324   top_y:  -27   width:  220   height: 1035)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/171900.png: Predicted in 31.816000 milli-seconds.
+apnea: 49%	(left_x:  178   top_y:  -32   width:  787   height: 1045)
+apnea: 31%	(left_x:  706   top_y:  -57   width:  236   height: 1102)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/26550.png: Predicted in 31.979000 milli-seconds.
+apnea: 68%	(left_x:   87   top_y:  -53   width:  965   height: 1089)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/140400.png: Predicted in 32.469000 milli-seconds.
+apnea: 66%	(left_x:  155   top_y:  -18   width:  256   height: 1018)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/382050.png: Predicted in 32.246000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/8100.png: Predicted in 31.912000 milli-seconds.
+apnea: 95%	(left_x:  315   top_y:  -95   width:  674   height: 1168)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/311400.png: Predicted in 31.389000 milli-seconds.
+apnea: 92%	(left_x:  198   top_y:   -4   width:  267   height:  992)
+apnea: 83%	(left_x:  594   top_y:  -61   width:  252   height: 1107)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/363150.png: Predicted in 32.266000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/121050.png: Predicted in 31.386000 milli-seconds.
+apnea: 45%	(left_x:  166   top_y:  -44   width:  661   height: 1076)
+apnea: 40%	(left_x:  297   top_y:   39   width:  242   height:  911)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/370350.png: Predicted in 31.702000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/276300.png: Predicted in 32.264000 milli-seconds.
+apnea: 68%	(left_x:  279   top_y:  -33   width:  605   height: 1046)
+apnea: 46%	(left_x:  294   top_y:   54   width:  265   height:  865)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/211950.png: Predicted in 32.147000 milli-seconds.
+apnea: 64%	(left_x:  182   top_y:   -4   width:  783   height:  990)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/186300.png: Predicted in 31.975000 milli-seconds.
+apnea: 93%	(left_x:  279   top_y:  -43   width:  266   height: 1061)
+apnea: 87%	(left_x:  690   top_y:  -29   width:  264   height: 1035)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/117450.png: Predicted in 32.140000 milli-seconds.
+apnea: 61%	(left_x:  151   top_y:  -76   width:  240   height: 1133)
+apnea: 29%	(left_x:  624   top_y:  -17   width:  377   height: 1014)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/18450.png: Predicted in 32.224000 milli-seconds.
+apnea: 53%	(left_x:  199   top_y:   20   width:  267   height:  940)
+apnea: 79%	(left_x:  561   top_y:   -1   width:  352   height:  984)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/183150.png: Predicted in 31.787000 milli-seconds.
+apnea: 79%	(left_x:  151   top_y:  -52   width:  225   height: 1084)
+apnea: 42%	(left_x:  536   top_y:    8   width:  215   height:  968)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/351900.png: Predicted in 32.286000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/330300.png: Predicted in 31.402000 milli-seconds.
+apnea: 73%	(left_x:  239   top_y:  -86   width:  508   height: 1162)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/203400.png: Predicted in 31.805000 milli-seconds.
+apnea: 33%	(left_x:  192   top_y:  -10   width:  769   height: 1002)
+apnea: 62%	(left_x:  218   top_y:  -45   width:  253   height: 1065)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/381600.png: Predicted in 32.362000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/178650.png: Predicted in 32.562000 milli-seconds.
+apnea: 71%	(left_x:  153   top_y:   -1   width:  833   height:  989)
+apnea: 68%	(left_x:  170   top_y:  -76   width:  213   height: 1124)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/173250.png: Predicted in 31.606000 milli-seconds.
+apnea: 83%	(left_x:  231   top_y:   24   width:  678   height:  942)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/126900.png: Predicted in 31.832000 milli-seconds.
+apnea: 60%	(left_x:  190   top_y:   -9   width:  288   height: 1002)
+apnea: 90%	(left_x:  654   top_y:    1   width:  295   height:  983)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/93600.png: Predicted in 32.452000 milli-seconds.
+apnea: 67%	(left_x:  158   top_y:   -2   width:  821   height:  993)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/326700.png: Predicted in 31.556000 milli-seconds.
+apnea: 77%	(left_x:  171   top_y:  -76   width:  199   height: 1134)
+apnea: 48%	(left_x:  559   top_y:  -19   width:  327   height: 1021)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/14850.png: Predicted in 32.249000 milli-seconds.
+apnea: 70%	(left_x:  165   top_y:    9   width:  808   height:  967)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/77400.png: Predicted in 32.360000 milli-seconds.
+apnea: 59%	(left_x:  139   top_y:  -17   width:  868   height: 1019)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/202500.png: Predicted in 31.251000 milli-seconds.
+apnea: 87%	(left_x:  159   top_y:  -14   width:  814   height: 1014)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/231300.png: Predicted in 31.688000 milli-seconds.
+apnea: 54%	(left_x:  134   top_y:    1   width:  873   height:  982)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/82350.png: Predicted in 31.644000 milli-seconds.
+apnea: 83%	(left_x:  133   top_y:   -8   width:  874   height: 1007)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/163350.png: Predicted in 31.979000 milli-seconds.
+apnea: 49%	(left_x:  169   top_y:  -22   width:  806   height: 1032)
+apnea: 34%	(left_x:  192   top_y:  -33   width:  292   height: 1047)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/61650.png: Predicted in 31.118000 milli-seconds.
+apnea: 80%	(left_x:   80   top_y:  -76   width:  528   height: 1138)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/380700.png: Predicted in 32.165000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/146250.png: Predicted in 32.169000 milli-seconds.
+apnea: 89%	(left_x:  235   top_y:    3   width:  679   height:  977)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/346050.png: Predicted in 32.450000 milli-seconds.
+apnea: 78%	(left_x:   57   top_y:   28   width:  252   height:  932)
+apnea: 69%	(left_x:  641   top_y:  -83   width:  355   height: 1148)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/55800.png: Predicted in 32.153000 milli-seconds.
+apnea: 86%	(left_x:  123   top_y:  -18   width:  900   height: 1023)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/40500.png: Predicted in 32.297000 milli-seconds.
+apnea: 97%	(left_x:  198   top_y:  -71   width:  751   height: 1126)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/373500.png: Predicted in 31.573000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/88200.png: Predicted in 31.519000 milli-seconds.
+apnea: 73%	(left_x:  160   top_y:   -5   width:  824   height: 1001)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/10350.png: Predicted in 32.386000 milli-seconds.
+apnea: 85%	(left_x:  144   top_y:  -26   width:  568   height: 1027)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/193500.png: Predicted in 32.652000 milli-seconds.
+apnea: 81%	(left_x:  160   top_y:  -34   width:  819   height: 1049)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/282600.png: Predicted in 31.772000 milli-seconds.
+apnea: 94%	(left_x:  205   top_y:  -54   width:  285   height: 1082)
+apnea: 94%	(left_x:  694   top_y:   11   width:  228   height:  969)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/98100.png: Predicted in 31.841000 milli-seconds.
+apnea: 91%	(left_x:  210   top_y:  -36   width:  276   height: 1044)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/134100.png: Predicted in 31.922000 milli-seconds.
+apnea: 33%	(left_x:   64   top_y:  -11   width:  255   height:  994)
+apnea: 49%	(left_x:  551   top_y:   -1   width:  348   height:  986)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/331200.png: Predicted in 32.189000 milli-seconds.
+apnea: 92%	(left_x:  212   top_y:   49   width:  216   height:  885)
+apnea: 79%	(left_x:  553   top_y:  -33   width:  231   height: 1048)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/39150.png: Predicted in 31.571000 milli-seconds.
+apnea: 28%	(left_x:  155   top_y:  -49   width:  702   height: 1073)
+apnea: 33%	(left_x:  695   top_y:  -11   width:  219   height: 1000)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/323550.png: Predicted in 31.921000 milli-seconds.
+apnea: 77%	(left_x:  181   top_y:  -19   width:  785   height: 1020)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/125550.png: Predicted in 32.609000 milli-seconds.
+apnea: 91%	(left_x:  169   top_y: -119   width:  209   height: 1218)
+apnea: 88%	(left_x:  655   top_y:  -11   width:  276   height: 1007)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/322650.png: Predicted in 31.214000 milli-seconds.
+apnea: 96%	(left_x:  137   top_y:  -27   width:  564   height: 1037)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/320400.png: Predicted in 32.152000 milli-seconds.
+apnea: 86%	(left_x:  178   top_y:   27   width:  778   height:  933)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/167850.png: Predicted in 32.162000 milli-seconds.
+apnea: 77%	(left_x:  162   top_y:  -69   width:  236   height: 1113)
+apnea: 26%	(left_x:  191   top_y:  -16   width:  764   height: 1017)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/52200.png: Predicted in 31.647000 milli-seconds.
+apnea: 65%	(left_x:  153   top_y:  -10   width:  688   height: 1005)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/263700.png: Predicted in 31.753000 milli-seconds.
+apnea: 92%	(left_x:   81   top_y:   -3   width:  250   height:  995)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/157050.png: Predicted in 32.220000 milli-seconds.
+apnea: 81%	(left_x:  169   top_y:  -27   width:  804   height: 1041)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/61200.png: Predicted in 31.863000 milli-seconds.
+apnea: 97%	(left_x:  209   top_y:  -36   width:  713   height: 1042)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/294750.png: Predicted in 32.358000 milli-seconds.
+apnea: 93%	(left_x:  234   top_y:   44   width:  179   height:  887)
+apnea: 76%	(left_x:  556   top_y:  -54   width:  360   height: 1091)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/49950.png: Predicted in 31.932000 milli-seconds.
+apnea: 95%	(left_x:  225   top_y:  -75   width:  712   height: 1132)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/303750.png: Predicted in 31.904000 milli-seconds.
+apnea: 85%	(left_x:  231   top_y:  -27   width:  676   height: 1038)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/360900.png: Predicted in 32.304000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/339750.png: Predicted in 32.325000 milli-seconds.
+apnea: 93%	(left_x:  168   top_y:  -99   width:  194   height: 1177)
+apnea: 35%	(left_x:  261   top_y:    7   width:  609   height:  970)
+apnea: 74%	(left_x:  585   top_y:  -69   width:  271   height: 1121)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/45450.png: Predicted in 32.370000 milli-seconds.
+apnea: 36%	(left_x:    9   top_y:  -49   width:  503   height: 1079)
+apnea: 79%	(left_x:  145   top_y:    1   width:  244   height:  979)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/97200.png: Predicted in 32.121000 milli-seconds.
+apnea: 89%	(left_x:  203   top_y:   -8   width:  738   height: 1008)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/319500.png: Predicted in 32.320000 milli-seconds.
+apnea: 98%	(left_x:  219   top_y:   56   width:  688   height:  876)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/174600.png: Predicted in 31.518000 milli-seconds.
+apnea: 61%	(left_x:  149   top_y:   -8   width:  845   height: 1004)
+apnea: 48%	(left_x:  194   top_y:   -8   width:  282   height:  996)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/224550.png: Predicted in 32.028000 milli-seconds.
+apnea: 77%	(left_x:  160   top_y:  -36   width:  829   height: 1052)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/63000.png: Predicted in 32.374000 milli-seconds.
+apnea: 73%	(left_x:  149   top_y:  -43   width:  849   height: 1070)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/27900.png: Predicted in 31.618000 milli-seconds.
+apnea: 79%	(left_x:  145   top_y:  -57   width:  857   height: 1093)
+apnea: 28%	(left_x:  201   top_y:  -43   width:  294   height: 1057)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/118800.png: Predicted in 32.020000 milli-seconds.
+apnea: 35%	(left_x:  164   top_y:  -34   width:  823   height: 1049)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/291150.png: Predicted in 32.410000 milli-seconds.
+apnea: 78%	(left_x:  115   top_y:  -48   width:  775   height: 1082)
+apnea: 47%	(left_x:  695   top_y:  -43   width:  200   height: 1068)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/264600.png: Predicted in 31.679000 milli-seconds.
+apnea: 82%	(left_x:  169   top_y:  -60   width:  330   height: 1097)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/253350.png: Predicted in 32.390000 milli-seconds.
+apnea: 89%	(left_x:  167   top_y:  -31   width:  500   height: 1043)
+apnea: 55%	(left_x:  779   top_y:   -0   width:  197   height:  986)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/162450.png: Predicted in 31.574000 milli-seconds.
+apnea: 33%	(left_x:  175   top_y:  -34   width:  806   height: 1058)
+apnea: 58%	(left_x:  244   top_y:   16   width:  217   height:  942)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/318600.png: Predicted in 31.872000 milli-seconds.
+apnea: 69%	(left_x:  137   top_y:   -9   width:  872   height:  998)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/197550.png: Predicted in 32.241000 milli-seconds.
+apnea: 52%	(left_x:  185   top_y:  -15   width:  779   height: 1014)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/109800.png: Predicted in 32.290000 milli-seconds.
+apnea: 82%	(left_x:  147   top_y:   -4   width:  840   height: 1000)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/147150.png: Predicted in 31.812000 milli-seconds.
+apnea: 88%	(left_x:  185   top_y:  -76   width:  785   height: 1137)
+apnea: 43%	(left_x:  682   top_y:  -34   width:  266   height: 1052)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/266400.png: Predicted in 32.486000 milli-seconds.
+apnea: 93%	(left_x:  268   top_y:  -53   width:  274   height: 1095)
+apnea: 79%	(left_x:  752   top_y:  -17   width:  225   height: 1020)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/110250.png: Predicted in 31.349000 milli-seconds.
+apnea: 81%	(left_x:  205   top_y:  -14   width:  728   height: 1009)
+apnea: 26%	(left_x:  586   top_y:   32   width:  298   height:  922)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/217350.png: Predicted in 32.425000 milli-seconds.
+apnea: 48%	(left_x:  285   top_y:   -9   width:  252   height:  996)
+apnea: 56%	(left_x:  667   top_y:   -7   width:  288   height:  998)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/60750.png: Predicted in 31.717000 milli-seconds.
+apnea: 28%	(left_x:  148   top_y:   -8   width:  242   height: 1001)
+apnea: 55%	(left_x:  178   top_y:  -20   width:  799   height: 1007)
+apnea: 70%	(left_x:  662   top_y:  -44   width:  292   height: 1056)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/218250.png: Predicted in 32.078000 milli-seconds.
+apnea: 60%	(left_x:  146   top_y:  -44   width:  852   height: 1067)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/328950.png: Predicted in 32.416000 milli-seconds.
+apnea: 43%	(left_x:  163   top_y:   -6   width:  804   height: 1006)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/184050.png: Predicted in 31.842000 milli-seconds.
+apnea: 28%	(left_x:  221   top_y:  -92   width:  683   height: 1173)
+apnea: 62%	(left_x:  362   top_y:   16   width:  294   height:  951)
+apnea: 53%	(left_x:  795   top_y:  -36   width:  187   height: 1062)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/151200.png: Predicted in 32.846000 milli-seconds.
+apnea: 91%	(left_x:  154   top_y:  -21   width:  835   height: 1030)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/225450.png: Predicted in 31.850000 milli-seconds.
+apnea: 61%	(left_x:  161   top_y:   -0   width:  824   height:  983)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/269550.png: Predicted in 31.473000 milli-seconds.
+apnea: 88%	(left_x:  176   top_y:   13   width:  628   height:  959)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/215550.png: Predicted in 31.886000 milli-seconds.
+apnea: 70%	(left_x:  167   top_y:  -17   width:  816   height: 1020)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/336600.png: Predicted in 32.085000 milli-seconds.
+apnea: 95%	(left_x:  167   top_y:  -71   width:  242   height: 1120)
+apnea: 69%	(left_x:  659   top_y:  -29   width:  296   height: 1038)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/21600.png: Predicted in 31.554000 milli-seconds.
+apnea: 80%	(left_x:  147   top_y:  -86   width:  847   height: 1144)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/267750.png: Predicted in 31.829000 milli-seconds.
+apnea: 92%	(left_x:  239   top_y:   -9   width:  191   height:  989)
+apnea: 64%	(left_x:  468   top_y:  -30   width:  504   height: 1045)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/136350.png: Predicted in 31.806000 milli-seconds.
+apnea: 76%	(left_x:  122   top_y:    3   width:  746   height:  984)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/194850.png: Predicted in 31.417000 milli-seconds.
+apnea: 77%	(left_x:  183   top_y:  -52   width:  786   height: 1089)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/9450.png: Predicted in 31.546000 milli-seconds.
+apnea: 93%	(left_x:  396   top_y:  -84   width:  517   height: 1143)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/296550.png: Predicted in 32.285000 milli-seconds.
+apnea: 96%	(left_x:  182   top_y:  -58   width:  319   height: 1087)
+apnea: 95%	(left_x:  664   top_y:  -12   width:  313   height: 1012)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/357750.png: Predicted in 31.851000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/168750.png: Predicted in 32.036000 milli-seconds.
+apnea: 78%	(left_x:  112   top_y:   -0   width:  607   height:  981)
+apnea: 78%	(left_x:  717   top_y:   -5   width:  199   height:  981)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/378450.png: Predicted in 32.378000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/265500.png: Predicted in 32.287000 milli-seconds.
+apnea: 76%	(left_x:  235   top_y: -102   width:  687   height: 1196)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/115200.png: Predicted in 31.628000 milli-seconds.
+apnea: 49%	(left_x:  191   top_y:   17   width:  775   height:  949)
+apnea: 63%	(left_x:  220   top_y:  -12   width:  240   height:  997)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/139500.png: Predicted in 32.080000 milli-seconds.
+apnea: 49%	(left_x:  214   top_y:  -27   width:  727   height: 1040)
+apnea: 82%	(left_x:  622   top_y:  -10   width:  353   height: 1010)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/274500.png: Predicted in 32.607000 milli-seconds.
+apnea: 71%	(left_x:  324   top_y:   31   width:  229   height:  905)
+apnea: 79%	(left_x:  672   top_y:    7   width:  260   height:  969)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/352350.png: Predicted in 31.857000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/270900.png: Predicted in 32.440000 milli-seconds.
+apnea: 29%	(left_x:  273   top_y: -101   width:  618   height: 1185)
+apnea: 83%	(left_x:  286   top_y:   27   width:  278   height:  915)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/254700.png: Predicted in 31.454000 milli-seconds.
+apnea: 71%	(left_x:  218   top_y:   36   width:  217   height:  911)
+apnea: 99%	(left_x:  571   top_y:  -34   width:  338   height: 1056)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/304650.png: Predicted in 32.604000 milli-seconds.
+apnea: 75%	(left_x:  120   top_y:  -35   width:  906   height: 1053)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/361350.png: Predicted in 32.188000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/256500.png: Predicted in 31.584000 milli-seconds.
+apnea: 99%	(left_x:  199   top_y:  -33   width:  327   height: 1047)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/142650.png: Predicted in 31.865000 milli-seconds.
+apnea: 49%	(left_x:  205   top_y: -131   width:  745   height: 1248)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/42750.png: Predicted in 32.097000 milli-seconds.
+apnea: 94%	(left_x:  183   top_y:  -50   width:  768   height: 1087)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/333450.png: Predicted in 32.325000 milli-seconds.
+apnea: 98%	(left_x:  204   top_y:  -53   width:  285   height: 1081)
+apnea: 86%	(left_x:  684   top_y:  -21   width:  262   height: 1029)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/92250.png: Predicted in 31.131000 milli-seconds.
+apnea: 49%	(left_x:  210   top_y:  -24   width:  735   height: 1033)
+apnea: 49%	(left_x:  671   top_y:  -56   width:  279   height: 1097)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/22050.png: Predicted in 32.326000 milli-seconds.
+apnea: 25%	(left_x:  117   top_y:  -66   width:  771   height: 1100)
+apnea: 60%	(left_x:  184   top_y:  -29   width:  320   height: 1039)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/25200.png: Predicted in 31.788000 milli-seconds.
+apnea: 49%	(left_x:  101   top_y:  -43   width:  948   height: 1064)
+apnea: 40%	(left_x:  197   top_y:  -68   width:  278   height: 1109)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/368100.png: Predicted in 32.383000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/331650.png: Predicted in 32.250000 milli-seconds.
+apnea: 42%	(left_x:  388   top_y:   10   width:  229   height:  962)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/79650.png: Predicted in 31.380000 milli-seconds.
+apnea: 87%	(left_x:  162   top_y:  -45   width:  823   height: 1074)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/265950.png: Predicted in 31.835000 milli-seconds.
+apnea: 94%	(left_x:  191   top_y:  -48   width:  310   height: 1076)
+apnea: 40%	(left_x:  770   top_y:  -27   width:  219   height: 1049)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/365850.png: Predicted in 32.462000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/277650.png: Predicted in 32.204000 milli-seconds.
+apnea: 43%	(left_x:  183   top_y:  -10   width:  782   height: 1004)
+apnea: 52%	(left_x:  202   top_y:  -18   width:  247   height: 1013)
+apnea: 56%	(left_x:  686   top_y:  -47   width:  258   height: 1076)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/299700.png: Predicted in 32.454000 milli-seconds.
+apnea: 36%	(left_x:  217   top_y:  -50   width:  718   height: 1086)
+apnea: 78%	(left_x:  346   top_y:   14   width:  278   height:  956)
+apnea: 55%	(left_x:  714   top_y: -120   width:  233   height: 1230)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/337500.png: Predicted in 32.008000 milli-seconds.
+apnea: 59%	(left_x:  138   top_y:    9   width:  868   height:  966)
+apnea: 26%	(left_x:  170   top_y:  -73   width:  202   height: 1124)
+apnea: 29%	(left_x:  585   top_y:  -20   width:  298   height: 1025)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/153000.png: Predicted in 32.329000 milli-seconds.
+apnea: 45%	(left_x:  544   top_y:  -21   width:  215   height: 1024)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/134550.png: Predicted in 31.795000 milli-seconds.
+apnea: 55%	(left_x:  167   top_y:  -51   width:  666   height: 1083)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/37350.png: Predicted in 31.645000 milli-seconds.
+apnea: 72%	(left_x:  159   top_y:  -46   width:  819   height: 1063)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/327150.png: Predicted in 31.958000 milli-seconds.
+apnea: 26%	(left_x:  183   top_y:   17   width:  634   height:  956)
+apnea: 64%	(left_x:  529   top_y:  -23   width:  221   height: 1026)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/225000.png: Predicted in 31.776000 milli-seconds.
+apnea: 81%	(left_x:  130   top_y:    3   width:  878   height:  980)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/114300.png: Predicted in 32.452000 milli-seconds.
+apnea: 94%	(left_x:  243   top_y:   69   width:  635   height:  853)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/115650.png: Predicted in 32.279000 milli-seconds.
+apnea: 55%	(left_x:  154   top_y:  -75   width:  835   height: 1132)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/379350.png: Predicted in 32.344000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/37800.png: Predicted in 31.934000 milli-seconds.
+apnea: 86%	(left_x:  176   top_y:  -35   width:  788   height: 1048)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/243000.png: Predicted in 31.550000 milli-seconds.
+apnea: 67%	(left_x:  139   top_y:  -53   width:  869   height: 1092)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/315900.png: Predicted in 32.398000 milli-seconds.
+apnea: 78%	(left_x:  151   top_y:  -92   width:  221   height: 1168)
+apnea: 79%	(left_x:  617   top_y:  -58   width:  390   height: 1100)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/83250.png: Predicted in 31.883000 milli-seconds.
+apnea: 81%	(left_x:  103   top_y:  -29   width:  655   height: 1042)
+apnea: 31%	(left_x:  527   top_y:  -37   width:  229   height: 1065)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/85500.png: Predicted in 32.064000 milli-seconds.
+apnea: 28%	(left_x:  199   top_y:  -12   width:  756   height: 1004)
+apnea: 43%	(left_x:  215   top_y:    1   width:  256   height:  982)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/85950.png: Predicted in 31.973000 milli-seconds.
+apnea: 66%	(left_x:  199   top_y:  -71   width:  747   height: 1123)
+apnea: 28%	(left_x:  273   top_y:    2   width:  283   height:  980)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/253800.png: Predicted in 31.619000 milli-seconds.
+apnea: 99%	(left_x:  271   top_y:  -46   width:  267   height: 1073)
+apnea: 85%	(left_x:  769   top_y:  -28   width:  205   height: 1043)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/193950.png: Predicted in 32.532000 milli-seconds.
+apnea: 68%	(left_x:  108   top_y:  -27   width:  932   height: 1037)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/191700.png: Predicted in 31.739000 milli-seconds.
+apnea: 53%	(left_x:  219   top_y:  -15   width:  253   height: 1006)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/91800.png: Predicted in 31.586000 milli-seconds.
+apnea: 98%	(left_x:  205   top_y:   -7   width:  263   height:  991)
+apnea: 80%	(left_x:  634   top_y:  -24   width:  344   height: 1034)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/238050.png: Predicted in 32.236000 milli-seconds.
+apnea: 32%	(left_x:  154   top_y:  -21   width:  845   height: 1028)
+apnea: 44%	(left_x:  201   top_y:  -11   width:  281   height: 1002)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/137250.png: Predicted in 32.136000 milli-seconds.
+apnea: 77%	(left_x:  172   top_y:  -27   width:  340   height: 1031)
+apnea: 36%	(left_x:  623   top_y:  -54   width:  198   height: 1094)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/35100.png: Predicted in 32.416000 milli-seconds.
+apnea: 60%	(left_x:  108   top_y:  -45   width:  936   height: 1066)
+apnea: 42%	(left_x:  193   top_y:    7   width:  290   height:  965)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/43200.png: Predicted in 31.776000 milli-seconds.
+apnea: 68%	(left_x:  156   top_y:  -30   width:  827   height: 1051)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/259650.png: Predicted in 32.615000 milli-seconds.
+apnea: 97%	(left_x:  198   top_y:  -14   width:  319   height: 1011)
+apnea: 38%	(left_x:  765   top_y:    9   width:  227   height:  971)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/95850.png: Predicted in 31.802000 milli-seconds.
+apnea: 63%	(left_x:  129   top_y:  -10   width:  885   height: 1010)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/13500.png: Predicted in 31.803000 milli-seconds.
+apnea: 94%	(left_x:  263   top_y:  -53   width:  634   height: 1087)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/310950.png: Predicted in 32.423000 milli-seconds.
+apnea: 98%	(left_x:  202   top_y:  -20   width:  308   height: 1013)
+apnea: 90%	(left_x:  656   top_y:  -42   width:  337   height: 1073)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/184950.png: Predicted in 31.877000 milli-seconds.
+apnea: 94%	(left_x:  188   top_y:  -33   width:  322   height: 1041)
+apnea: 84%	(left_x:  626   top_y:  -80   width:  208   height: 1147)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/143100.png: Predicted in 32.120000 milli-seconds.
+apnea: 99%	(left_x:  196   top_y:  -13   width:  750   height: 1015)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/23850.png: Predicted in 32.281000 milli-seconds.
+apnea: 79%	(left_x:  146   top_y:  -78   width:  863   height: 1134)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/22950.png: Predicted in 31.861000 milli-seconds.
+apnea: 95%	(left_x:  171   top_y:  -40   width:  802   height: 1071)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/313200.png: Predicted in 31.800000 milli-seconds.
+apnea: 97%	(left_x:  166   top_y:  -65   width:  216   height: 1112)
+apnea: 92%	(left_x:  547   top_y:  -61   width:  363   height: 1107)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/293400.png: Predicted in 31.900000 milli-seconds.
+apnea: 47%	(left_x:  176   top_y:  -29   width:  806   height: 1042)
+apnea: 41%	(left_x:  689   top_y:  -93   width:  263   height: 1168)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/56700.png: Predicted in 32.409000 milli-seconds.
+apnea: 83%	(left_x:  128   top_y:  -43   width:  886   height: 1066)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/51300.png: Predicted in 31.706000 milli-seconds.
+apnea: 45%	(left_x:  177   top_y:  -81   width:  791   height: 1154)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/91350.png: Predicted in 31.972000 milli-seconds.
+apnea: 44%	(left_x:  161   top_y:   11   width:  823   height:  961)
+apnea: 62%	(left_x:  671   top_y:  -39   width:  290   height: 1062)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/108000.png: Predicted in 32.418000 milli-seconds.
+apnea: 53%	(left_x:  196   top_y:  -24   width:  269   height: 1034)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/135450.png: Predicted in 31.508000 milli-seconds.
+apnea: 35%	(left_x:  756   top_y:  -69   width:  236   height: 1122)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/216000.png: Predicted in 31.397000 milli-seconds.
+apnea: 77%	(left_x:  155   top_y:  -42   width:  835   height: 1065)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/244350.png: Predicted in 32.028000 milli-seconds.
+apnea: 75%	(left_x:  155   top_y:  -29   width:  832   height: 1041)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/36000.png: Predicted in 32.307000 milli-seconds.
+apnea: 82%	(left_x:   97   top_y:  -39   width:  812   height: 1061)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/260100.png: Predicted in 31.320000 milli-seconds.
+apnea: 88%	(left_x:  186   top_y:  -88   width:  336   height: 1152)
+apnea: 86%	(left_x:  668   top_y:  -39   width:  313   height: 1068)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/63900.png: Predicted in 32.631000 milli-seconds.
+apnea: 78%	(left_x:  171   top_y:  -65   width:  809   height: 1108)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/13050.png: Predicted in 32.052000 milli-seconds.
+apnea: 97%	(left_x:  292   top_y:   -5   width:  577   height:  986)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/181800.png: Predicted in 32.404000 milli-seconds.
+apnea: 37%	(left_x:  188   top_y:  -84   width:  593   height: 1157)
+apnea: 46%	(left_x:  456   top_y:  -23   width:  210   height: 1020)
+apnea: 53%	(left_x:  795   top_y:  -18   width:  179   height: 1011)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/113850.png: Predicted in 31.869000 milli-seconds.
+apnea: 79%	(left_x:  189   top_y:   18   width:  610   height:  949)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/379800.png: Predicted in 32.127000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/363600.png: Predicted in 32.768000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/288900.png: Predicted in 32.170000 milli-seconds.
+apnea: 85%	(left_x:  345   top_y:  -32   width:  619   height: 1055)
+apnea: 31%	(left_x:  513   top_y:    6   width:  282   height:  981)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/14400.png: Predicted in 32.106000 milli-seconds.
+apnea: 83%	(left_x:  160   top_y:  -46   width:  818   height: 1079)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/171450.png: Predicted in 32.329000 milli-seconds.
+apnea: 82%	(left_x:  229   top_y:   -7   width:  554   height:  995)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/80550.png: Predicted in 31.624000 milli-seconds.
+apnea: 85%	(left_x:  137   top_y:  -11   width:  868   height: 1006)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/66600.png: Predicted in 31.549000 milli-seconds.
+apnea: 62%	(left_x:  161   top_y:  -24   width:  824   height: 1034)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/319050.png: Predicted in 32.169000 milli-seconds.
+apnea: 39%	(left_x:  208   top_y:  -53   width:  737   height: 1087)
+apnea: 53%	(left_x:  268   top_y:   17   width:  287   height:  952)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/343350.png: Predicted in 32.302000 milli-seconds.
+apnea: 86%	(left_x:  230   top_y:  -58   width:  244   height: 1090)
+apnea: 89%	(left_x:  660   top_y:  -21   width:  313   height: 1026)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/112050.png: Predicted in 32.026000 milli-seconds.
+apnea: 80%	(left_x:  277   top_y:   14   width:  287   height:  954)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/359550.png: Predicted in 31.943000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/51750.png: Predicted in 32.504000 milli-seconds.
+apnea: 65%	(left_x:  121   top_y:    6   width:  896   height:  979)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/229950.png: Predicted in 32.072000 milli-seconds.
+apnea: 66%	(left_x:  166   top_y:  -20   width:  662   height: 1033)
+apnea: 29%	(left_x:  262   top_y:   -3   width:  309   height:  994)
+apnea: 42%	(left_x:  791   top_y:   -6   width:  186   height:  991)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/33300.png: Predicted in 32.263000 milli-seconds.
+apnea: 75%	(left_x:  166   top_y:  -51   width:  812   height: 1087)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/99900.png: Predicted in 31.912000 milli-seconds.
+apnea: 75%	(left_x:  205   top_y:  -73   width:  743   height: 1122)
+apnea: 32%	(left_x:  293   top_y:  -12   width:  272   height:  999)
+apnea: 34%	(left_x:  709   top_y:  -85   width:  223   height: 1151)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/45000.png: Predicted in 32.223000 milli-seconds.
+apnea: 98%	(left_x:  208   top_y:  -17   width:  715   height: 1021)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/213750.png: Predicted in 32.231000 milli-seconds.
+apnea: 62%	(left_x:  139   top_y:  -45   width:  870   height: 1080)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/251100.png: Predicted in 32.174000 milli-seconds.
+apnea: 30%	(left_x:  194   top_y:  -63   width:  274   height: 1099)
+apnea: 65%	(left_x:  208   top_y:  -29   width:  729   height: 1050)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/131400.png: Predicted in 31.989000 milli-seconds.
+apnea: 32%	(left_x:  297   top_y:   48   width:  249   height:  895)
+apnea: 64%	(left_x:  750   top_y:  -57   width:  227   height: 1097)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/186750.png: Predicted in 31.603000 milli-seconds.
+apnea: 50%	(left_x:  206   top_y:   26   width:  252   height:  927)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/169650.png: Predicted in 32.036000 milli-seconds.
+apnea: 30%	(left_x:  147   top_y:  -46   width:  225   height: 1076)
+apnea: 59%	(left_x:  164   top_y:    9   width:  814   height:  972)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/222750.png: Predicted in 32.173000 milli-seconds.
+apnea: 82%	(left_x:  164   top_y:  -16   width:  810   height: 1013)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/156600.png: Predicted in 32.184000 milli-seconds.
+apnea: 60%	(left_x:  223   top_y:  -12   width:  692   height: 1007)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/219600.png: Predicted in 31.673000 milli-seconds.
+apnea: 70%	(left_x:  161   top_y:   -7   width:  818   height: 1002)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/102150.png: Predicted in 32.023000 milli-seconds.
+apnea: 74%	(left_x:  147   top_y:  -78   width:  843   height: 1141)
+apnea: 40%	(left_x:  170   top_y:  -33   width:  204   height: 1039)
+apnea: 50%	(left_x:  693   top_y:  -58   width:  250   height: 1100)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/270000.png: Predicted in 31.539000 milli-seconds.
+apnea: 91%	(left_x:  279   top_y:    2   width:  595   height:  981)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/243450.png: Predicted in 31.877000 milli-seconds.
+apnea: 68%	(left_x:  199   top_y:  -56   width:  292   height: 1090)
+apnea: 62%	(left_x:  637   top_y:  -23   width:  336   height: 1026)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/263250.png: Predicted in 32.467000 milli-seconds.
+apnea: 64%	(left_x:  201   top_y:   25   width:  590   height:  933)
+apnea: 71%	(left_x:  611   top_y:  -48   width:  216   height: 1085)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/31950.png: Predicted in 32.087000 milli-seconds.
+apnea: 79%	(left_x:   96   top_y:  -29   width:  940   height: 1045)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/220050.png: Predicted in 31.845000 milli-seconds.
+apnea: 74%	(left_x:  164   top_y:  -26   width:  815   height: 1040)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/371700.png: Predicted in 32.476000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/287550.png: Predicted in 32.201000 milli-seconds.
+apnea: 94%	(left_x:  206   top_y:  -36   width:  247   height: 1047)
+apnea: 50%	(left_x:  211   top_y:  -55   width:  731   height: 1091)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/250650.png: Predicted in 31.621000 milli-seconds.
+apnea: 74%	(left_x:  227   top_y:  -60   width:  710   height: 1110)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/368550.png: Predicted in 32.449000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/178200.png: Predicted in 31.645000 milli-seconds.
+apnea: 80%	(left_x:  209   top_y:  -84   width:  281   height: 1137)
+apnea: 41%	(left_x:  691   top_y:  -95   width:  225   height: 1175)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/196650.png: Predicted in 32.338000 milli-seconds.
+apnea: 67%	(left_x:  188   top_y:  -12   width:  765   height: 1005)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/349650.png: Predicted in 32.078000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/301050.png: Predicted in 31.728000 milli-seconds.
+apnea: 36%	(left_x:  182   top_y:  -75   width:  777   height: 1135)
+apnea: 68%	(left_x:  344   top_y:  -12   width:  293   height:  998)
+apnea: 38%	(left_x:  710   top_y: -100   width:  233   height: 1195)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/201150.png: Predicted in 32.512000 milli-seconds.
+apnea: 71%	(left_x:  162   top_y:  -12   width:  821   height: 1011)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/156150.png: Predicted in 32.285000 milli-seconds.
+apnea: 86%	(left_x:  200   top_y:  -12   width:  745   height: 1007)
+apnea: 27%	(left_x:  251   top_y:   -6   width:  338   height:  995)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/204300.png: Predicted in 32.118000 milli-seconds.
+apnea: 65%	(left_x:  192   top_y:  -53   width:  610   height: 1089)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/374850.png: Predicted in 32.097000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/40950.png: Predicted in 31.919000 milli-seconds.
+apnea: 90%	(left_x:  162   top_y:  -52   width:  816   height: 1088)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/257400.png: Predicted in 32.490000 milli-seconds.
+apnea: 48%	(left_x:   76   top_y:   25   width:  206   height:  924)
+apnea: 40%	(left_x:  238   top_y:   17   width:  650   height:  966)
+apnea: 37%	(left_x:  450   top_y:    9   width:  257   height:  972)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/369000.png: Predicted in 31.954000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/89100.png: Predicted in 32.304000 milli-seconds.
+apnea: 75%	(left_x:  156   top_y:  -27   width:  833   height: 1038)
+apnea: 30%	(left_x:  206   top_y:   11   width:  275   height:  955)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/248400.png: Predicted in 31.993000 milli-seconds.
+apnea: 99%	(left_x:  226   top_y:   -5   width:  692   height:  995)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/227700.png: Predicted in 32.191000 milli-seconds.
+apnea: 84%	(left_x:  153   top_y:   -8   width:  831   height:  995)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/100350.png: Predicted in 32.226000 milli-seconds.
+apnea: 29%	(left_x:  223   top_y:   20   width:  214   height:  936)
+apnea: 64%	(left_x:  236   top_y:    4   width:  653   height:  987)
+apnea: 31%	(left_x:  569   top_y:  -43   width:  294   height: 1072)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/94500.png: Predicted in 32.487000 milli-seconds.
+apnea: 98%	(left_x:  190   top_y:   -4   width:  629   height:  993)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/71100.png: Predicted in 32.358000 milli-seconds.
+apnea: 67%	(left_x:  153   top_y:  -10   width:  835   height: 1005)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/103050.png: Predicted in 31.733000 milli-seconds.
+apnea: 81%	(left_x:   74   top_y:  -12   width:  556   height: 1001)
+apnea: 37%	(left_x:  692   top_y:  -16   width:  268   height: 1018)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/272700.png: Predicted in 32.386000 milli-seconds.
+apnea: 98%	(left_x:  192   top_y:  -56   width:  270   height: 1097)
+apnea: 93%	(left_x:  615   top_y:  -30   width:  262   height: 1047)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/78750.png: Predicted in 31.932000 milli-seconds.
+apnea: 66%	(left_x:  151   top_y:  -15   width:  847   height: 1016)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/65250.png: Predicted in 32.305000 milli-seconds.
+apnea: 74%	(left_x:  112   top_y:  -25   width:  925   height: 1035)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/1800.png: Predicted in 32.216000 milli-seconds.
+apnea: 92%	(left_x:  117   top_y:  -50   width:  767   height: 1067)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/150300.png: Predicted in 32.000000 milli-seconds.
+apnea: 93%	(left_x:  187   top_y:  -33   width:  754   height: 1055)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/124200.png: Predicted in 32.032000 milli-seconds.
+apnea: 79%	(left_x:  259   top_y:    3   width:  633   height:  980)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/72450.png: Predicted in 32.171000 milli-seconds.
+apnea: 57%	(left_x:  169   top_y:  -22   width:  803   height: 1033)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/340200.png: Predicted in 31.560000 milli-seconds.
+apnea: 75%	(left_x:  148   top_y:  -53   width:  217   height: 1086)
+apnea: 80%	(left_x:  476   top_y:  -14   width:  214   height: 1009)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/345150.png: Predicted in 32.128000 milli-seconds.
+apnea: 83%	(left_x:  301   top_y:   28   width:  226   height:  926)
+apnea: 84%	(left_x:  688   top_y:  -47   width:  255   height: 1079)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/193050.png: Predicted in 32.142000 milli-seconds.
+apnea: 41%	(left_x:  191   top_y:    1   width:  759   height:  976)
+apnea: 37%	(left_x:  203   top_y:   19   width:  262   height:  941)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/210600.png: Predicted in 32.336000 milli-seconds.
+apnea: 75%	(left_x:  118   top_y:  -24   width:  904   height: 1032)
+apnea: 25%	(left_x:  167   top_y:  -58   width:  218   height: 1085)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/2700.png: Predicted in 32.464000 milli-seconds.
+apnea: 72%	(left_x:  211   top_y:  -45   width:  706   height: 1053)
+apnea: 75%	(left_x:  216   top_y:  -59   width:  270   height: 1087)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/274950.png: Predicted in 32.265000 milli-seconds.
+apnea: 71%	(left_x:  148   top_y:  -55   width:  272   height: 1083)
+apnea: 33%	(left_x:  219   top_y:   17   width:  558   height:  945)
+apnea: 57%	(left_x:  530   top_y:  -43   width:  228   height: 1067)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/107550.png: Predicted in 31.932000 milli-seconds.
+apnea: 29%	(left_x:  109   top_y:   -9   width:  927   height: 1004)
+apnea: 65%	(left_x:  144   top_y:  -33   width:  217   height: 1057)
+apnea: 77%	(left_x:  563   top_y:   -3   width:  355   height:  994)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/46800.png: Predicted in 32.304000 milli-seconds.
+apnea: 76%	(left_x:  205   top_y:  -58   width:  284   height: 1093)
+apnea: 73%	(left_x:  642   top_y:   19   width:  324   height:  942)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/355500.png: Predicted in 31.753000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/900.png: Predicted in 32.372000 milli-seconds.
+apnea: 51%	(left_x:  203   top_y:  -48   width:  752   height: 1071)
+apnea: 37%	(left_x:  641   top_y:  -24   width:  323   height: 1027)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/113400.png: Predicted in 32.044000 milli-seconds.
+apnea: 91%	(left_x:  181   top_y:  -16   width:  778   height: 1019)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/307350.png: Predicted in 32.342000 milli-seconds.
+apnea: 62%	(left_x:  251   top_y:  -28   width:  628   height: 1045)
+apnea: 72%	(left_x:  508   top_y:  -80   width:  280   height: 1138)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/183600.png: Predicted in 32.082000 milli-seconds.
+apnea: 90%	(left_x:  267   top_y:   19   width:  602   height:  949)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/375300.png: Predicted in 32.484000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/324000.png: Predicted in 32.460000 milli-seconds.
+apnea: 41%	(left_x:  151   top_y:  -14   width:  851   height: 1018)
+apnea: 42%	(left_x:  202   top_y:   18   width:  256   height:  943)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/159750.png: Predicted in 31.934000 milli-seconds.
+apnea: 55%	(left_x:  157   top_y:  -32   width:  841   height: 1044)
+apnea: 67%	(left_x:  208   top_y:   -3   width:  247   height:  981)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/59400.png: Predicted in 32.431000 milli-seconds.
+apnea: 57%	(left_x:  208   top_y:  -52   width:  315   height: 1074)
+apnea: 87%	(left_x:  217   top_y:   15   width:  696   height:  946)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/246600.png: Predicted in 32.280000 milli-seconds.
+apnea: 81%	(left_x:  156   top_y:  -35   width:  830   height: 1055)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/34650.png: Predicted in 31.252000 milli-seconds.
+apnea: 66%	(left_x:  164   top_y:  -41   width:  674   height: 1058)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/321300.png: Predicted in 32.565000 milli-seconds.
+apnea: 75%	(left_x:  142   top_y:  -19   width:  868   height: 1024)
+apnea: 73%	(left_x:  168   top_y:  -43   width:  231   height: 1065)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/283500.png: Predicted in 32.048000 milli-seconds.
+apnea: 70%	(left_x:   86   top_y:   -2   width:  236   height:  970)
+apnea: 81%	(left_x:  517   top_y:  -28   width:  223   height: 1045)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/145800.png: Predicted in 31.814000 milli-seconds.
+apnea: 30%	(left_x:  319   top_y:   55   width:  197   height:  867)
+apnea: 45%	(left_x:  775   top_y:  -31   width:  213   height: 1047)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/274050.png: Predicted in 32.098000 milli-seconds.
+apnea: 34%	(left_x:   76   top_y:  -27   width:  244   height: 1024)
+apnea: 83%	(left_x:  438   top_y:  -10   width:  270   height: 1003)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/328500.png: Predicted in 32.054000 milli-seconds.
+apnea: 89%	(left_x:  172   top_y:  -27   width:  795   height: 1038)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/306450.png: Predicted in 32.356000 milli-seconds.
+apnea: 31%	(left_x:  211   top_y:  -36   width:  268   height: 1049)
+apnea: 84%	(left_x:  602   top_y:  -60   width:  259   height: 1101)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/104850.png: Predicted in 32.195000 milli-seconds.
+apnea: 49%	(left_x:  110   top_y:  -33   width:  931   height: 1052)
+apnea: 76%	(left_x:  160   top_y:  -98   width:  203   height: 1185)
+apnea: 69%	(left_x:  689   top_y:  -81   width:  270   height: 1151)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/9900.png: Predicted in 32.550000 milli-seconds.
+apnea: 33%	(left_x:  161   top_y:  -42   width:  838   height: 1073)
+apnea: 46%	(left_x:  577   top_y:   36   width:  323   height:  917)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/312300.png: Predicted in 32.127000 milli-seconds.
+apnea: 41%	(left_x:  140   top_y:  -51   width:  855   height: 1086)
+apnea: 46%	(left_x:  756   top_y:   11   width:  220   height:  959)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/241200.png: Predicted in 32.368000 milli-seconds.
+apnea: 67%	(left_x:  157   top_y:  -63   width:  828   height: 1110)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/301500.png: Predicted in 31.845000 milli-seconds.
+apnea: 92%	(left_x:  183   top_y:  -32   width:  781   height: 1050)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/200700.png: Predicted in 31.581000 milli-seconds.
+apnea: 72%	(left_x:  206   top_y:  -54   width:  745   height: 1089)
+apnea: 49%	(left_x:  206   top_y:  -21   width:  273   height: 1015)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/246150.png: Predicted in 31.883000 milli-seconds.
+apnea: 69%	(left_x:  115   top_y:   -9   width:  917   height: 1003)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/334350.png: Predicted in 32.378000 milli-seconds.
+apnea: 93%	(left_x:  377   top_y:    8   width:  214   height:  964)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/87750.png: Predicted in 32.204000 milli-seconds.
+apnea: 80%	(left_x:  170   top_y:  -29   width:  803   height: 1043)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/355950.png: Predicted in 31.619000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/308700.png: Predicted in 31.823000 milli-seconds.
+apnea: 76%	(left_x:  261   top_y:   -8   width:  342   height:  993)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/116550.png: Predicted in 32.336000 milli-seconds.
+apnea: 76%	(left_x:  155   top_y:  -29   width:  822   height: 1039)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/179100.png: Predicted in 32.299000 milli-seconds.
+apnea: 59%	(left_x:  152   top_y:  -20   width:  843   height: 1027)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/182250.png: Predicted in 31.973000 milli-seconds.
+apnea: 98%	(left_x:  283   top_y:  -19   width:  254   height: 1013)
+apnea: 90%	(left_x:  672   top_y:   43   width:  269   height:  899)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/373050.png: Predicted in 32.175000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/209700.png: Predicted in 32.616000 milli-seconds.
+apnea: 81%	(left_x:  188   top_y:  -19   width:  772   height: 1017)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/354150.png: Predicted in 32.318000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/309600.png: Predicted in 31.582000 milli-seconds.
+apnea: 69%	(left_x:  176   top_y:  -18   width:  782   height: 1023)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/121950.png: Predicted in 31.677000 milli-seconds.
+apnea: 72%	(left_x:  181   top_y:  -52   width:  776   height: 1088)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/285750.png: Predicted in 32.252000 milli-seconds.
+apnea: 72%	(left_x:  239   top_y:  -17   width:  669   height: 1021)
+apnea: 42%	(left_x:  240   top_y:  -27   width:  227   height: 1021)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/287100.png: Predicted in 32.181000 milli-seconds.
+apnea: 98%	(left_x:  266   top_y:    2   width:  322   height:  977)
+apnea: 86%	(left_x:  712   top_y: -119   width:  232   height: 1226)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/202950.png: Predicted in 32.301000 milli-seconds.
+apnea: 80%	(left_x:  180   top_y:    9   width:  782   height:  969)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/340650.png: Predicted in 32.028000 milli-seconds.
+apnea: 26%	(left_x:  219   top_y:  -27   width:  722   height: 1039)
+apnea: 84%	(left_x:  359   top_y:    4   width:  269   height:  972)
+apnea: 55%	(left_x:  727   top_y:  -94   width:  205   height: 1175)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/245250.png: Predicted in 31.781000 milli-seconds.
+apnea: 70%	(left_x:  126   top_y:  -10   width:  891   height: 1006)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/21150.png: Predicted in 31.726000 milli-seconds.
+apnea: 31%	(left_x:  106   top_y:  -63   width:  936   height: 1102)
+apnea: 56%	(left_x:  148   top_y: -139   width:  259   height: 1255)
+apnea: 33%	(left_x:  666   top_y:  -48   width:  289   height: 1079)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/350550.png: Predicted in 31.850000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/206100.png: Predicted in 31.728000 milli-seconds.
+apnea: 82%	(left_x:  162   top_y:  -53   width:  816   height: 1086)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/64350.png: Predicted in 32.387000 milli-seconds.
+apnea: 80%	(left_x:  123   top_y:  -36   width:  898   height: 1055)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/98550.png: Predicted in 32.493000 milli-seconds.
+apnea: 85%	(left_x:  206   top_y:  -25   width:  595   height: 1033)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/182700.png: Predicted in 31.730000 milli-seconds.
+apnea: 94%	(left_x:  180   top_y:  -30   width:  212   height: 1034)
+apnea: 63%	(left_x:  618   top_y:  -50   width:  246   height: 1075)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/144000.png: Predicted in 32.171000 milli-seconds.
+apnea: 92%	(left_x:  233   top_y:    8   width:  539   height:  967)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/377100.png: Predicted in 31.789000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/321750.png: Predicted in 31.556000 milli-seconds.
+apnea: 72%	(left_x:  159   top_y:  -27   width:  817   height: 1032)
+apnea: 41%	(left_x:  263   top_y:  -18   width:  309   height: 1015)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/346950.png: Predicted in 32.149000 milli-seconds.
+apnea: 97%	(left_x:   90   top_y: -111   width:  511   height: 1224)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/39600.png: Predicted in 32.356000 milli-seconds.
+apnea: 86%	(left_x:   64   top_y:  -25   width: 1017   height: 1030)
+apnea: 49%	(left_x:  157   top_y:  -69   width:  232   height: 1113)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/120150.png: Predicted in 31.844000 milli-seconds.
+apnea: 97%	(left_x:  248   top_y:   13   width:  647   height:  963)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/70650.png: Predicted in 31.947000 milli-seconds.
+apnea: 90%	(left_x:  227   top_y:  -32   width:  703   height: 1052)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/148500.png: Predicted in 32.380000 milli-seconds.
+apnea: 76%	(left_x:  138   top_y:  -19   width:  730   height: 1022)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/359100.png: Predicted in 32.294000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/108900.png: Predicted in 31.862000 milli-seconds.
+apnea: 50%	(left_x:  214   top_y:    9   width:  553   height:  967)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/166050.png: Predicted in 32.218000 milli-seconds.
+apnea: 36%	(left_x:  179   top_y:  -72   width:  654   height: 1127)
+apnea: 29%	(left_x:  232   top_y:  -16   width:  236   height: 1011)
+apnea: 25%	(left_x:  625   top_y:  -45   width:  218   height: 1076)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/360450.png: Predicted in 31.616000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/236700.png: Predicted in 32.011000 milli-seconds.
+apnea: 71%	(left_x:  124   top_y:   -8   width:  894   height: 1002)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/120600.png: Predicted in 32.317000 milli-seconds.
+apnea: 65%	(left_x:  157   top_y:  -69   width:  199   height: 1123)
+apnea: 40%	(left_x:  570   top_y:   39   width:  305   height:  909)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/344700.png: Predicted in 31.375000 milli-seconds.
+apnea: 28%	(left_x:  232   top_y:  -36   width:  671   height: 1060)
+apnea: 40%	(left_x:  530   top_y:    1   width:  229   height:  972)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/239850.png: Predicted in 31.820000 milli-seconds.
+apnea: 53%	(left_x:  141   top_y:   -6   width:  864   height:  996)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/28350.png: Predicted in 32.308000 milli-seconds.
+apnea: 95%	(left_x:  189   top_y:   -4   width:  753   height:  991)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/135900.png: Predicted in 31.697000 milli-seconds.
+apnea: 99%	(left_x:  240   top_y:   14   width:  659   height:  961)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/69300.png: Predicted in 31.971000 milli-seconds.
+apnea: 78%	(left_x:  190   top_y:  -18   width:  769   height: 1018)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/57600.png: Predicted in 32.228000 milli-seconds.
+apnea: 56%	(left_x:  285   top_y:   -9   width:  737   height: 1008)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/238500.png: Predicted in 31.849000 milli-seconds.
+apnea: 79%	(left_x:  182   top_y:  -32   width:  782   height: 1046)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/353700.png: Predicted in 32.287000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/254250.png: Predicted in 32.123000 milli-seconds.
+apnea: 98%	(left_x:  231   top_y:  -39   width:  258   height: 1056)
+apnea: 31%	(left_x:  710   top_y:  -46   width:  224   height: 1070)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/76950.png: Predicted in 31.961000 milli-seconds.
+apnea: 65%	(left_x:  496   top_y:   25   width:  462   height:  925)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/214650.png: Predicted in 32.223000 milli-seconds.
+apnea: 71%	(left_x:  149   top_y:  -23   width:  848   height: 1030)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/67950.png: Predicted in 32.240000 milli-seconds.
+apnea: 60%	(left_x:  184   top_y:  -27   width:  781   height: 1041)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/144900.png: Predicted in 32.402000 milli-seconds.
+apnea: 66%	(left_x:  121   top_y:  -31   width:  602   height: 1047)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/239400.png: Predicted in 32.011000 milli-seconds.
+apnea: 71%	(left_x:  152   top_y:  -37   width:  840   height: 1056)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/195300.png: Predicted in 32.348000 milli-seconds.
+apnea: 69%	(left_x:  162   top_y:  -33   width:  821   height: 1050)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/342000.png: Predicted in 32.261000 milli-seconds.
+apnea: 96%	(left_x:  245   top_y:  -49   width:  238   height: 1078)
+apnea: 86%	(left_x:  667   top_y:   10   width:  244   height:  965)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/376650.png: Predicted in 31.860000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/22500.png: Predicted in 31.530000 milli-seconds.
+apnea: 91%	(left_x:  153   top_y:  -41   width:  693   height: 1062)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/187650.png: Predicted in 32.440000 milli-seconds.
+apnea: 36%	(left_x:  150   top_y: -102   width:  550   height: 1184)
+apnea: 88%	(left_x:  350   top_y:  -19   width:  287   height: 1015)
+apnea: 55%	(left_x:  772   top_y:  -27   width:  210   height: 1036)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/252900.png: Predicted in 31.622000 milli-seconds.
+apnea: 64%	(left_x:  232   top_y:   -3   width:  250   height:  979)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/353250.png: Predicted in 31.663000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/100800.png: Predicted in 32.211000 milli-seconds.
+apnea: 60%	(left_x:  150   top_y:  -41   width:  226   height: 1073)
+apnea: 54%	(left_x:  536   top_y:  -34   width:  224   height: 1040)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/108450.png: Predicted in 31.958000 milli-seconds.
+apnea: 53%	(left_x:  203   top_y:  -52   width:  738   height: 1087)
+apnea: 28%	(left_x:  303   top_y:   62   width:  247   height:  860)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/355050.png: Predicted in 32.596000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/226800.png: Predicted in 32.382000 milli-seconds.
+apnea: 66%	(left_x:  141   top_y:  -18   width:  864   height: 1019)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/86400.png: Predicted in 31.578000 milli-seconds.
+apnea: 79%	(left_x:  206   top_y:  -20   width:  263   height: 1021)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/380250.png: Predicted in 32.246000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/332100.png: Predicted in 32.035000 milli-seconds.
+apnea: 78%	(left_x:  261   top_y:  -22   width:  478   height: 1027)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/237600.png: Predicted in 32.109000 milli-seconds.
+apnea: 67%	(left_x:  145   top_y:    4   width:  857   height:  975)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/234450.png: Predicted in 32.339000 milli-seconds.
+apnea: 53%	(left_x:  188   top_y:  -53   width:  772   height: 1088)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/162000.png: Predicted in 31.984000 milli-seconds.
+apnea: 94%	(left_x:  203   top_y:  -88   width:  756   height: 1170)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/286200.png: Predicted in 32.355000 milli-seconds.
+apnea: 65%	(left_x:  183   top_y:  -25   width:  770   height: 1042)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/220950.png: Predicted in 32.202000 milli-seconds.
+apnea: 47%	(left_x:  155   top_y:   -8   width:  841   height:  999)
+apnea: 44%	(left_x:  205   top_y:    1   width:  266   height:  974)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/236250.png: Predicted in 31.938000 milli-seconds.
+apnea: 66%	(left_x:  145   top_y:  -32   width:  853   height: 1047)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/278100.png: Predicted in 32.012000 milli-seconds.
+apnea: 79%	(left_x:  159   top_y:  -35   width:  820   height: 1053)
+apnea: 76%	(left_x:  212   top_y:  -60   width:  230   height: 1092)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/335700.png: Predicted in 32.213000 milli-seconds.
+apnea: 54%	(left_x:  381   top_y:   13   width:  216   height:  954)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/351000.png: Predicted in 31.879000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/33750.png: Predicted in 32.483000 milli-seconds.
+apnea: 83%	(left_x:  192   top_y:  -38   width:  626   height: 1057)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/140850.png: Predicted in 32.076000 milli-seconds.
+apnea: 63%	(left_x:  258   top_y:    8   width:  657   height:  967)
+apnea: 74%	(left_x:  359   top_y:  -13   width:  253   height: 1007)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/126450.png: Predicted in 32.124000 milli-seconds.
+apnea: 95%	(left_x:  205   top_y:  -65   width:  260   height: 1104)
+apnea: 85%	(left_x:  657   top_y:  -34   width:  306   height: 1054)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/279900.png: Predicted in 31.856000 milli-seconds.
+apnea: 74%	(left_x:  140   top_y: -137   width:  271   height: 1247)
+apnea: 90%	(left_x:  640   top_y:   22   width:  321   height:  948)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/101250.png: Predicted in 32.432000 milli-seconds.
+apnea: 83%	(left_x:  291   top_y:   10   width:  277   height:  960)
+apnea: 83%	(left_x:  703   top_y:  -93   width:  259   height: 1182)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/313650.png: Predicted in 31.788000 milli-seconds.
+apnea: 95%	(left_x:  159   top_y:  -85   width:  221   height: 1149)
+apnea: 97%	(left_x:  573   top_y:  -32   width:  291   height: 1050)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/354600.png: Predicted in 32.361000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/348750.png: Predicted in 32.325000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/104400.png: Predicted in 31.701000 milli-seconds.
+apnea: 96%	(left_x:  306   top_y:    7   width:  549   height:  968)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/221400.png: Predicted in 32.036000 milli-seconds.
+apnea: 68%	(left_x:  175   top_y:   38   width:  794   height:  907)
+apnea: 30%	(left_x:  209   top_y:  -12   width:  263   height:  997)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/102600.png: Predicted in 32.011000 milli-seconds.
+apnea: 38%	(left_x:  175   top_y:    9   width:  784   height:  976)
+apnea: 49%	(left_x:  209   top_y:  -12   width:  244   height: 1001)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/93150.png: Predicted in 31.876000 milli-seconds.
+apnea: 94%	(left_x:  192   top_y:  -18   width:  767   height: 1025)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/40050.png: Predicted in 32.562000 milli-seconds.
+apnea: 87%	(left_x:  149   top_y:  -21   width:  550   height: 1015)
+apnea: 40%	(left_x:  756   top_y:    5   width:  230   height:  977)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/278550.png: Predicted in 31.412000 milli-seconds.
+apnea: 78%	(left_x:  179   top_y:  -75   width:  211   height: 1130)
+apnea: 47%	(left_x:  205   top_y:  -38   width:  737   height: 1065)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/70200.png: Predicted in 31.856000 milli-seconds.
+apnea: 76%	(left_x:  153   top_y:   13   width:  682   height:  963)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/297900.png: Predicted in 31.477000 milli-seconds.
+apnea: 90%	(left_x:  221   top_y:   43   width:  212   height:  895)
+apnea: 55%	(left_x:  266   top_y:  -23   width:  608   height: 1023)
+apnea: 34%	(left_x:  676   top_y:  -23   width:  231   height: 1030)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/109350.png: Predicted in 32.304000 milli-seconds.
+apnea: 94%	(left_x:  216   top_y:   -7   width:  715   height:  996)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/203850.png: Predicted in 31.619000 milli-seconds.
+apnea: 26%	(left_x:  194   top_y:  -80   width:  767   height: 1140)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/44100.png: Predicted in 32.197000 milli-seconds.
+apnea: 59%	(left_x:  164   top_y:  -37   width:  348   height: 1055)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/211500.png: Predicted in 32.297000 milli-seconds.
+apnea: 95%	(left_x:  277   top_y: -104   width:  611   height: 1190)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/101700.png: Predicted in 32.147000 milli-seconds.
+apnea: 66%	(left_x:  206   top_y:   -2   width:  274   height:  983)
+apnea: 28%	(left_x:  686   top_y:  -13   width:  232   height: 1009)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/139950.png: Predicted in 32.232000 milli-seconds.
+apnea: 92%	(left_x:  145   top_y:  -93   width:  282   height: 1166)
+apnea: 51%	(left_x:  663   top_y:  -57   width:  275   height: 1096)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/172800.png: Predicted in 31.826000 milli-seconds.
+apnea: 79%	(left_x:  173   top_y:  -23   width:  653   height: 1036)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/341550.png: Predicted in 32.227000 milli-seconds.
+apnea: 69%	(left_x:  376   top_y:  -10   width:  260   height:  999)
+apnea: 49%	(left_x:  765   top_y:   -5   width:  215   height:  994)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/75600.png: Predicted in 32.120000 milli-seconds.
+apnea: 47%	(left_x:  153   top_y:  -82   width:  233   height: 1148)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/142200.png: Predicted in 32.224000 milli-seconds.
+apnea: 86%	(left_x:  144   top_y:  -80   width:  272   height: 1139)
+apnea: 39%	(left_x:  683   top_y:  -57   width:  280   height: 1100)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/271800.png: Predicted in 32.356000 milli-seconds.
+apnea: 73%	(left_x:  227   top_y:  -60   width:  358   height: 1096)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/4500.png: Predicted in 31.742000 milli-seconds.
+apnea: 87%	(left_x:  210   top_y:  -82   width:  728   height: 1133)
+apnea: 55%	(left_x:  570   top_y:  -23   width:  304   height: 1023)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/319950.png: Predicted in 32.353000 milli-seconds.
+apnea: 55%	(left_x:  167   top_y:  -14   width:  809   height: 1015)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/318150.png: Predicted in 31.974000 milli-seconds.
+apnea: 87%	(left_x:  121   top_y:    5   width:  893   height:  974)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/155250.png: Predicted in 31.791000 milli-seconds.
+apnea: 79%	(left_x:  207   top_y:  -20   width:  728   height: 1019)
+apnea: 28%	(left_x:  588   top_y:   10   width:  300   height:  968)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/36900.png: Predicted in 32.401000 milli-seconds.
+apnea: 60%	(left_x:  134   top_y:  -49   width:  880   height: 1080)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/4050.png: Predicted in 32.141000 milli-seconds.
+apnea: 97%	(left_x:  206   top_y:  -41   width:  572   height: 1057)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/310050.png: Predicted in 32.040000 milli-seconds.
+apnea: 48%	(left_x:  157   top_y:  -32   width:  546   height: 1042)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/338400.png: Predicted in 32.097000 milli-seconds.
+apnea: 83%	(left_x:  304   top_y:    3   width:  244   height:  969)
+apnea: 52%	(left_x:  766   top_y:  -35   width:  200   height: 1048)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/106200.png: Predicted in 32.202000 milli-seconds.
+apnea: 40%	(left_x:  190   top_y:  -49   width:  763   height: 1083)
+apnea: 32%	(left_x:  267   top_y:   17   width:  294   height:  949)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/129600.png: Predicted in 31.794000 milli-seconds.
+apnea: 84%	(left_x:  170   top_y:   15   width:  527   height:  954)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/383400.png: Predicted in 32.008000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/320850.png: Predicted in 32.263000 milli-seconds.
+apnea: 26%	(left_x:  201   top_y:  -29   width:  277   height: 1037)
+apnea: 91%	(left_x:  675   top_y:   -5   width:  270   height:  998)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/73350.png: Predicted in 32.102000 milli-seconds.
+apnea: 87%	(left_x:  221   top_y:    0   width:  680   height:  986)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/128700.png: Predicted in 31.782000 milli-seconds.
+apnea: 99%	(left_x:  195   top_y:   -9   width:  764   height: 1017)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/297450.png: Predicted in 31.788000 milli-seconds.
+apnea: 58%	(left_x:  392   top_y:   12   width:  205   height:  959)
+apnea: 86%	(left_x:  713   top_y: -132   width:  234   height: 1258)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/332550.png: Predicted in 31.999000 milli-seconds.
+apnea: 97%	(left_x:  297   top_y:   -9   width:  269   height:  995)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/342900.png: Predicted in 31.822000 milli-seconds.
+apnea: 92%	(left_x:  157   top_y: -113   width:  216   height: 1204)
+apnea: 29%	(left_x:  299   top_y:  -65   width:  715   height: 1115)
+apnea: 34%	(left_x:  539   top_y:   38   width:  381   height:  911)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/74700.png: Predicted in 32.327000 milli-seconds.
+apnea: 65%	(left_x:  167   top_y:  -18   width:  813   height: 1018)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/329850.png: Predicted in 32.315000 milli-seconds.
+apnea: 99%	(left_x:  167   top_y:  -70   width:  342   height: 1127)
+apnea: 37%	(left_x:  694   top_y:  -55   width:  259   height: 1087)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/215100.png: Predicted in 32.338000 milli-seconds.
+apnea: 46%	(left_x:  165   top_y:  -56   width:  821   height: 1094)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/145350.png: Predicted in 32.419000 milli-seconds.
+apnea: 62%	(left_x:  553   top_y:   12   width:  218   height:  960)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/78300.png: Predicted in 32.027000 milli-seconds.
+apnea: 72%	(left_x:  135   top_y:  -15   width:  877   height: 1015)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/372600.png: Predicted in 32.368000 milli-seconds.
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/238950.png: Predicted in 32.628000 milli-seconds.
+apnea: 64%	(left_x:  157   top_y:  -30   width:  831   height: 1043)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/85050.png: Predicted in 33.156000 milli-seconds.
+apnea: 85%	(left_x:  186   top_y:    4   width:  767   height:  979)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/204750.png: Predicted in 32.424000 milli-seconds.
+apnea: 88%	(left_x:  147   top_y:  -26   width:  849   height: 1041)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/233100.png: Predicted in 32.240000 milli-seconds.
+apnea: 71%	(left_x:  121   top_y:  -27   width:  896   height: 1042)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/92700.png: Predicted in 32.037000 milli-seconds.
+apnea: 72%	(left_x:  179   top_y:  -41   width:  334   height: 1066)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/255600.png: Predicted in 32.484000 milli-seconds.
+apnea: 98%	(left_x:  276   top_y:  -53   width:  292   height: 1092)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/90000.png: Predicted in 31.879000 milli-seconds.
+apnea: 73%	(left_x:  170   top_y:   32   width:  652   height:  925)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/273600.png: Predicted in 32.002000 milli-seconds.
+apnea: 99%	(left_x:  297   top_y:    2   width:  549   height:  982)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/188550.png: Predicted in 31.122000 milli-seconds.
+apnea: 64%	(left_x:  221   top_y:  -25   width:  391   height: 1029)
+apnea: 52%	(left_x:  714   top_y: -130   width:  229   height: 1248)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/207000.png: Predicted in 32.118000 milli-seconds.
+apnea: 76%	(left_x:  210   top_y:   -7   width:  249   height:  995)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/119250.png: Predicted in 32.078000 milli-seconds.
+apnea: 43%	(left_x:  197   top_y:  -39   width:  304   height: 1057)
+apnea: 26%	(left_x:  224   top_y:  -23   width:  710   height: 1029)
+apnea: 27%	(left_x:  679   top_y:  -62   width:  262   height: 1104)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/19800.png: Predicted in 32.025000 milli-seconds.
+apnea: 70%	(left_x:   95   top_y:   -9   width:  950   height: 1004)
+apnea: 27%	(left_x:  244   top_y:  -24   width:  351   height: 1040)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/192600.png: Predicted in 32.309000 milli-seconds.
+apnea: 92%	(left_x:  166   top_y:  -26   width:  808   height: 1029)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/250200.png: Predicted in 31.613000 milli-seconds.
+apnea: 98%	(left_x:  131   top_y:   12   width:  283   height:  959)
+apnea: 79%	(left_x:  657   top_y:  -29   width:  333   height: 1039)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/289350.png: Predicted in 32.144000 milli-seconds.
+apnea: 72%	(left_x:  150   top_y:  -11   width:  692   height: 1010)
+apnea: 80%	(left_x:  720   top_y: -102   width:  216   height: 1187)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/229050.png: Predicted in 31.383000 milli-seconds.
+apnea: 67%	(left_x:  166   top_y:  -13   width:  812   height: 1008)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/237150.png: Predicted in 31.446000 milli-seconds.
+apnea: 72%	(left_x:  148   top_y:  -31   width:  846   height: 1048)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/50850.png: Predicted in 31.955000 milli-seconds.
+apnea: 81%	(left_x:  181   top_y:  -41   width:  781   height: 1071)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/20700.png: Predicted in 31.805000 milli-seconds.
+apnea: 94%	(left_x:  177   top_y:  -41   width:  776   height: 1060)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/4950.png: Predicted in 32.125000 milli-seconds.
+apnea: 83%	(left_x:  136   top_y:  -19   width:  269   height: 1013)
+apnea: 46%	(left_x:  697   top_y:  -38   width:  236   height: 1052)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/338850.png: Predicted in 32.378000 milli-seconds.
+apnea: 79%	(left_x:  205   top_y:  -31   width:  278   height: 1035)
+Enter Image Path: /home/shamnvik/Yolo4Apnea/tmp/207900.png: Predicted in 32.462000 milli-seconds.
+apnea: 94%	(left_x:  126   top_y:    9   width:  597   height:  966)
+Enter Image Path: 
