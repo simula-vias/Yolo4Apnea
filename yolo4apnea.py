@@ -104,21 +104,26 @@ def plot_events(signal,events):
     #ax.grid(False)
     #fig.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
 
-    for line in events.itertuples():
-        ax.set_xlim(line.PRED_START-400,line.PRED_END + 400)
-        #marking = ax.axvspan(line.PRED_START, line.PRED_END, alpha=line.CONFIDENCE/100, color='red')
-        ax.plot([line.PRED_START,line.PRED_END],[-0.6,-0.6],linewidth=3,color="r")
-        ax.plot([line.PRED_START,line.PRED_START],[-0.5,-0.7],linewidth=3,color="r")
-        ax.plot([line.PRED_END,line.PRED_END],[-0.5,-0.7],linewidth=3,color="r")
-        ax.text(line.PRED_START-20, -0.75, line.PRED_START, family="serif")
-        ax.text(line.PRED_END-20, -0.75, line.PRED_END, family="serif")
+    with progressbar.ProgressBar(max_value=len(events)) as event:
+        i = 0
+        for line in events.itertuples():
+            event.update(i)
+            i +=1
+            ax.set_xlim(line.PRED_START-400,line.PRED_END + 400)
+            #marking = ax.axvspan(line.PRED_START, line.PRED_END, alpha=line.CONFIDENCE/100, color='red')
+            ax.plot([line.PRED_START,line.PRED_END],[-0.6,-0.6],linewidth=3,color="r")
+            ax.plot([line.PRED_START,line.PRED_START],[-0.5,-0.7],linewidth=3,color="r")
+            ax.plot([line.PRED_END,line.PRED_END],[-0.5,-0.7],linewidth=3,color="r")
+            ax.text(line.PRED_START-20, -0.75, line.PRED_START, family="serif")
+            ax.text(line.PRED_END-20, -0.75, line.PRED_END, family="serif")
 
-        extra = Rectangle((0, 0), 1, 1, fc="w", fill=False, edgecolor='none', linewidth=0)
-        leg = ax.legend([f"Prediction of apnea",f"Start = {line.PRED_START}",f"End = {line.PRED_END}",f"Confidence = {line.CONFIDENCE}"],loc="upper right")
-        leg._legend_box.align = "right"
+            extra = Rectangle((0, 0), 1, 1, fc="w", fill=False, edgecolor='none', linewidth=0)
+            leg = ax.legend([f"Prediction of apnea",f"Start = {line.PRED_START}",f"End = {line.PRED_END}",f"Confidence = {line.CONFIDENCE}"],loc="upper right")
+            leg._legend_box.align = "right"
 
-        fig.savefig(f"../out/{line.PRED_START}.png")
-        #marking.remove()
+            fig.savefig(f"../out/{line.PRED_START}.png")
+            #marking.remove()
+    print("Done creating png files. See out/ for output")
 
 """
 Analyses predictions.txt to convert yolos prediction to a dataframe for easier processing
@@ -151,6 +156,44 @@ def get_predictions(demo):
                 predictions = predictions.append({'IMG_START':start_value, "PRED_START":apnea_start,"PRED_END" : apnea_width,"CONFIDENCE" :confidence }, ignore_index=True)
     return predictions
 
+
+def clean_predictions(predictions):
+    predictions = predictions.sort_values(by=["PRED_START"])
+    ndf = []
+
+    prev_to = -1
+    prev_from = 0
+    confidence = 200
+    for index, row in predictions.iterrows():
+        if prev_to == -1:
+            prev_from = row["PRED_START"]
+            prev_to = row["PRED_END"]
+            confidence = row["CONFIDENCE"]
+            
+        elif row["PRED_START"] < prev_from and row["PRED_END"] > prev_to:
+            prev_from = row["PRED_START"]
+            prev_to = row["PREV_END"]
+            confidence = confidence if row["CONFIDENCE"] > confidence else row["CONFIDENCE"]
+
+        elif row["PRED_START"] > prev_from and row["PRED_END"] < prev_to:
+            pass
+        elif row["PRED_START"] < prev_to and row["PRED_END"] > prev_to :
+            prev_to = row["PRED_END"]
+            onfidence = confidence if row["CONFIDENCE"] > confidence else row["CONFIDENCE"]
+
+        else:
+            confidence = confidence if row["CONFIDENCE"] > confidence else row["CONFIDENCE"]
+ 
+            ndf.append({"PRED_START":prev_from,"PRED_END":prev_to,"DURATION":prev_to - prev_from,"CONFIDENCE":confidence})
+            prev_from = row["PRED_START"]
+            prev_to = row["PRED_END"]
+            confidence = row["CONFIDENCE"]
+
+
+    ndf.append({"PRED_START":prev_from,"PRED_END":prev_to,"DURATION":prev_to - prev_from,"CONFIDENCE":confidence})
+
+    ndf = pd.DataFrame(ndf)
+    return ndf
 """
 Prints a formatted version of the prediction to the terminal
 """
@@ -195,6 +238,7 @@ def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=Fals
     predictions = get_predictions(demo)
 
     predictions = predictions[predictions.CONFIDENCE > threshold]
+    predictions = clean_predictions(predictions)
     apnea_prediction = np.zeros(int(predictions.PRED_END.max()))
 
 
