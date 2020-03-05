@@ -9,8 +9,14 @@ import re
 import argparse
 import progressbar
 import shutil
+import lxml
+from lxml import etree
+from io import StringIO, BytesIO
+from sklearn.metrics import confusion_matrix,accuracy_score
 
 from PIL import Image
+
+
 
 XLIM = 90 * 10
 OVERLAP = 45 * 10
@@ -57,16 +63,36 @@ def readEdfFile(file):
     try:
         edf  = pyedflib.EdfReader(file)
         cols = edf.getSignalLabels()
-    
-        thor_res = pd.Series(edf.readSignal(cols.index("THOR RES")),name="THOR_RES")
-        abdo_res = pd.Series(edf.readSignal(cols.index("ABDO RES")),name="ABDO_RES")
-        signals = thor_res.to_frame().join(abdo_res)
+
+        signal = pd.DataFrame([])
+        signal['THOR_RES'] = edf.readSignal(cols.index("THOR RES"))
+        signal['ABDO_RES'] = edf.readSignal(cols.index("ABDO RES"))
+        signal['SUM'] = signal['ABDO_RES'] + signal['THOR_RES']
+        
 
     finally:
         edf._close()
         del edf
 
-    return signals
+    return signal
+
+
+def read_annotation_file(file):
+    full_address = f"{os.path.dirname(os.getcwd())}{os.sep}{file}"
+
+    events = []
+
+    with open(full_address) as f:
+        tree = etree.parse(f)
+        tree = tree.getroot()
+        for scored_event in tree.find("ScoredEvents"):
+            concept = scored_event.find("EventConcept")
+            if concept.text == "Obstructive apnea|Obstructive Apnea":
+                start = np.float(scored_event.find("Start").text)
+                end = start + np.float(scored_event.find("Duration").text)
+                events.append({"START":start*10,"END":end*10})
+
+    return pd.DataFrame(events)
 
 """
 Plots images from the signal dataframe in a predictable way. Starts a new image for every OVERLAP/10 seconds to map the whole recording
@@ -75,6 +101,7 @@ Returns:
     None -- outputs images in tmp/ folder
 """
 def generate_image_from_signal(signal):
+
     fig, ax = plt.subplots(figsize=(10,10))
     ax.plot(signal.index, signal["ABDO_RES"])
     ax.set_ylim(-1, 1)
@@ -90,13 +117,16 @@ def generate_image_from_signal(signal):
             j+=1
             fig.savefig(f"tmp/{i}.png")
     print(f"DONE\nCreated {j} images")
+
+
 """
 Plots the signal of the events that yolo predicted with signal before and after the event
 
 Returns:
     None -- Outputs prediction images in /out folder
 """
-def plot_events(signal,events):
+def plot_events(signal,events,annotations=None):
+    print("Generating PNG's of all events")
     fig, ax = plt.subplots(figsize=(10,10))
     ax.plot(signal.index, signal["ABDO_RES"])
     ax.set_ylim(-1, 1)
@@ -104,25 +134,37 @@ def plot_events(signal,events):
     #ax.grid(False)
     #fig.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
 
+    for event in annotations.itertuples():
+        #print(event)
+        ax.plot([event.START,event.END],[-0.8,-0.8],linewidth=3,color="g")
+        ax.plot([event.START,event.START],[-0.7,-0.9],linewidth=3,color="g")
+        ax.plot([event.END,event.END],[-0.7,-0.9],linewidth=3,color="g")
+    
+
+
+    for line in events.itertuples():
+
+        #marking = ax.axvspan(line.PRED_START, line.PRED_END, alpha=line.CONFIDENCE/100, color='red')
+        ax.plot([line.PRED_START,line.PRED_END],[-0.6,-0.6],linewidth=3,color="r")
+        ax.plot([line.PRED_START,line.PRED_START],[-0.5,-0.7],linewidth=3,color="r")
+        ax.plot([line.PRED_END,line.PRED_END],[-0.5,-0.7],linewidth=3,color="r")
+        ax.text(line.PRED_START-20, -0.75, line.PRED_START, family="serif")
+        ax.text(line.PRED_END-20, -0.75, line.PRED_END, family="serif")
+
+
+        #marking.remove()
+
     with progressbar.ProgressBar(max_value=len(events)) as event:
         i = 0
         for line in events.itertuples():
-            event.update(i)
-            i +=1
             ax.set_xlim(line.PRED_START-400,line.PRED_END + 400)
-            #marking = ax.axvspan(line.PRED_START, line.PRED_END, alpha=line.CONFIDENCE/100, color='red')
-            ax.plot([line.PRED_START,line.PRED_END],[-0.6,-0.6],linewidth=3,color="r")
-            ax.plot([line.PRED_START,line.PRED_START],[-0.5,-0.7],linewidth=3,color="r")
-            ax.plot([line.PRED_END,line.PRED_END],[-0.5,-0.7],linewidth=3,color="r")
-            ax.text(line.PRED_START-20, -0.75, line.PRED_START, family="serif")
-            ax.text(line.PRED_END-20, -0.75, line.PRED_END, family="serif")
-
+            event.update(i)
+            i +=1 
             extra = Rectangle((0, 0), 1, 1, fc="w", fill=False, edgecolor='none', linewidth=0)
             leg = ax.legend([f"Prediction of apnea",f"Start = {line.PRED_START}",f"End = {line.PRED_END}",f"Confidence = {line.CONFIDENCE}"],loc="upper right")
             leg._legend_box.align = "right"
-
             fig.savefig(f"../out/{line.PRED_START}.png")
-            #marking.remove()
+        
     print("Done creating png files. See out/ for output")
 
 """
@@ -133,7 +175,7 @@ Returns:
     Dataframe -- Dataframe with info about when the image starts,when the prediction starts, when the prediction ends, and confidence in prediction
 """
 def get_predictions(demo):
-    predictions = pd.DataFrame(columns=['IMG_START', 'PRED_START', 'PRED_END','CONFIDENCE'])
+    predictions = []
     image_width = Image.open("../tmp/0.png").size[0]
     pixel_duration = image_width/XLIM
 
@@ -153,8 +195,8 @@ def get_predictions(demo):
                 confidence = int(new_apnea.group(1))
                 apnea_start = start_value + (int(new_apnea.group(2))/ pixel_duration)
                 apnea_width = apnea_start + (int(new_apnea.group(3))/ pixel_duration)
-                predictions = predictions.append({'IMG_START':start_value, "PRED_START":apnea_start,"PRED_END" : apnea_width,"CONFIDENCE" :confidence }, ignore_index=True)
-    return predictions
+                predictions.append({'IMG_START':start_value, "PRED_START":apnea_start,"PRED_END" : apnea_width,"CONFIDENCE" :confidence })
+    return pd.DataFrame(predictions)
 
 
 def clean_predictions(predictions):
@@ -179,7 +221,7 @@ def clean_predictions(predictions):
             pass
         elif row["PRED_START"] < prev_to and row["PRED_END"] > prev_to :
             prev_to = row["PRED_END"]
-            onfidence = confidence if row["CONFIDENCE"] > confidence else row["CONFIDENCE"]
+            confidence = confidence if row["CONFIDENCE"] > confidence else row["CONFIDENCE"]
 
         else:
             confidence = confidence if row["CONFIDENCE"] > confidence else row["CONFIDENCE"]
@@ -194,13 +236,64 @@ def clean_predictions(predictions):
 
     ndf = pd.DataFrame(ndf)
     return ndf
+
+
 """
 Prints a formatted version of the prediction to the terminal
 """
 def print_predictions(predictions,confidence):
-    pred = predictions[["PRED_START","PRED_END","CONFIDENCE"]]
+    pred = predictions[["PRED_START","PRED_END","CONFIDENCE","DURATION"]]
     print(f"\n{pred.to_string(index=False)}")
     print(f"\nFound {len(pred)} events with confidence over {confidence}")
+
+
+
+def compare_prediction_to_annotation(predictions,annotations):
+
+    length = max(int(predictions.PRED_END.max()),int(annotations.END.max()))
+
+    apnea_prediction = np.zeros(length)
+    annotation_truths = np.zeros(length)
+
+    for line in predictions.itertuples():
+        for index in range(int(line.PRED_START), int(line.PRED_END)):
+            apnea_prediction[index] = 1
+            #if apnea_prediction[index] < line.CONFIDENCE:
+            #    apnea_prediction[index] = line.CONFIDENCE
+    
+
+    for line in annotations.itertuples():
+        for index in range(int(line.START), int(line.END)):
+            annotation_truths[index] = 1
+
+
+
+    tn, fp, fn, tp = confusion_matrix(annotation_truths,apnea_prediction).ravel()
+
+
+    print(f"\nTrue negative:  {tn:>6.0f}  {tn/length:>3.2f}%\n\
+False positive: {fp:>6.0f}  {fp/length:>3.2f}%\n\
+False negative: {fn:>6.0f}  {fn/length:>3.2f}%\n\
+True positive:  {tp:>6.0f}  {tp/length:>3.2f}%")
+
+    accuracy = accuracy_score(annotation_truths,apnea_prediction)
+    print(f"Total accuracy score:  {accuracy*100:>3.2f}%")
+
+    events_correctly_found = 0
+    events_not_found = 0
+
+
+    for line in annotations.itertuples():
+        if np.isin(1,apnea_prediction[int(line.START):int(line.END)]):
+            events_correctly_found += 1
+        else:
+            events_not_found += 1
+    print(f"\nFound {events_correctly_found} of {events_not_found+events_correctly_found} events {(events_correctly_found/(events_not_found+events_correctly_found)*100):0.2f}%")
+    print(f"Also predicted {len(predictions)-events_correctly_found} events that was not classified as apneas in the annotation file")
+    
+
+
+
 
 """
 Reads edf file
@@ -210,16 +303,28 @@ converts predictions to dataframe
 outputs to terminal/generates images according to flags set when running program
 deletes tmp files
 """
-def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=False):
+def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=False,compare=None,display=False):
+
+
+    files = ""
+    curdir = os.getcwd()
+
+
     if not threshold:
         threshold = 0
 
     signal = readEdfFile(file)
     if not replay:
+        
+        #Delete the previous tmp files
+        for f in glob.iglob(f"tmp{os.sep}*"):
+            os.remove(f"{curdir}{os.sep}{f}")
+        shutil.copyfile(file,f"tmp{os.sep}last_file.edf")
+
         generate_image_from_signal(signal)
 
-    files = ""
-    curdir = os.getcwd()
+        
+
 
     for image in glob.iglob(f"tmp{os.sep}*"):
         files += f"{curdir}{os.sep}{image}\n"
@@ -237,24 +342,21 @@ def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=Fals
     print("Done")
     predictions = get_predictions(demo)
 
-    predictions = predictions[predictions.CONFIDENCE > threshold]
+    predictions = predictions[predictions.CONFIDENCE >= threshold]
     predictions = clean_predictions(predictions)
-    apnea_prediction = np.zeros(int(predictions.PRED_END.max()))
 
+    annotations = None
 
-    for line in predictions.itertuples():
-        for index in range(int(line.PRED_START), int(line.PRED_END)):
-            if apnea_prediction[index] < line.CONFIDENCE:
-                apnea_prediction[index] = line.CONFIDENCE
+    if compare:
+        print(f"\nComparing to {compare}")
+        annotations = read_annotation_file(compare)
+        compare_prediction_to_annotation(predictions,annotations)
 
     if output_png:
-        plot_events(signal,predictions)
+        plot_events(signal,predictions,annotations)
 
-
-    print_predictions(predictions,threshold)
-    #Delete the temporary files
-    for image in glob.iglob(f"tmp{os.sep}*"):
-        os.remove(f"{curdir}{os.sep}{image}")
+    if display:
+        print_predictions(predictions,threshold)
 
     os.remove("generate.txt")
 
@@ -266,7 +368,11 @@ if __name__ == "__main__":
     parser.add_argument('file', help='path to a .edf file to analyze')
     parser.add_argument('-p', help='Output png predictions to out/', action="store_true")
     parser.add_argument("-x",'-xml', help='Output predictions annotations to xml file', action="store_true")
-    parser.add_argument("-t",'--thresh','-threshold', help='Output predictions annotations to xml file',type=int)
+    parser.add_argument("-t",'--thresh','-threshold', help='Change threshold for keeping prediction',type=int)
+    parser.add_argument("-c",'--compare', help='Compare to annotation file')
+    parser.add_argument("-d",'--display', help='Display predictions to screen',action="store_true")
+
+
 
     args = parser.parse_args()
     
@@ -275,14 +381,14 @@ if __name__ == "__main__":
     if args.file=="demo":
         print("### DEMO MODE ###")
         print("Uses precalculated predictions for computers without (GPU assisted) darknet.")
-        args.file = f"demo/{os.sep}shhs2-200116.edf"
-        shutil.copyfile(f"demo/{os.sep}predictions.txt",f"darknet{os.sep}predictions.txt")
+        args.file = f"demo{os.sep}shhs2-200116.edf"
+        shutil.copyfile(f"demo{os.sep}predictions.txt",f"darknet{os.sep}predictions.txt")
         demo=True
 
     if args.file=="replay":
         print("### Replaying last calculation with new flags ###")
         print("Uses predictions already calculated for creating output")
-        args.file = "shhs1-200001.edf"
+        args.file = f"tmp{os.sep}last_file.edf"
         replay=True
     
-    predict_edf(args.file,output_png=args.p,output_xml=args.p, threshold=args.thresh,demo=demo,replay=replay)
+    predict_edf(args.file,output_png=args.p,output_xml=args.p, threshold=args.thresh,demo=demo,replay=replay,compare=args.compare,display=args.display)
