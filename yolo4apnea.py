@@ -13,7 +13,7 @@ import lxml
 from lxml import etree
 from io import StringIO, BytesIO
 from sklearn.metrics import confusion_matrix,accuracy_score
-
+import math
 from PIL import Image
 
 
@@ -103,17 +103,17 @@ Returns:
 def generate_image_from_signal(signal):
 
     fig, ax = plt.subplots(figsize=(10,10))
-    ax.plot(signal.index, signal["ABDO_RES"])
+    ax.plot(signal.index, signal["SUM"])
     ax.set_ylim(-1, 1)
     ax.grid(False)
     fig.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
 
     print("Creating images for analysis")
     j = 0
-    with progressbar.ProgressBar(max_value=len(signal)) as prog:
+    with progressbar.ProgressBar(max_value=math.ceil(len(signal)/OVERLAP)) as prog:
         for i in range(0,len(signal),OVERLAP):
             ax.set_xlim(i,i + XLIM)
-            prog.update(i)
+            prog.update(j)
             j+=1
             fig.savefig(f"tmp/{i}.png")
     print(f"DONE\nCreated {j} images")
@@ -135,7 +135,7 @@ def plot_events(signal,events,annotations=None):
     #fig.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
 
     for event in annotations.itertuples():
-        #print(event)
+        print(event)
         ax.plot([event.START,event.END],[-0.8,-0.8],linewidth=3,color="g")
         ax.plot([event.START,event.START],[-0.7,-0.9],linewidth=3,color="g")
         ax.plot([event.END,event.END],[-0.7,-0.9],linewidth=3,color="g")
@@ -158,6 +158,7 @@ def plot_events(signal,events,annotations=None):
         i = 0
         for line in events.itertuples():
             ax.set_xlim(line.PRED_START-400,line.PRED_END + 400)
+
             event.update(i)
             i +=1 
             extra = Rectangle((0, 0), 1, 1, fc="w", fill=False, edgecolor='none', linewidth=0)
@@ -198,7 +199,6 @@ def get_predictions(demo):
                 predictions.append({'IMG_START':start_value, "PRED_START":apnea_start,"PRED_END" : apnea_width,"CONFIDENCE" :confidence })
     return pd.DataFrame(predictions)
 
-
 def clean_predictions(predictions):
     predictions = predictions.sort_values(by=["PRED_START"])
     ndf = []
@@ -212,14 +212,14 @@ def clean_predictions(predictions):
             prev_to = row["PRED_END"]
             confidence = row["CONFIDENCE"]
             
-        elif row["PRED_START"] < prev_from and row["PRED_END"] > prev_to:
+        elif row["PRED_START"] <= prev_from and row["PRED_END"] > prev_to:
             prev_from = row["PRED_START"]
-            prev_to = row["PREV_END"]
+            prev_to = row["PRED_END"]
             confidence = confidence if row["CONFIDENCE"] > confidence else row["CONFIDENCE"]
 
         elif row["PRED_START"] > prev_from and row["PRED_END"] < prev_to:
             pass
-        elif row["PRED_START"] < prev_to and row["PRED_END"] > prev_to :
+        elif row["PRED_START"] <= prev_to and row["PRED_END"] > prev_to :
             prev_to = row["PRED_END"]
             confidence = confidence if row["CONFIDENCE"] > confidence else row["CONFIDENCE"]
 
@@ -238,6 +238,7 @@ def clean_predictions(predictions):
     return ndf
 
 
+
 """
 Prints a formatted version of the prediction to the terminal
 """
@@ -247,52 +248,76 @@ def print_predictions(predictions,confidence):
     print(f"\nFound {len(pred)} events with confidence over {confidence}")
 
 
-
-def compare_prediction_to_annotation(predictions,annotations):
-
-    length = max(int(predictions.PRED_END.max()),int(annotations.END.max()))
-
-    apnea_prediction = np.zeros(length)
-    annotation_truths = np.zeros(length)
-
-    for line in predictions.itertuples():
-        for index in range(int(line.PRED_START), int(line.PRED_END)):
-            apnea_prediction[index] = 1
+def convert_events_to_array(events,length):
+    values = np.zeros(length)
+    for line in events.itertuples():
+        if "START" in events:
+            for index in range(int(line.START), int(line.END)):
+                values[index] = 1
+        else:
+            for index in range(int(line.PRED_START), int(line.PRED_END)):
+                values[index] = 1    
             #if apnea_prediction[index] < line.CONFIDENCE:
             #    apnea_prediction[index] = line.CONFIDENCE
-    
+    return values
 
-    for line in annotations.itertuples():
-        for index in range(int(line.START), int(line.END)):
-            annotation_truths[index] = 1
+def get_accuracy(tn,fp,fn,tp,threshold,length=False,total_predicted_events=None,total_annotated_events=None):
+    datapoint_results = {}
 
+    datapoint_results["FALSE_POSITIVE_COUNT"]= fp
+    datapoint_results["FALSE_NEGATIVE_COUNT"]= fn
+    datapoint_results["TRUE_POSITIVE_COUNT"]= tp
+    datapoint_results["SENSITIVITY"] = (tp/(tp+fn))*100
+    datapoint_results["PRECISION"] = (tp/(tp+fp))*100
+    datapoint_results["THRESHOLD"] = threshold
+    if tn:
+        datapoint_results["TRUE_NEGATIVE_COUNT"]= tn
+        datapoint_results["SPECIFICITY"] = (tn/(tn+fp))*100
+        datapoint_results["ACCURACY"] = ((tp+tn)/(fp+tn+tp+fn))*100
+        datapoint_results["NPV"] = (tn/(tn+fn))*100
 
+    if length:
+        deciseconds_to_hours_ratio = 36000
+        sleep_in_hours = length / deciseconds_to_hours_ratio
+        datapoint_results["AHI_PREDICTED"] = total_predicted_events/sleep_in_hours 
+        datapoint_results["AHI_TRUE"] = total_annotated_events/sleep_in_hours 
+    datapoint_results = pd.Series(datapoint_results)
+    return datapoint_results
 
-    tn, fp, fn, tp = confusion_matrix(annotation_truths,apnea_prediction).ravel()
-
-
-    print(f"\nTrue negative:  {tn:>6.0f}  {tn/length:>3.2f}%\n\
-False positive: {fp:>6.0f}  {fp/length:>3.2f}%\n\
-False negative: {fn:>6.0f}  {fn/length:>3.2f}%\n\
-True positive:  {tp:>6.0f}  {tp/length:>3.2f}%")
-
-    accuracy = accuracy_score(annotation_truths,apnea_prediction)
-    print(f"Total accuracy score:  {accuracy*100:>3.2f}%")
-
-    events_correctly_found = 0
-    events_not_found = 0
-
+def event_confusion_matrix(annotations,predictions,annotation_truths,apnea_prediction):
+    tn,tp,fn,fp = None,0,0,0
 
     for line in annotations.itertuples():
         if np.isin(1,apnea_prediction[int(line.START):int(line.END)]):
-            events_correctly_found += 1
+            tp += 1
         else:
-            events_not_found += 1
-    print(f"\nFound {events_correctly_found} of {events_not_found+events_correctly_found} events {(events_correctly_found/(events_not_found+events_correctly_found)*100):0.2f}%")
-    print(f"Also predicted {len(predictions)-events_correctly_found} events that was not classified as apneas in the annotation file")
-    
+            fn += 1
+
+    for line in predictions.itertuples():
+        if np.isin(1,annotation_truths[int(line.PRED_START):int(line.PRED_END)]):
+            pass
+        else:
+            fp += 1
+    return (tn,tp,fn,fp)
 
 
+def compare_prediction_to_annotation(predictions,annotations,threshold,length):
+
+    annotation_truths = convert_events_to_array(annotations,length)
+    apnea_prediction = convert_events_to_array(predictions,length)
+
+    ### For datapoints
+
+    tn, fp, fn, tp = confusion_matrix(annotation_truths,apnea_prediction).ravel()
+    datapoint_results = get_accuracy(tn,fp,fn,tp,threshold)
+
+    ### For events
+    tn, fp, fn, tp = event_confusion_matrix(annotations,predictions,annotation_truths,apnea_prediction)
+    event_results = get_accuracy(tn,fp,fn,tp,threshold,length=length,total_predicted_events=len(predictions),total_annotated_events=len(annotations))
+    results_df = pd.DataFrame({"Datapoints":datapoint_results, "Events": event_results},
+    index=["FALSE_POSITIVE_COUNT","TRUE_POSITIVE_COUNT","TRUE_NEGATIVE_COUNT","FALSE_NEGATIVE_COUNT","SENSITIVITY","PRECISION",
+    "SPECIFICITY","ACCURACY","NPV", "AHI_PREDICTED","AHI_TRUE","THRESHOLD"])
+    return results_df
 
 
 """
@@ -303,7 +328,7 @@ converts predictions to dataframe
 outputs to terminal/generates images according to flags set when running program
 deletes tmp files
 """
-def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=False,compare=None,display=False):
+def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=False,compare=None,display=False,plot_comp=False):
 
 
     files = ""
@@ -314,6 +339,7 @@ def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=Fals
         threshold = 0
 
     signal = readEdfFile(file)
+    length = len(signal)
     if not replay:
         
         #Delete the previous tmp files
@@ -323,12 +349,8 @@ def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=Fals
 
         generate_image_from_signal(signal)
 
-        
-
-
     for image in glob.iglob(f"tmp{os.sep}*"):
         files += f"{curdir}{os.sep}{image}\n"
-
 
     os.chdir("darknet")
     with open("generate.txt","w+") as f:
@@ -340,17 +362,44 @@ def predict_edf(file,output_png,output_xml,threshold=None,demo=False,replay=Fals
         pass
     
     print("Done")
+
+
     predictions = get_predictions(demo)
+    if plot_comp:
+        threshold = 0
+    else:
+        predictions = predictions[predictions.CONFIDENCE >= threshold]
 
-    predictions = predictions[predictions.CONFIDENCE >= threshold]
     predictions = clean_predictions(predictions)
-
     annotations = None
 
     if compare:
         print(f"\nComparing to {compare}")
         annotations = read_annotation_file(compare)
-        compare_prediction_to_annotation(predictions,annotations)
+
+        if plot_comp:
+            print("plot_comp")
+            results = pd.DataFrame()
+            for i in range(0,101,1):
+            
+                predictions = predictions[predictions.CONFIDENCE >= i]
+                values = compare_prediction_to_annotation(predictions,annotations,i,length)
+                if values is not None:
+                    values.name = i
+                    results = results.append(values)
+            print(results)
+            fig, ax = plt.subplots(figsize=(20,20))
+            #ax.plot(results.ACCURACY_RESULT*100,label="Total accuracy")
+            ax.plot(results.EVENTS_FOUND,label="Events found")
+            ax.plot(results.EVENTS_NOT_FOUND,label="Events not found")
+            ax.plot(results.NON_APNEA_EVENTS_PREDICTED,label="Non apnea predicted")
+
+
+            ax.legend()
+            plt.show()
+        else:
+            results = compare_prediction_to_annotation(predictions,annotations,threshold,length)
+            print(results.round(2))
 
     if output_png:
         plot_events(signal,predictions,annotations)
@@ -371,8 +420,7 @@ if __name__ == "__main__":
     parser.add_argument("-t",'--thresh','-threshold', help='Change threshold for keeping prediction',type=int)
     parser.add_argument("-c",'--compare', help='Compare to annotation file')
     parser.add_argument("-d",'--display', help='Display predictions to screen',action="store_true")
-
-
+    parser.add_argument('--plot_comparisons', help='Only with -c flag. Plots accuracy at different values',action="store_true")
 
     args = parser.parse_args()
     
@@ -391,4 +439,4 @@ if __name__ == "__main__":
         args.file = f"tmp{os.sep}last_file.edf"
         replay=True
     
-    predict_edf(args.file,output_png=args.p,output_xml=args.p, threshold=args.thresh,demo=demo,replay=replay,compare=args.compare,display=args.display)
+    predict_edf(args.file,output_png=args.p,output_xml=args.p, threshold=args.thresh,demo=demo,replay=replay,compare=args.compare,display=args.display,plot_comp=args.plot_comparisons)
