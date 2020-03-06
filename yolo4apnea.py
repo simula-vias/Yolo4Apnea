@@ -122,14 +122,14 @@ def generate_image_from_signal(signal):
 
 
 
-
-def plot_events(signal, events, annotations=None):
     """
     Plots the signal of the events that yolo predicted with signal before and after the event
 
     Returns:
         None -- Outputs prediction images in /out folder
     """
+def plot_events(signal, events, annotations=None):
+
 
     print("Generating PNG's of all events")
     fig, ax = plt.subplots(figsize=(10, 10))
@@ -232,28 +232,27 @@ def clean_predictions(predictions):
     confidence = 200
     for index, row in predictions.iterrows():
         if prev_to == -1:
-            prev_from = row["PRED_START"]
-            prev_to = row["PRED_END"]
-            confidence = row["CONFIDENCE"]
+            prev_from = row.PRED_START
+            prev_to = row.PRED_END
+            confidence = row.CONFIDENCE
 
-        elif row["PRED_START"] <= prev_from and row["PRED_END"] > prev_to:
-            prev_from = row["PRED_START"]
-            prev_to = row["PRED_END"]
-            confidence = confidence if row["CONFIDENCE"] > confidence else row["CONFIDENCE"]
+        elif row.PRED_START <= prev_from and row.PRED_END> prev_to:
+            prev_from = row.PRED_START
+            prev_to = row.PRED_END
+            confidence = confidence if row.CONFIDENCE> confidence else row.CONFIDENCE
 
-        elif row["PRED_START"] > prev_from and row["PRED_END"] < prev_to:
+        elif row.PRED_START > prev_from and row.PRED_END < prev_to:
             pass
-        elif row["PRED_START"] <= prev_to and row["PRED_END"] > prev_to:
-            prev_to = row["PRED_END"]
-            confidence = confidence if row["CONFIDENCE"] > confidence else row["CONFIDENCE"]
+        elif row.PRED_START <= prev_to and row.PRED_END > prev_to:
+            prev_to = row.PRED_END
+            confidence = confidence if row.CONFIDENCE > confidence else row.CONFIDENCE
 
         else:
-            confidence = confidence if row["CONFIDENCE"] > confidence else row["CONFIDENCE"]
-
+            confidence = confidence if row.CONFIDENCE > confidence else row.CONFIDENCE
             ndf.append({"PRED_START": prev_from, "PRED_END": prev_to,
                         "DURATION": prev_to - prev_from, "CONFIDENCE": confidence})
-            prev_from = row["PRED_START"]
-            prev_to = row["PRED_END"]
+            prev_from = row.PRED_START
+            prev_to = row.PRED_END
             confidence = row["CONFIDENCE"]
 
     ndf.append({"PRED_START": prev_from, "PRED_END": prev_to,
@@ -298,8 +297,6 @@ def convert_events_to_array(events, length):
         else:
             for index in range(int(line.PRED_START), int(line.PRED_END)):
                 values[index] = 1
-            # if apnea_prediction[index] < line.CONFIDENCE:
-            #    apnea_prediction[index] = line.CONFIDENCE
     return values
 
 
@@ -397,8 +394,10 @@ def compare_prediction_to_annotation(predictions, annotations, threshold, length
     # For events
     tn, fp, fn, tp = event_confusion_matrix(
         annotations, predictions, annotation_truths, apnea_prediction)
+    
     event_results = get_accuracy(tn, fp, fn, tp, threshold, length=length, total_predicted_events=len(
         predictions), total_annotated_events=len(annotations))
+    
     results_df = pd.DataFrame({"Datapoints": datapoint_results, "Events": event_results},
                               index=["FALSE_POSITIVE_COUNT", "TRUE_POSITIVE_COUNT", "TRUE_NEGATIVE_COUNT", "FALSE_NEGATIVE_COUNT", "SENSITIVITY", "PRECISION",
                                      "SPECIFICITY", "ACCURACY", "NPV", "AHI_PREDICTED", "AHI_TRUE", "THRESHOLD"])
