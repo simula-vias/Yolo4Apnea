@@ -12,9 +12,12 @@ import shutil
 import lxml
 from lxml import etree
 from io import StringIO, BytesIO
-from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.metrics import confusion_matrix, accuracy_score,f1_score,roc_auc_score,classification_report,precision_score,roc_curve
 import math
 from PIL import Image
+from multiprocessing import Pool 
+import itertools
+import timeit
 
 
 XLIM = 90 * 10
@@ -98,27 +101,29 @@ def read_annotation_file(file):
 
 
 
+def plot_and_write_interval(params):
+    signal,start = params
+    fig, ax = plt.subplots(figsize=(10, 10))
+    ax.set_xlim(start, start + XLIM)
+    fig.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
+    ax.set_ylim(-1, 1)
+    ax.plot(signal.index, signal["ABDO_RES"])
+    fig.savefig(f"tmp/{start}.png")
+    plt.close()
+
+    
 
 def generate_image_from_signal(signal):
     """
     Plots images from the signal dataframe in a predictable way. Starts a new image for every OVERLAP/10 seconds to map the whole recording
-    """
+    """    
+    
+    pool = Pool(8)    
+    pool.map(plot_and_write_interval,zip([signal for i in range(0, len(signal), OVERLAP)],[i for i in range(0, len(signal), OVERLAP)]))
+    print("Generated images")
+    
+    # TODO Create stats showing how far along we are currently. Probably more optimizing and finetuning?
 
-    fig, ax = plt.subplots(figsize=(10, 10))
-    ax.plot(signal.index, signal["SUM"])
-    ax.set_ylim(-1, 1)
-    ax.grid(False)
-    fig.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
-
-    print("Creating images for analysis")
-    j = 0
-    with progressbar.ProgressBar(max_value=math.ceil(len(signal)/OVERLAP)) as prog:
-        for i in range(0, len(signal), OVERLAP):
-            ax.set_xlim(i, i + XLIM)
-            prog.update(j)
-            j += 1
-            fig.savefig(f"tmp/{i}.png")
-    print(f"DONE\nCreated {j} images")
 
 
 
@@ -299,6 +304,25 @@ def convert_events_to_array(events, length):
                 values[index] = 1
     return values
 
+def get_metrics_of_prediction(truth,pred):
+    print("Getting metrics")
+    print("Precision Score")
+    precision = precision_score(truth,pred)
+    print(precision)
+
+    print("Confusion matrix")
+    confusion = confusion_matrix(truth,pred)
+    print(confusion)
+    
+    print("Classification_report")
+    report = classification_report(truth,pred)
+    print(report)
+    
+    print("ROC_AUC")
+    auc_roc = roc_auc_score(truth,pred)
+    print(auc_roc)
+    
+
 
 def get_accuracy(tn, fp, fn, tp, threshold, length=False, total_predicted_events=None, total_annotated_events=None):
     """Predicts different versions of accuracy and precission
@@ -391,6 +415,7 @@ def compare_prediction_to_annotation(predictions, annotations, threshold, length
     tn, fp, fn, tp = confusion_matrix(annotation_truths, apnea_prediction).ravel()
     datapoint_results = get_accuracy(tn, fp, fn, tp, threshold)
 
+    get_metrics_of_prediction(annotation_truths,apnea_prediction)
     # For events
     tn, fp, fn, tp = event_confusion_matrix(
         annotations, predictions, annotation_truths, apnea_prediction)
@@ -517,7 +542,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "-x", '-xml', help='Output predictions annotations to xml file', action="store_true")
     parser.add_argument("-t", '--thresh', '-threshold',
-                        help='Change threshold for keeping prediction', type=int)
+                        help='Change threshold for keeping prediction', type=int,default=0)
     parser.add_argument("-c", '--compare', help='Compare to annotation file')
     parser.add_argument(
         "-d", '--display', help='Display predictions to screen', action="store_true")
