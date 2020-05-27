@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import os
 import pyedflib
 import pandas as pd
@@ -18,7 +19,8 @@ from PIL import Image
 from multiprocessing import Pool 
 import itertools
 import timeit
-
+from src.Prediction import Prediction
+from src.config import main_folder
 
 XLIM = 90 * 10
 OVERLAP = 45 * 10
@@ -74,30 +76,6 @@ def readEdfFile(file):
     return signal
 
 
-def read_annotation_file(file):
-    """Return start and end of obstructive apnea from xml
-    
-    Arguments:
-        file {str} -- string to xml file with annotations
-    
-    Returns:
-        DataFrame -- Dataframe of all annotated events in the xml file
-    """
-    full_address = f"{os.path.dirname(os.getcwd())}{os.sep}{file}"
-
-    events = []
-
-    with open(full_address) as f:
-        tree = etree.parse(f)
-        tree = tree.getroot()
-        for scored_event in tree.find("ScoredEvents"):
-            concept = scored_event.find("EventConcept")
-            if concept.text == "Obstructive apnea|Obstructive Apnea":
-                start = np.float(scored_event.find("Start").text)
-                end = start + np.float(scored_event.find("Duration").text)
-                events.append({"START": start*10, "END": end*10})
-
-    return pd.DataFrame(events)
 
 
 
@@ -117,7 +95,7 @@ def generate_image_from_signal(signal):
     """
     Plots images from the signal dataframe in a predictable way. Starts a new image for every OVERLAP/10 seconds to map the whole recording
     """    
-    
+    print("Generating image from signal")
     pool = Pool(8)    
     pool.map(plot_and_write_interval,zip([signal for i in range(0, len(signal), OVERLAP)],[i for i in range(0, len(signal), OVERLAP)]))
     print("Generated images")
@@ -145,7 +123,6 @@ def plot_events(signal, events, annotations=None):
     #fig.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
 
     for event in annotations.itertuples():
-        print(event)
         ax.plot([event.START, event.END], [-0.8, -0.8], linewidth=3, color="g")
         ax.plot([event.START, event.START],
                 [-0.7, -0.9], linewidth=3, color="g")
@@ -172,8 +149,8 @@ def plot_events(signal, events, annotations=None):
 
             event.update(i)
             i += 1
-            extra = Rectangle((0, 0), 1, 1, fc="w", fill=False,
-                              edgecolor='none', linewidth=0)
+            #extra = Rectangle((0, 0), 1, 1, fc="w", fill=False,
+            #                  edgecolor='none', linewidth=0)
             leg = ax.legend([f"Prediction of apnea", f"Start = {line.PRED_START}",
                              f"End = {line.PRED_END}", f"Confidence = {line.CONFIDENCE}"], loc="upper right")
             leg._legend_box.align = "right"
@@ -200,12 +177,15 @@ converts pixelvalues from prediction to correct event-time since start of record
     Returns:
         DataFrame -- Prediction of all apnea events saved in ./predictions.txt file
     """
+    
+    print("Analyses predictions")
+    
     predictions = []
     image_width = Image.open("../tmp/0.png").size[0]
     pixel_duration = image_width/XLIM
 
     predictions_file = "./predictions.txt"
-
+    
     if demo:
         predictions_file = "../demo/predictions.txt"
 
@@ -228,7 +208,7 @@ converts pixelvalues from prediction to correct event-time since start of record
     return pd.DataFrame(predictions)
 
 
-def clean_predictions(predictions):
+def clean_predictions(predictions,length):
     predictions = predictions.sort_values(by=["PRED_START"])
     ndf = []
 
@@ -260,9 +240,11 @@ def clean_predictions(predictions):
             prev_to = row.PRED_END
             confidence = row["CONFIDENCE"]
 
+    prev_to = prev_to if prev_to < length else length
+    
     ndf.append({"PRED_START": prev_from, "PRED_END": prev_to,
                 "DURATION": prev_to - prev_from, "CONFIDENCE": confidence})
-
+    
     ndf = pd.DataFrame(ndf)
     return ndf
 
@@ -294,7 +276,9 @@ def convert_events_to_array(events, length):
     Returns:
         int array -- array consisting of 1 and 0. 1 is event, 0 is not-event
     """
+
     values = np.zeros(length)
+
     for line in events.itertuples():
         if "START" in events:
             for index in range(int(line.START), int(line.END)):
@@ -469,7 +453,7 @@ def predict_edf(file, output_png, output_xml, threshold=0, demo=False, replay=Fa
 
         generate_image_from_signal(signal)
 
-    for image in glob.iglob(f"tmp{os.sep}*"):
+    for image in glob.iglob(f"tmp{os.sep}*.png"):
         files += f"{curdir}{os.sep}{image}\n"
 
     os.chdir("darknet")
@@ -478,7 +462,7 @@ def predict_edf(file, output_png, output_xml, threshold=0, demo=False, replay=Fa
 
     if not demo and not replay:
         print("Running YOLO on signal. This may take a long time depending on GPU/CPU and length of recording")
-        os.system(("./darknet detector test ../obj.data ../yolo-obj.cfg ../yolo-obj_last.weights -ext_output < generate.txt > predictions.txt"))
+        os.system(("./darknet detector test ../obj.data ../yolo-obj.cfg ../yolo-obj_last.weights -dont_show -ext_output < generate.txt > predictions.txt"))
         print("Done")
 
     predictions = get_predictions(demo)
@@ -487,7 +471,7 @@ def predict_edf(file, output_png, output_xml, threshold=0, demo=False, replay=Fa
     else:
         predictions = predictions[predictions.CONFIDENCE >= threshold]
 
-    predictions = clean_predictions(predictions)
+    predictions = clean_predictions(predictions,length)
     annotations = None
 
     if compare:
@@ -567,6 +551,44 @@ if __name__ == "__main__":
         print("Uses predictions already calculated for creating output")
         args.file = f"tmp{os.sep}last_file.edf"
         replay = True
+    
+    signal_path = f"{os.getcwd()}{os.sep}{args.file}"
+    annotation_path = f"{os.getcwd()}{os.sep}{args.compare}"
+    
+    generate_reports = False
+    if generate_reports:
+        #patients =["shhs1-202105"]
+        patients = ["shhs1-202105",
+                    "shhs2-204782",
+                    "shhs2-200353",
+                    "shhs1-203654",
+                    "shhs1-201723",
+                    "shhs1-200824",
+                    "shhs2-204583",
+                    "shhs1-202496",
+                    "shhs2-204798",
+                    "shhs1-201758"]
+        results = {}
+        
 
-    predict_edf(args.file, output_png=args.p, output_xml=args.p, threshold=args.thresh, demo=demo,
-                replay=replay, compare=args.compare, display=args.display, plot_comp=args.plot_comparisons)
+        for patient in patients:
+            prediction = Prediction(patient,annotation_path=patient,replay=replay,demo=demo,threshold=args.thresh)
+            results[patient] = prediction.get_predictions()
+            #results[patient] = prediction.report_full()
+            print("patient filename")
+            print(patient)
+            print (f"{main_folder}{patient}")
+            results[patient].to_csv(f"{main_folder}{patient}.csv")
+        
+        for a,b in results.items():
+            print()
+            print(a)
+            print(b)
+    else:
+        print(args.file)
+        prediction = Prediction(args.file,annotation_path=args.compare,replay=replay,demo=demo,threshold=args.thresh)
+        results = prediction.get_predictions()
+        print(results)
+
+    #predict_edf(args.file, output_png=args.p, output_xml=args.p, threshold=args.thresh, demo=demo,
+    #            replay=replay, compare=args.compare, display=args.display, plot_comp=args.plot_comparisons)
