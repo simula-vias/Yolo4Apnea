@@ -1,18 +1,18 @@
 import React, {useState} from 'react';
 
+const id = '_' + Math.random().toString(36).substr(2, 9)
 
-export const PredictedSignal = ({abdoSignal, displayEnd, play, predictions, setPredictions, useInterval}) => {
+
+export const PredictedSignal = ({abdoSignal, displayEnd, play, predictions, setPredictions, useInterval,apiRoot}) => {
 
     const [previousIndex, setPreviousIndex] = useState(0)
-
 
     useInterval(() => {
         if (play) {
             let new_signals = abdoSignal.slice(previousIndex, displayEnd)
 
-            // API call here
-            let apiEndpoint = "http://localhost:5000/api/predict"
-            let requestData = {signal: new_signals,startIndex: previousIndex}
+            let apiEndpoint = apiRoot + "/predict"
+            let requestData = {signal: new_signals,startIndex: previousIndex,id:id}
 
             const requestOptions = {
                 method: 'POST',
@@ -31,7 +31,7 @@ export const PredictedSignal = ({abdoSignal, displayEnd, play, predictions, setP
                 })
             setPreviousIndex(displayEnd)
         }
-    }, 1000)
+    }, 4000) //NOTE! Flask server wil run into appending errors if set too short. TODO: Make append_signal or predict() handle these cases
 
 
     return (

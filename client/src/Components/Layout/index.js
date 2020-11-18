@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {Configuration} from "../Configuration";
 import {Graph} from "../Graph";
 import {Signal} from "../Signal";
+import {ServerConnection} from "../ServerConnection";
 
 
 export const Layout = () => {
@@ -15,7 +16,10 @@ export const Layout = () => {
 
     const [predictions, setPredictions] = useState([])
 
-    const slidingWindow = 300
+    const [apiRoot,setApiRoot] = useState("http://localhost:5000/api")
+
+
+    const slidingWindow = 900
 
     //Copied from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
     function useInterval(callback, delay) {
@@ -42,6 +46,9 @@ export const Layout = () => {
     return (
         <>
 
+            <ServerConnection  apiRoot={apiRoot} useInterval={useInterval}>
+
+            </ServerConnection>
             <Graph
                 abdoSignal={abdoSignal} displayStart={displayStart} displayEnd={displayEnd}
                 slidingWindow={slidingWindow} predictions={predictions} useInterval={useInterval}
@@ -57,7 +64,7 @@ export const Layout = () => {
                 displayEnd={displayEnd} setDisplayEnd={setDisplayEnd} displayStart={displayStart}
                 setDisplayStart={setDisplayStart}
                 slidingWindow={slidingWindow} predictions={predictions} setPredictions={setPredictions}
-                useInterval={useInterval}>
+                useInterval={useInterval} apiRoot={apiRoot}>
             </Signal>
 
 
