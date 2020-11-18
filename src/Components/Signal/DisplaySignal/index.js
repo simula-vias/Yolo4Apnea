@@ -13,7 +13,7 @@ export const DisplaySignal = ({play, displayEnd, setDisplayEnd, displayStart, se
                     setDisplayStart(displayStart + 1)
                 }
             }
-        }, 100)
+        }, 100) // 100 is default value
         return () => clearInterval(interval)
 
 
