@@ -7,7 +7,6 @@ from .config import ImageConfig,YoloConfig
 from .predictions import Predictions
 from .yolo_signal_detector import YoloSignalDetector
 
-
 class ApneaDetector:
 
     def __init__(self,weights_path=YoloConfig.weights): #Todo, remove default weights
@@ -16,11 +15,10 @@ class ApneaDetector:
 
         self.signal_index = 0
         self.signal_length = 0
-        self.id = uuid.uuid1() #TODO id from parameters maybe? Could be used when making the detector concurrent
         self.signal = np.zeros(12 * 60 * 60 * 10)
 
         self.predictions = Predictions()
-        self.yolo = YoloSignalDetector(weights_path)
+        self.yolo = YoloSignalDetector(weights_path,YoloConfig.size,YoloConfig.iou,YoloConfig.score)
 
     def append_signal(self, signal):
         """
@@ -33,7 +31,6 @@ class ApneaDetector:
 
         self._signal[self.signal_length:self.signal_length + len(signal)] = signal
         self.signal_length += len(signal)
-        print("Predicting newly added signal")
         progress = progressbar.ProgressBar(max_value=self.signal_length)
         progress.update(self.signal_index)
         self._predict_unchecked_data(progress)
@@ -55,12 +52,13 @@ class ApneaDetector:
         If newly added data is less than {self.sliding_window_overlap} it predicts all the new data
         and whatever is needed before to reach {self.sliding_window_duration}
         """
-        unchecked_duration = self.signal_length - self.signal_index
 
         signal, self.signal_index, signal_start_index = self._get_next_unchecked_signal(self.signal, self.signal_index)
         self._predict_image(signal,signal_start_index)
 
         progress.update(self.signal_index)
+        unchecked_duration = self.signal_length - self.signal_index
+
         if unchecked_duration > 0:
             self._predict_unchecked_data(progress)
 
