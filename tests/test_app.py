@@ -23,7 +23,7 @@ class Test(TestCase):
                 signal = list(self.abdo_signal[i:i+duration])
 
                 rv = c.post('/api/predict', json={
-                    'signal': signal, 'startIndex': i
+                    'signal': signal, 'startIndex': i,"id":"TESTID"
                 })
                 json_data = rv.get_json()
                 if i+duration < sliding_window_duration:
