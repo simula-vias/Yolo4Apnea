@@ -5,7 +5,6 @@ from yoloapnea.config import ImageConfig
 from yoloapnea.predictions import Predictions
 
 
-
 class TestPredictions(TestCase):
 
     def setUp(self):
@@ -56,57 +55,54 @@ class TestPredictions(TestCase):
 
     def test_get_last_predictions_no_data(self):
         last_pred, start_index = self.predictions.get_last_predictions()
-        self.assertEqual(len(last_pred),0)
-        self.assertEqual(start_index,0)
+        self.assertEqual(len(last_pred), 0)
+        self.assertEqual(start_index, 0)
 
     def test_get_last_predictions_with_some_data(self):
-        self.predictions.append_predictions(self.non_overlap_predictions, -int(self.sliding_window_duration*0.3))
+        self.predictions.append_predictions(self.non_overlap_predictions, -int(self.sliding_window_duration * 0.3))
         last_pred, start_index = self.predictions.get_last_predictions()
-        self.assertEqual(len(last_pred),self.sliding_window_duration*0.7)
-        self.assertEqual(start_index,0)
+        self.assertEqual(len(last_pred), self.sliding_window_duration * 0.7)
+        self.assertEqual(start_index, 0)
 
     def test_get_last_predictions_with_enough_data(self):
-        self.predictions.append_predictions(self.non_overlap_predictions, int(self.sliding_window_duration*3))
-        last_pred,start_index = self.predictions.get_last_predictions()
-        self.assertEqual(len(last_pred),self.sliding_window_duration)
-        self.assertEqual(start_index,self.sliding_window_duration*3)
+        self.predictions.append_predictions(self.non_overlap_predictions, int(self.sliding_window_duration * 3))
+        last_pred, start_index = self.predictions.get_last_predictions()
+        self.assertEqual(len(last_pred), self.sliding_window_duration)
+        self.assertEqual(start_index, self.sliding_window_duration * 3)
 
     def test_get_last_predictions_with_adding_data(self):
         self.predictions.append_predictions(self.non_overlap_predictions, 0)
-        last_pred,start_index = self.predictions.get_last_predictions()
+        last_pred, start_index = self.predictions.get_last_predictions()
 
-        self.assertEqual(len(last_pred),self.sliding_window_duration)
+        self.assertEqual(len(last_pred), self.sliding_window_duration)
         self.predictions.append_predictions(self.non_overlap_predictions, 200)
 
-        last_pred,start_index = self.predictions.get_last_predictions()
-        self.assertEqual(len(last_pred),self.sliding_window_duration)
+        last_pred, start_index = self.predictions.get_last_predictions()
+        self.assertEqual(len(last_pred), self.sliding_window_duration)
 
         self.predictions.append_predictions(self.non_overlap_predictions, 400)
-        last_pred,start_index = self.predictions.get_last_predictions()
-        self.assertEqual(len(last_pred),self.sliding_window_duration)
+        last_pred, start_index = self.predictions.get_last_predictions()
+        self.assertEqual(len(last_pred), self.sliding_window_duration)
 
         self.predictions.append_predictions(self.non_overlap_predictions, 500)
-        last_pred,start_index = self.predictions.get_last_predictions()
-        self.assertEqual(len(last_pred),self.sliding_window_duration)
+        last_pred, start_index = self.predictions.get_last_predictions()
+        self.assertEqual(len(last_pred), self.sliding_window_duration)
 
         self.predictions.append_predictions(self.non_overlap_predictions, 700)
-        last_pred,start_index = self.predictions.get_last_predictions()
-        self.assertEqual(len(last_pred),self.sliding_window_duration)
+        last_pred, start_index = self.predictions.get_last_predictions()
+        self.assertEqual(len(last_pred), self.sliding_window_duration)
 
         self.predictions.append_predictions(self.non_overlap_predictions, 900)
-        last_pred,start_index = self.predictions.get_last_predictions()
-        self.assertEqual(len(last_pred),self.sliding_window_duration)
+        last_pred, start_index = self.predictions.get_last_predictions()
+        self.assertEqual(len(last_pred), self.sliding_window_duration)
 
         self.predictions.append_predictions(self.non_overlap_predictions, 950)
-        last_pred,start_index = self.predictions.get_last_predictions()
-        self.assertEqual(len(last_pred),self.sliding_window_duration)
+        last_pred, start_index = self.predictions.get_last_predictions()
+        self.assertEqual(len(last_pred), self.sliding_window_duration)
 
         self.predictions.append_predictions(self.non_overlap_predictions, 1200)
-        last_pred,start_index = self.predictions.get_last_predictions()
-        self.assertEqual(len(last_pred),self.sliding_window_duration)
-
-
-
+        last_pred, start_index = self.predictions.get_last_predictions()
+        self.assertEqual(len(last_pred), self.sliding_window_duration)
 
     def test_append_predictions(self):
         self.predictions.append_predictions(self.non_overlap_predictions, 0)
@@ -149,3 +145,22 @@ class TestPredictions(TestCase):
 
         xml = self.predictions.get_xml(0)
         minidom.parseString(xml)
+
+    def test_get_predictions_as_df(self):
+        self.predictions.append_predictions(self.non_overlap_predictions, 0)
+        df = self.predictions.get_predictions_as_df()
+
+        self.assertTrue(self.sliding_window_duration * 0.2 in df["start"].values)
+        self.assertTrue(self.sliding_window_duration * 0.4 in df["end"].values)
+
+        self.assertFalse(self.sliding_window_duration * 0.1 in df["start"].values)
+        self.assertFalse(self.sliding_window_duration * 0.1 in df["end"].values)
+
+        self.assertFalse(self.sliding_window_duration * 0.45 in df["start"].values)
+        self.assertFalse(self.sliding_window_duration * 0.35 in df["end"].values)
+
+        self.assertTrue(self.sliding_window_duration * 0.5 in df["start"].values)
+        self.assertTrue(self.sliding_window_duration * 0.7 in df["end"].values)
+
+        print(df)
+

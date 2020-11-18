@@ -1,4 +1,8 @@
+import pickle
+
 import numpy as np
+import pandas as pd
+
 from yattag import Doc, indent
 
 from .config import ImageConfig
@@ -36,6 +40,31 @@ class Predictions:
         """
         return self.predictions
 
+    def get_predictions_as_df(self):
+
+        with open('predictions_whole_recording.npy', 'wb') as f:
+            np.save(f,self.predictions)
+
+        # Taken from https://stackoverflow.com/questions/49491011/python-how-to-find-event-occurences-in-data
+        predictions = self.predictions
+        indicators = (predictions > 0.0).astype(int)
+        indicators_diff = np.concatenate([[0],indicators[1:] - indicators[:-1]])
+        diff_locations = np.where(indicators_diff != 0)[0]
+
+        assert len(diff_locations) % 2 == 0
+
+        starts = diff_locations[0::2]
+        ends = diff_locations[1::2]
+
+        df = pd.DataFrame({'start':starts,
+                           'end':ends,})
+
+        df['min_confidence'] = [predictions[start:end].min() for start,end in zip(df["start"],df["end"])]
+        df['max_confidence'] = [predictions[start:end].max() for start,end in zip(df["start"],df["end"])]
+        df['duration'] = df["end"] - df["start"]
+        return df
+
+
     def append_predictions(self, detections, start_index):
         """
         Converts detection object from yolo into timestamps
@@ -45,6 +74,7 @@ class Predictions:
                             the image it was detected on
         :param start_index: index in the signal of the leftmost pixel in the image yolo was run on.
         """
+
         for detection in detections:
             confidence = detection["confidence"]
             start_percentage = detection["left"]
@@ -109,5 +139,10 @@ class Predictions:
         Inserts prediction into predictions array
         :param prediction: Prediction dictionary with keys: start, end & confidence
         """
+
         np.maximum(self.predictions[prediction["start"]:prediction["end"]], prediction["confidence"],
                    out=self.predictions[prediction["start"]:prediction["end"]])
+
+        print()
+
+

@@ -15,12 +15,16 @@ if len(physical_devices) > 0:
 
 class YoloSignalDetector:
 
-    def __init__(self,weights_path):
-        self.input_size = YoloConfig.size
-        self.iou = YoloConfig.iou
-        self.score = YoloConfig.score
+    loaded_model = None
+
+    def __init__(self,weights_path,input_size,iou,score):
         self.weights = weights_path
-        self.saved_model_loaded = tf.saved_model.load(self.weights, tags=[tag_constants.SERVING])
+        self.input_size = input_size
+        self.iou = iou
+        self.score = score
+
+        if YoloSignalDetector.loaded_model is None:
+            YoloSignalDetector.loaded_model = tf.saved_model.load(self.weights, tags=[tag_constants.SERVING])
 
     def detect(self, signal, show_bbox=False):
         image = self.signal_to_image(signal)
@@ -35,7 +39,6 @@ class YoloSignalDetector:
                         "right": right_end}
 
                 predictions.append(pred)
-
         return predictions
 
     @staticmethod
@@ -68,7 +71,7 @@ class YoloSignalDetector:
             images_data.append(image_data)
         images_data = np.asarray(images_data).astype(np.float32)
 
-        infer = self.saved_model_loaded.signatures['serving_default']
+        infer = YoloSignalDetector.loaded_model.signatures['serving_default']
         batch_data = tf.constant(images_data)
         pred_bbox = infer(batch_data)
 
