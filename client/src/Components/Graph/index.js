@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {SensorGraph} from "./SensorGraph";
-import {PredictionGraph} from "./PredictionGraph";
 import Grid from "@material-ui/core/Grid";
+import {CombinedGraph} from "./CombinedGraph";
 
 export const Graph = ({abdoSignal, displayStart, displayEnd, predictions, useInterval}) => {
 
@@ -9,8 +8,10 @@ export const Graph = ({abdoSignal, displayStart, displayEnd, predictions, useInt
 
 
     useEffect(() => {
-        let arrayIndex = Array.from(Array(abdoSignal.length).keys())
-        setSignalIndexArray(arrayIndex)
+        if( abdoSignal !== undefined){
+            let arrayIndex = Array.from(Array(abdoSignal.length).keys())
+            setSignalIndexArray(arrayIndex)
+        }
     }, [abdoSignal])
 
 
@@ -19,16 +20,10 @@ export const Graph = ({abdoSignal, displayStart, displayEnd, predictions, useInt
         <>
             <Grid container direction="column" alignItems={"center"} justify={"center"}>
                 <Grid item xs={12}>
-                    <SensorGraph abdoSignal={abdoSignal} displayEnd={displayEnd} displayStart={displayStart} signalIndexArray={signalIndexArray} useInterval={useInterval}>
-                    </SensorGraph>
+                    <CombinedGraph abdoSignal={abdoSignal} displayEnd={displayEnd} displayStart={displayStart}
+                                 signalIndexArray={signalIndexArray} useInterval={useInterval} predictions={predictions}>
+                    </CombinedGraph>
                 </Grid>
-
-            <Grid xs={12}>
-                <PredictionGraph predictions={predictions} displayEnd={displayEnd}
-                                 displayStart={displayStart} signalIndexArray={signalIndexArray} useInterval={useInterval}>
-                </PredictionGraph>
-            </Grid>
-
             </Grid>
         </>
     )
