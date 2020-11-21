@@ -6,8 +6,6 @@ export const ServerConnection = ({apiRoot, useInterval}) => {
     const [serverConnected,setServerConnected] = useState(false)
     const [serverCheckInterval,setServerCheckInterval] = useState(3000)
     useInterval(() => {
-        console.log(!serverConnected)
-        if (!serverConnected){
             let apiEndpoint = apiRoot + "/serverstatus"
 
             const requestOptions = {
@@ -23,9 +21,8 @@ export const ServerConnection = ({apiRoot, useInterval}) => {
                         setServerCheckInterval(20000)
                     }
                 })
-        }
 
-    }, serverCheckInterval) //NOTE! Flask server wil run into appending errors if set too short. TODO: Make append_signal or predict() handle these cases
+    }, serverCheckInterval)
 
     return <h1> Connected to server?  {serverConnected.toString()}</h1>
 }

@@ -5,7 +5,7 @@ import {PredictedSignal} from "./PredictedSignal";
 
 
 export const Signal = ({demoMode, abdoSignal, setAbdoSignal, play, displayEnd, setDisplayEnd, displayStart, setDisplayStart,
-                           slidingWindow, predictions, setPredictions, useInterval, apiRoot}) => {
+                           slidingWindow, predictions, setPredictions, useInterval, apiRoot,id}) => {
 
 
     return (
@@ -24,12 +24,12 @@ export const Signal = ({demoMode, abdoSignal, setAbdoSignal, play, displayEnd, s
             <PredictedSignal abdoSignal={abdoSignal} displayEnd={displayEnd} play={play} predictions={predictions}
                              setPredictions={setPredictions}
                              useInterval={useInterval}
-                             apiRoot={apiRoot}>
+                             apiRoot={apiRoot} id={id}>
 
             </PredictedSignal>
 
 
-            Abdo signal is of length {abdoSignal.length}
+            Abdo signal is of length {abdoSignal !== undefined ? abdoSignal.length : 0}
 
         </>
     )

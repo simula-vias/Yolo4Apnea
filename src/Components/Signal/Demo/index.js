@@ -8,6 +8,7 @@ export const Demo = ({setAbdoSignal}) => {
         let demo_abdo_values = demo_abdo
         console.log("demo mode set")
         setAbdoSignal([...demo_abdo_values])
+
     }, [setAbdoSignal])
 
 
