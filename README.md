@@ -6,6 +6,8 @@ Server-client infrastructure to run real-time detection of apneas using YOLO as
 talken about in the Yolo4Apnea: Real-time Detection of Obstructive Sleep Apnea
 demo paper.
 
+**If this repo fails download, it is also available at https://github.com/shamnvik/Yolo4Apnea**
+
 ##  Note:  Project is not finished, and will be upgraded incrementally
 
 # Requirements
