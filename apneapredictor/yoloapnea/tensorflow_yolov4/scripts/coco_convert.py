@@ -7,8 +7,12 @@ import json
 import sys
 import pickle
 
-flags.DEFINE_string('input', '/Volumes/Elements/data/coco_dataset/coco/annotations/instances_val2017.json', 'path to classes file')
+flags.DEFINE_string(
+    'input',
+    '/Volumes/Elements/data/coco_dataset/coco/annotations/instances_val2017.json',
+    'path to classes file')
 flags.DEFINE_string('output', 'val2017.pkl', 'path to classes file')
+
 
 class COCO:
     """
@@ -40,9 +44,10 @@ class COCO:
                 cls = None
 
                 for info in images_info:
-                        if info["id"] == image_id:
-                            filename, img_width, img_height = \
-                                info["file_name"].split(".")[0], info["width"], info["height"]
+                    if info["id"] == image_id:
+                        filename, img_width, img_height = \
+                            info["file_name"].split(
+                                ".")[0], info["width"], info["height"]
 
                 for category in cls_info:
                     if category["id"] == cls_id:
@@ -84,7 +89,8 @@ class COCO:
                     }
 
                 percent = (float(progress_cnt) / float(progress_length)) * 100
-                print(str(progress_cnt) + "/" + str(progress_length) + " total: " + str(round(percent, 2)))
+                print(str(progress_cnt) + "/" + str(progress_length) +
+                      " total: " + str(round(percent, 2)))
                 progress_cnt += 1
 
             #print(json.dumps(data, indent=4, sort_keys = True))
@@ -95,15 +101,18 @@ class COCO:
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
 
-            msg = "ERROR : {}, moreInfo : {}\t{}\t{}".format(e, exc_type, fname, exc_tb.tb_lineno)
+            msg = "ERROR : {}, moreInfo : {}\t{}\t{}".format(
+                e, exc_type, fname, exc_tb.tb_lineno)
 
             return False, msg
+
 
 def main(_argv):
     coco = COCO()
     data = coco.parse(FLAGS.input)
     with open(FLAGS.output, 'wb') as handle:
         pickle.dump(data, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
 
 if __name__ == '__main__':
     try:
