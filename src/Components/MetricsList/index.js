@@ -38,8 +38,8 @@ export const MetricsList = ({server, id, useInterval}) => {
         getMetrics(server, id, setMetrics)
             .then(metrics => {
                 if (metrics !== undefined) {
-                    let cleaned_rows = Object.keys(metrics).map((row) => {
-                        return cleanTableRow(metrics, row)
+                    let cleaned_rows = Object.keys(metrics["prediction"]).map((row) => {
+                        return cleanTableRow(metrics["prediction"], row)
                     })
                     setMetrics(cleaned_rows)
                 }
