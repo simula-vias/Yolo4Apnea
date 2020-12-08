@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import {useEffect} from "react";
 
 
 export const DisplaySignal = ({play, displayEnd, setDisplayEnd, displayStart, setDisplayStart, slidingWindow}) => {
@@ -21,10 +21,5 @@ export const DisplaySignal = ({play, displayEnd, setDisplayEnd, displayStart, se
     }, [play, displayStart, displayEnd, setDisplayEnd,setDisplayStart,slidingWindow])
 
 
-    return (
-        <>
-            Display signal starts at {displayStart} and ends at {displayEnd}
-            Play state = {play.toString()}
-        </>
-    )
+    return (null)
 }

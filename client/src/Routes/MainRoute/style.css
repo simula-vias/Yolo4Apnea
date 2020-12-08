@@ -1,0 +1,16 @@
+.custom-file-input {
+    height: 1vh !important;
+    vertical-align: middle !important;
+}
+
+
+.tall-button {
+    white-space: normal !important;
+    height: 200px !important;
+    min-width: 140px !important;
+}
+
+.block-button {
+    width: 100% !important;
+
+}
