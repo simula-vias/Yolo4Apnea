@@ -1,17 +1,17 @@
+from tensorflow.compat.v1 import InteractiveSession
+from tensorflow.compat.v1 import ConfigProto
+import numpy as np
+import cv2
+from PIL import Image
+from tensorflow.python.saved_model import tag_constants
+from core.yolov4 import filter_boxes
+import core.utils as utils
+from absl.flags import FLAGS
+from absl import app, flags, logging
 import tensorflow as tf
 physical_devices = tf.config.experimental.list_physical_devices('GPU')
 if len(physical_devices) > 0:
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
-from absl import app, flags, logging
-from absl.flags import FLAGS
-import core.utils as utils
-from core.yolov4 import filter_boxes
-from tensorflow.python.saved_model import tag_constants
-from PIL import Image
-import cv2
-import numpy as np
-from tensorflow.compat.v1 import ConfigProto
-from tensorflow.compat.v1 import InteractiveSession
 
 flags.DEFINE_string('framework', 'tf', '(tf, tflite, trt')
 flags.DEFINE_string('weights', './checkpoints/yolov4-416',
@@ -23,6 +23,7 @@ flags.DEFINE_string('image', './data/kite.jpg', 'path to input image')
 flags.DEFINE_string('output', 'result.png', 'path to output image')
 flags.DEFINE_float('iou', 0.45, 'iou threshold')
 flags.DEFINE_float('score', 0.25, 'score threshold')
+
 
 def main(_argv):
     config = ConfigProto()
@@ -54,13 +55,19 @@ def main(_argv):
         print(output_details)
         interpreter.set_tensor(input_details[0]['index'], images_data)
         interpreter.invoke()
-        pred = [interpreter.get_tensor(output_details[i]['index']) for i in range(len(output_details))]
+        pred = [
+            interpreter.get_tensor(
+                output_details[i]['index']) for i in range(
+                len(output_details))]
         if FLAGS.model == 'yolov3' and FLAGS.tiny == True:
-            boxes, pred_conf = filter_boxes(pred[1], pred[0], score_threshold=0.25, input_shape=tf.constant([input_size, input_size]))
+            boxes, pred_conf = filter_boxes(
+                pred[1], pred[0], score_threshold=0.25, input_shape=tf.constant([input_size, input_size]))
         else:
-            boxes, pred_conf = filter_boxes(pred[0], pred[1], score_threshold=0.25, input_shape=tf.constant([input_size, input_size]))
+            boxes, pred_conf = filter_boxes(
+                pred[0], pred[1], score_threshold=0.25, input_shape=tf.constant([input_size, input_size]))
     else:
-        saved_model_loaded = tf.saved_model.load(FLAGS.weights, tags=[tag_constants.SERVING])
+        saved_model_loaded = tf.saved_model.load(
+            FLAGS.weights, tags=[tag_constants.SERVING])
         infer = saved_model_loaded.signatures['serving_default']
         batch_data = tf.constant(images_data)
         pred_bbox = infer(batch_data)
@@ -77,13 +84,18 @@ def main(_argv):
         iou_threshold=FLAGS.iou,
         score_threshold=FLAGS.score
     )
-    pred_bbox = [boxes.numpy(), scores.numpy(), classes.numpy(), valid_detections.numpy()]
+    pred_bbox = [
+        boxes.numpy(),
+        scores.numpy(),
+        classes.numpy(),
+        valid_detections.numpy()]
     image = utils.draw_bbox(original_image, pred_bbox)
     # image = utils.draw_bbox(image_data*255, pred_bbox)
     image = Image.fromarray(image.astype(np.uint8))
     image.show()
     image = cv2.cvtColor(np.array(image), cv2.COLOR_BGR2RGB)
     cv2.imwrite(FLAGS.output, image)
+
 
 if __name__ == '__main__':
     try:

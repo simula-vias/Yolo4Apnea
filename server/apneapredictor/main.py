@@ -5,8 +5,9 @@ import pandas as pd
 import numpy as np
 import pyedflib
 
+
 class CLI:
-    def __init__(self,signal_file=None,signal_type="ABDO_RES"):
+    def __init__(self, signal_file=None, signal_type="ABDO_RES"):
         signal_file = os.getcwd() + os.sep + signal_file
         self.edf_signal = self.readEdfFile(signal_file)
         self.signal = self.edf_signal[signal_type].to_numpy()
@@ -15,10 +16,8 @@ class CLI:
         self.apnea_detector.append_signal(self.signal)
         predictions = self.apnea_detector.predictions
         xml = predictions.get_xml()
-        print(xml)
-        print(predictions.get_predictions_as_np_array())
 
-    def readEdfFile(self,file):
+    def readEdfFile(self, file):
         """Reads EDF file from SHHS dataset. Will need adjustments to work for other signals
         Arguments:
             file {str} -- Path to edf file
@@ -42,7 +41,6 @@ class CLI:
         return signal
 
 
-
 if __name__ == '__main__':
     print("Starting cli")
     parser = argparse.ArgumentParser(description='Predict Apnea events on .edf file ',
@@ -51,5 +49,3 @@ if __name__ == '__main__':
     parser.add_argument('file', help='path to a .edf file to analyze')
     args = parser.parse_args()
     cli = CLI(signal_file=args.file)
-
-

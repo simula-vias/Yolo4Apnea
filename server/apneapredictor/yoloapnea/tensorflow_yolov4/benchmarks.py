@@ -67,7 +67,8 @@ def main(_argv):
                 model = tf.keras.Model(input_layer, bbox_tensors)
                 utils.load_weights(model, FLAGS.weights)
     elif FLAGS.framework == 'trt':
-        saved_model_loaded = tf.saved_model.load(FLAGS.weights, tags=[tag_constants.SERVING])
+        saved_model_loaded = tf.saved_model.load(
+            FLAGS.weights, tags=[tag_constants.SERVING])
         signature_keys = list(saved_model_loaded.signatures.keys())
         print(signature_keys)
         infer = saved_model_loaded.signatures['serving_default']
@@ -83,7 +84,9 @@ def main(_argv):
     original_image = cv2.imread(FLAGS.image)
     original_image = cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB)
     original_image_size = original_image.shape[:2]
-    image_data = utils.image_preprocess(np.copy(original_image), [FLAGS.size, FLAGS.size])
+    image_data = utils.image_preprocess(
+        np.copy(original_image), [
+            FLAGS.size, FLAGS.size])
     image_data = image_data[np.newaxis, ...].astype(np.float32)
     img_raw = tf.image.decode_image(
         open(FLAGS.image, 'rb').read(), channels=3)
@@ -100,10 +103,13 @@ def main(_argv):
                 value = value.numpy()
                 pred_bbox.append(value)
             if FLAGS.model == 'yolov4':
-                pred_bbox = utils.postprocess_bbbox(pred_bbox, ANCHORS, STRIDES, XYSCALE)
+                pred_bbox = utils.postprocess_bbbox(
+                    pred_bbox, ANCHORS, STRIDES, XYSCALE)
             else:
-                pred_bbox = utils.postprocess_bbbox(pred_bbox, ANCHORS, STRIDES)
-            bboxes = utils.postprocess_boxes(pred_bbox, original_image_size, input_size, 0.25)
+                pred_bbox = utils.postprocess_bbbox(
+                    pred_bbox, ANCHORS, STRIDES)
+            bboxes = utils.postprocess_boxes(
+                pred_bbox, original_image_size, input_size, 0.25)
             bboxes = utils.nms(bboxes, 0.213, method='nms')
         elif FLAGS.framework == 'trt':
             pred_bbox = []
@@ -112,15 +118,19 @@ def main(_argv):
                 value = value.numpy()
                 pred_bbox.append(value)
             if FLAGS.model == 'yolov4':
-                pred_bbox = utils.postprocess_bbbox(pred_bbox, ANCHORS, STRIDES, XYSCALE)
+                pred_bbox = utils.postprocess_bbbox(
+                    pred_bbox, ANCHORS, STRIDES, XYSCALE)
             else:
-                pred_bbox = utils.postprocess_bbbox(pred_bbox, ANCHORS, STRIDES)
-            bboxes = utils.postprocess_boxes(pred_bbox, original_image_size, input_size, 0.25)
+                pred_bbox = utils.postprocess_bbbox(
+                    pred_bbox, ANCHORS, STRIDES)
+            bboxes = utils.postprocess_boxes(
+                pred_bbox, original_image_size, input_size, 0.25)
             bboxes = utils.nms(bboxes, 0.213, method='nms')
         # pred_bbox = pred_bbox.numpy()
         curr_time = time.time()
         exec_time = curr_time - prev_time
-        if i == 0: continue
+        if i == 0:
+            continue
         sum += (1 / exec_time)
         info = str(i) + " time:" + str(round(exec_time, 3)) + " average FPS:" + str(round(sum / i, 2)) + ", FPS: " + str(
             round((1 / exec_time), 1))

@@ -19,7 +19,8 @@ class TestApneaDetector(TestCase):
         apnea_predictor = ApneaDetector()
         apnea_predictor.append_signal(self.abdo_signal[0:700])
         predictions = apnea_predictor.predictions.get_predictions_as_np_array()
-        np.testing.assert_almost_equal(self.abdo_signal[0:700], apnea_predictor.signal, decimal=5)
+        np.testing.assert_almost_equal(
+            self.abdo_signal[0:700], apnea_predictor.signal, decimal=5)
 
     def test_append_signal_many_small_appends(self):
         apnea_predictor = ApneaDetector()
@@ -63,10 +64,11 @@ class TestApneaDetector(TestCase):
         apnea_predictor_2.append_signal(self.abdo_signal[900:1500])
         apnea_predictor_2.append_signal(self.abdo_signal[1500:10000])
 
-        self.assertEqual(apnea_predictor_1.signal_length,1500)
-        self.assertEqual(apnea_predictor_2.signal_length,10000)
-        self.assertNotEqual(apnea_predictor_1.signal_length,apnea_predictor_2.signal_length)
-
+        self.assertEqual(apnea_predictor_1.signal_length, 1500)
+        self.assertEqual(apnea_predictor_2.signal_length, 10000)
+        self.assertNotEqual(
+            apnea_predictor_1.signal_length,
+            apnea_predictor_2.signal_length)
 
     def test__get_next_unchecked_signal_little_data(self):
         apnea_predictor = ApneaDetector()
@@ -89,7 +91,8 @@ class TestApneaDetector(TestCase):
         self.assertEqual(new_index, small_index + small_index + medium_index)
         self.assertEqual(len(prediction), self.sliding_window_duration)
 
-    def test__get_next_unchecked_signal_not_enough_remaining_data_in_signal(self):
+    def test__get_next_unchecked_signal_not_enough_remaining_data_in_signal(
+            self):
         apnea_predictor = ApneaDetector()
         data_index = 1200
         start_index = 1100
@@ -124,6 +127,6 @@ class TestApneaDetector(TestCase):
         appended_signal = apnea_predictor.signal
         np.testing.assert_almost_equal(true_signal, appended_signal, decimal=5)
         self.assertEqual(len(true_signal), apnea_predictor.signal_length)
-        df = apnea_predictor.predictions.get_predictions_as_df()
+        df = apnea_predictor.predictions.get_predictions_as_df(
+            apnea_predictor.predictions.predictions)
         print(df)
-

@@ -7,7 +7,12 @@ import sys
 # then replace spaces with delimiters inside ground-truth/ and predicted/
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-d', '--delimiter', type=str, help="delimiter to replace space (default: '-')", default='-')
+parser.add_argument(
+    '-d',
+    '--delimiter',
+    type=str,
+    help="delimiter to replace space (default: '-')",
+    default='-')
 parser.add_argument('-y', '--yes', action='store_true', help="force yes confirmation on yes/no query (default: False)",
                     default=False)
 args = parser.parse_args()
@@ -53,8 +58,7 @@ def query_yes_no(question, default="yes", bypass=False):
 
 def rename_class(current_class_name, new_class_name):
     # get list of txt files
-    file_list = glob.glob('*.txt')
-    file_list.sort()
+    file_list = sorted(glob.glob('*.txt'))
     # iterate through the txt files
     for txt_file in file_list:
         class_found = False

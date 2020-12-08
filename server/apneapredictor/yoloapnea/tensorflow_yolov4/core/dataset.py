@@ -2,20 +2,23 @@
 # coding=utf-8
 
 import os
-import cv2
 import random
+
+import core.utils as utils
+import cv2
 import numpy as np
 import tensorflow as tf
-import core.utils as utils
 from core.config import cfg
 
 
 class Dataset(object):
     """implement Dataset here"""
 
-    def __init__(self, FLAGS, is_training: bool, dataset_type: str = "converted_coco"):
+    def __init__(self, FLAGS, is_training: bool,
+                 dataset_type: str = "converted_coco"):
         self.tiny = FLAGS.tiny
-        self.strides, self.anchors, NUM_CLASS, XYSCALE = utils.load_config(FLAGS)
+        self.strides, self.anchors, NUM_CLASS, XYSCALE = utils.load_config(
+            FLAGS)
         self.dataset_type = dataset_type
 
         self.annot_path = (
@@ -298,7 +301,8 @@ class Dataset(object):
             )
             for i in range(3)
         ]
-        bboxes_xywh = [np.zeros((self.max_bbox_per_scale, 4)) for _ in range(3)]
+        bboxes_xywh = [np.zeros((self.max_bbox_per_scale, 4))
+                       for _ in range(3)]
         bbox_count = np.zeros((3,))
 
         for bbox in bboxes:
@@ -321,7 +325,7 @@ class Dataset(object):
                 axis=-1,
             )
             bbox_xywh_scaled = (
-                    1.0 * bbox_xywh[np.newaxis, :] / self.strides[:, np.newaxis]
+                1.0 * bbox_xywh[np.newaxis, :] / self.strides[:, np.newaxis]
             )
 
             iou = []
@@ -329,7 +333,7 @@ class Dataset(object):
             for i in range(3):
                 anchors_xywh = np.zeros((self.anchor_per_scale, 4))
                 anchors_xywh[:, 0:2] = (
-                        np.floor(bbox_xywh_scaled[i, 0:2]).astype(np.int32) + 0.5
+                    np.floor(bbox_xywh_scaled[i, 0:2]).astype(np.int32) + 0.5
                 )
                 anchors_xywh[:, 2:4] = self.anchors[i]
 
