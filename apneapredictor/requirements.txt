@@ -11,3 +11,4 @@ yattag==1.14.0
 setuptools~=50.3.1
 lxml~=4.6.1
 scikit-learn~=0.23.2
+progressbar2

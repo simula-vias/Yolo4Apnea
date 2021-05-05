@@ -130,3 +130,5 @@ dmypy.json
 
 #Weight files
 /yoloapnea/tensorflow_yolov4/checkpoints/
+/tests/yolo-obj_last.weights
+/tests/yolo-obj.cfg
