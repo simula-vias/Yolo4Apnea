@@ -4,9 +4,9 @@ from unittest import TestCase
 import numpy as np
 
 import app
-from apneapredictor.yoloapnea.config import ImageConfig
+from config import Config
 
-sliding_window_duration = ImageConfig.sliding_window_duration
+sliding_window_duration = Config.sliding_window_duration
 
 
 class Test(TestCase):

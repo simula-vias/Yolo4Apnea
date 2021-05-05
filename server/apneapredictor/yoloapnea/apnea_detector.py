@@ -1,27 +1,41 @@
+import cv2
 import numpy as np
 import progressbar
 
-from .config import ImageConfig, YoloConfig
+from .Plotters.pyPlotter import PyPlotter as SignalPlotter
+from .apneas import ApneaType
 from .predictions import Predictions
 from .yolo_signal_detector import YoloSignalDetector
 
 
 class ApneaDetector:
 
-    def __init__(self, weights_path=YoloConfig.weights):  # Todo, remove default weights
-        self.sliding_window_duration = ImageConfig.sliding_window_duration
-        self.sliding_window_overlap = ImageConfig.sliding_window_overlap
+    def __init__(self, weights_path, config_path, apnea_types_list, sliding_window_duration, sliding_window_overlap,
+                 yolosize, conf_thresh, nms_thresh, plotter):
+        self.sliding_window_duration = sliding_window_duration
+        self.sliding_window_overlap = sliding_window_overlap
 
         self.signal_index = 0
         self.signal_length = 0
-        self.signal = np.zeros(12 * 60 * 60 * 10)
+        self.signal = np.zeros(15 * 60 * 60 * 10)
 
-        self.predictions = Predictions()
-        self.yolo = YoloSignalDetector(
-            weights_path,
-            YoloConfig.size,
-            YoloConfig.iou,
-            YoloConfig.score)
+        self.weights = weights_path
+        self.config = config_path
+
+        apnea_types = [ApneaType[a] for a in apnea_types_list]
+
+        self.predictions = Predictions(self.sliding_window_duration, apnea_types, 0.25)
+        if plotter == "PyPlot":
+            from .Plotters.pyPlotter import PyPlotter as Plotter
+            self.signalPlotter = Plotter(self.sliding_window_duration, self.sliding_window_overlap)
+        else:
+            raise NotImplementedError("Plotter type not implemented")
+
+        size = yolosize
+        conf_thresh = conf_thresh
+        nms_thresh = nms_thresh
+
+        self.yolo = YoloSignalDetector(self.weights, size, conf_thresh, nms_thresh, self.config)
 
     def append_signal(self, signal):
         """
@@ -32,10 +46,11 @@ class ApneaDetector:
         :return: None. Predictions can be accessed from predictions object (self.predictions).
         """
 
-        self._signal[self.signal_length:self.signal_length +
-                     len(signal)] = signal
+        self._signal[self.signal_length:self.signal_length + len(signal)] = signal
         self.signal_length += len(signal)
-        progress = progressbar.ProgressBar(max_value=self.signal_length)
+
+        progressbar_value = self.sliding_window_duration if len(signal) < self.sliding_window_duration else len(signal)
+        progress = progressbar.ProgressBar(max_value=progressbar_value)
         progress.update(self.signal_index)
         self._predict_unchecked_data(progress)
 
@@ -57,43 +72,34 @@ class ApneaDetector:
         and whatever is needed before to reach {self.sliding_window_duration}
         """
 
-        signal, self.signal_index, signal_start_index = self._get_next_unchecked_signal(
-            self.signal, self.signal_index)
-        self._predict_image(signal, signal_start_index)
+        signal_start_index_with_guaranteed_overlap = self.signal_index - self.sliding_window_overlap
+        signal_start_index_with_guaranteed_overlap = 0 if signal_start_index_with_guaranteed_overlap < 0 else signal_start_index_with_guaranteed_overlap
 
-        progress.update(self.signal_index)
-        unchecked_duration = self.signal_length - self.signal_index
+        signal_to_plot = self.signal[signal_start_index_with_guaranteed_overlap:self.signal_length]
+        added_before_start = 0
 
-        if unchecked_duration > 0:
-            self._predict_unchecked_data(progress)
+        if self.signal_length < self.sliding_window_duration:
+            zeroedArray = np.zeros(self.sliding_window_duration)
+            zeroedArray[-len(signal_to_plot):] = signal_to_plot
+            added_before_start = len(signal_to_plot) - self.sliding_window_duration
+            signal_to_plot = zeroedArray
 
-    def _get_next_unchecked_signal(self, signal, start_index):
-        new_start_index = start_index
-        signal_start_index = start_index
-        # Enough data for sliding window duration after start index
-        if len(signal) - start_index > self.sliding_window_duration:
-            signal_data = signal[start_index:start_index +
-                                 self.sliding_window_duration]
-            new_start_index += self.sliding_window_overlap
-            signal_start_index = start_index
+        elif len(signal_to_plot) < self.sliding_window_duration:
+            added_before_start = self.sliding_window_duration - len(signal_to_plot)
+            signal_to_plot = self.signal[-self.sliding_window_duration:]
 
-        # Not enough data after index, but enough data before to reach
-        # sliding_window_duration
-        elif len(signal) >= self.sliding_window_duration:
-            signal_data = signal[-self.sliding_window_duration:]
-            new_start_index = len(signal)
-            signal_start_index = len(signal) - self.sliding_window_duration
+        images = self.signalPlotter.plot_signal(signal_to_plot)
 
-        elif len(signal) < self.sliding_window_duration:
-            signal_data = np.zeros(self.sliding_window_duration)
-            signal_data[-len(signal):] = signal
-            new_start_index = len(signal)
-            signal_start_index = len(signal) - self.sliding_window_duration
-        else:
-            raise NotImplementedError
-        return signal_data, new_start_index, signal_start_index
+        for index, img in images:
+            true_index = index + added_before_start
+            self._predict_image(img, true_index)
+            progress_index = true_index + self.sliding_window_duration - self.signal_index
+            progress_index = 0 if progress_index < 0 else progress_index
+            progress.update(progress_index)
 
-    def _predict_image(self, signal, start_index):
+        self.signal_index = self.signal_length
+
+    def _predict_image(self, img, start_index):
         """
         Local helper function for running yolo on a signal of already correct length and inserts the predictions
         into the prediction object
@@ -102,5 +108,5 @@ class ApneaDetector:
         :param start_index: index of signal[0] in {self.signal} for knowing when predictions start
                 since start of recording
         """
-        detections = self.yolo.detect(signal, show_bbox=False)
+        detections = self.yolo.detect(img, show_bbox=False)
         self.predictions.append_predictions(detections, start_index)

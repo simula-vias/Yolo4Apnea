@@ -9,16 +9,26 @@ from config import Config
 app = Flask(__name__)
 CORS(app)
 
-
 print("initalising detector")
 print("This may take some time")
-yoloapnea.ApneaDetector(weights_path=Config.weights_path)
+
+weights = Config.weights_path
+config = Config.cfg_path
+apnea_types = ["Obstructive", "Hypopnea"]
+sliding_window_duration = Config.sliding_window_duration
+sliding_window_overlap = 300
+yolosize = 608
+conf_thresh = 0.0
+nms_thresh = 0.1
+plotter = "PyPlot"
+
+yoloapnea.ApneaDetector(weights, config, apnea_types, sliding_window_duration, sliding_window_overlap, yolosize,
+                        conf_thresh, nms_thresh, plotter)
 print("Initialisation done")
 
 example_prediction = np.zeros(100)
 example_prediction[50:] = 1
 example_index = 0
-
 
 clients = {}
 
@@ -35,7 +45,8 @@ def predict():
 
         if id not in clients:
             weights_path = Config.weights_path
-            clients[id] = yoloapnea.ApneaDetector(weights_path=weights_path)
+            clients[id] = yoloapnea.ApneaDetector(weights, config, apnea_types, sliding_window_duration,
+                                                  sliding_window_overlap, yolosize, conf_thresh, nms_thresh, plotter)
 
         detector = clients[id]
 

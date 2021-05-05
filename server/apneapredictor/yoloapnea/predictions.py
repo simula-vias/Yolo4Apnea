@@ -1,25 +1,75 @@
-import pickle
-
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from lxml import etree
-from sklearn.metrics import accuracy_score, precision_score, f1_score, recall_score
-from sklearn import preprocessing
+from sklearn.metrics import accuracy_score, precision_score, f1_score, recall_score, roc_curve, auc
 from sklearn.preprocessing import binarize
-
 from yattag import Doc, indent
 
-from .config import ImageConfig
+from .apneas import ApneaType
+from .evaluate import Evaluate
 
 
 class Predictions:
 
-    def __init__(self):
-        self.predictions = np.zeros(12 * 60 * 60 * 10)
-        self.ground_truth = None
-        self.ground_truth_length = 0
-        self.sliding_window_duration = ImageConfig.sliding_window_duration
+    def __init__(self, sliding_window_duration, apnea_types, threshold):
+        self._predictions = np.zeros(12 * 60 * 60 * 10)
+        self._ground_truth = None
+        self._ground_truth_length = 0
+        self.sliding_window_duration = sliding_window_duration
         self.last_predicted_index = 0
+        self.last_ground_truth_index = 0
+        self.apnea_types = apnea_types
+        self.threshold = threshold
+
+    @property
+    def predictions(self):
+        return self._predictions[:self.last_predicted_index]
+
+    @property
+    def ground_truth(self):
+        if self._ground_truth is None:
+            return None
+        else:
+            return self._ground_truth[:self.ground_truth_length]
+
+    @property
+    def ground_truth_length(self):
+        return self.last_predicted_index  # Ground truth will never be longer than the signal data
+
+    @property
+    def annotation_file(self):
+        raise RuntimeError("This property has no getter")
+
+    @annotation_file.setter
+    def annotation_file(self, file):
+
+        if type(file) is pd.core.frame.DataFrame:
+            self.set_dataFrame_annotations(file)
+
+        elif file.endswith("nsrr.xml"):
+            self.read_xml_annotations(file)
+
+        else:
+            raise NotImplementedError("Annotation filetype not supported")
+
+    # @property
+    # def info(self):
+    #     df = self.get_predictions_as_df(self.predictions)
+    #     statistics = {}
+    #     statistics["apneas"] = len(df["start"])
+    #     statistics["recording_length_minutes"] = len(self.predictions) / (60 * 10)  # Hour * hz
+    #     statistics["calculated_ahi"] = (statistics["apneas"] / statistics["recording_length_minutes"]) * 60
+    #     return statistics
+
+    @property
+    def calculatedAhi(self):
+        df = self.get_predictions_as_df(self.predictions)
+        return len(df["start"]) / (len(self.predictions) / (60 * 10)) * 60
+
+    @property
+    def evaluate(self):
+        return Evaluate(self.predictions, self.ground_truth, self.apnea_types, self.threshold)
 
     def get_last_predictions(self):
         """
@@ -38,39 +88,6 @@ class Predictions:
 
         return predictions, start_index
 
-    def get_predictions_as_np_array(self):
-        """
-        All stored predictions as numpy array
-        :return: numpy array of predictions. Values represent confidence of prediction. 0 < value < 1
-        """
-        return self.predictions
-
-    def get_predictions_as_df(self, predictions):
-
-        # with open('predictions_whole_recording.npy', 'wb') as f:
-        #     np.save(f,self.predictions)
-
-        # Taken from
-        # https://stackoverflow.com/questions/49491011/python-how-to-find-event-occurences-in-data
-        indicators = (predictions > 0.0).astype(int)
-        indicators_diff = np.concatenate(
-            [[0], indicators[1:] - indicators[:-1]])
-        diff_locations = np.where(indicators_diff != 0)[0]
-
-        assert len(diff_locations) % 2 == 0
-
-        starts = diff_locations[0::2]
-        ends = diff_locations[1::2]
-
-        df = pd.DataFrame({'start': starts,
-                           'end': ends, })
-
-        df['min_confidence'] = [predictions[start:end].min()
-                                for start, end in zip(df["start"], df["end"])]
-        df['max_confidence'] = [predictions[start:end].max()
-                                for start, end in zip(df["start"], df["end"])]
-        df['duration'] = df["end"] - df["start"]
-        return df
 
     def append_predictions(self, detections, start_index):
         """
@@ -87,10 +104,8 @@ class Predictions:
             start_percentage = detection["left"]
             end_percentage = detection["right"]
 
-            start = start_index + \
-                int(start_percentage * self.sliding_window_duration)
-            end = start_index + int(end_percentage *
-                                    self.sliding_window_duration)
+            start = start_index + int(start_percentage * self.sliding_window_duration)
+            end = start_index + int(end_percentage * self.sliding_window_duration)
 
             new_prediction = {"start": start,
                               "end": end,
@@ -149,69 +164,23 @@ class Predictions:
         :param prediction: Prediction dictionary with keys: start, end & confidence
         """
 
-        np.maximum(self.predictions[prediction["start"]:prediction["end"]], prediction["confidence"],
-                   out=self.predictions[prediction["start"]:prediction["end"]])
+        np.maximum(self._predictions[prediction["start"]:prediction["end"]], prediction["confidence"],
+                   out=self._predictions[prediction["start"]:prediction["end"]])
 
-        print()
 
     def get_prediction_metrics(self):
-        print("Getting prediction metrics")
-        df = self.get_predictions_as_df(self.predictions)
         metrics = {}
-        prediction_metrics = {}
-        annotation_metrics = {}
 
-        prediction_metrics["event_count"] = len(df["start"])
-        prediction_metrics["mean_duration"] = df["duration"].mean() if len(
-            df["start"]) > 0 else 0
-        # Hour * hz
-        prediction_metrics["recording_length_minutes"] = self.last_predicted_index / (
-            60 * 10)
-        if prediction_metrics["recording_length_minutes"] > 0:
-            prediction_metrics["calculated_ahi"] = (
-                prediction_metrics["event_count"] / prediction_metrics["recording_length_minutes"]) * 60
-
-        metrics["prediction"] = prediction_metrics
+        metrics["prediction"] = self.get_array_statistics(self.predictions, self.last_predicted_index)
 
         if self.ground_truth is not None:
-            df = self.get_predictions_as_df(self.ground_truth)
-
-            annotation_metrics["event_count"] = len(df["start"])
-            annotation_metrics["mean_duration"] = df["duration"].mean() if len(
-                df["start"]) > 0 else 0
-
-            annotation_metrics["annotation_length_minutes"] = self.ground_truth_length / (
-                60 * 10)
-            metric_end = int(
-                float(max(self.ground_truth_length, self.last_predicted_index)))
-
-            if annotation_metrics["annotation_length_minutes"] > 0:
-                annotation_metrics["calculated_ahi"] = (annotation_metrics["event_count"] / annotation_metrics[
-                    "annotation_length_minutes"]) * 60
-
-            predictions = self.predictions[:metric_end]
-            ground_truth = self.ground_truth[:metric_end]
-            ground_truth_binary = np.ravel(
-                binarize(ground_truth.reshape(1, -1), 0))
-            predictions_binary = np.ravel(
-                binarize(predictions.reshape(1, -1), 0))
-
-            annotation_metrics["accuracy_score"] = accuracy_score(
-                ground_truth_binary, predictions_binary)
-            annotation_metrics["f1_score"] = f1_score(
-                ground_truth_binary, predictions_binary)
-            annotation_metrics["precision_score"] = precision_score(
-                ground_truth_binary, predictions_binary)
-            annotation_metrics["recall_score"] = recall_score(
-                ground_truth_binary, predictions_binary)
-
-            metrics["annotation"] = annotation_metrics
+            metrics["ground_truth"] = self.get_array_statistics(self.ground_truth, self.ground_truth_length)
+            metrics["comparison"] = self.get_evaluation_metrics()
 
         return metrics
 
     def read_xml_annotations(self, file):
-        print("reading XML annotations")
-        self.ground_truth = np.zeros(12 * 60 * 60 * 10)
+        self._ground_truth = np.zeros(12 * 60 * 60 * 10)
 
         with open(file) as f:
             start, end, apnea_type = 0, 0, 0
@@ -221,20 +190,25 @@ class Predictions:
                 concept = scored_event.find("EventConcept")
                 if concept.text == "Obstructive apnea|Obstructive Apnea":
                     start = int(float(scored_event.find("Start").text))
-                    end = start + \
-                        int(float(scored_event.find("Duration").text))
-                    apnea_type = 1
+                    end = start + int(float(scored_event.find("Duration").text))
+                    apnea_type = ApneaType.Obstructive.value
 
                 elif concept.text == "Hypopnea|Hypopnea":
                     start = int(float(scored_event.find("Start").text))
-                    end = start + \
-                        int(float(scored_event.find("Duration").text))
-                    apnea_type = 2
+                    end = start + int(float(scored_event.find("Duration").text))
+                    apnea_type = ApneaType.Hypopnea.value
 
-                self.ground_truth[start:end] = apnea_type
+                self._ground_truth[start:end] = apnea_type
 
                 if concept.text == "Recording Start Time":
                     start = int(float(scored_event.find("Start").text))
-                    end = start + \
-                        int(float(scored_event.find("Duration").text))
-                    self.ground_truth_length = end
+                    end = start + int(float(scored_event.find("Duration").text))
+                    # self._ground_truth_length = end * 10  # "Duration" is in seconds, converting to deciseconds
+
+    def set_dataFrame_annotations(self, df):
+        self._ground_truth = np.zeros(12 * 60 * 60 * 10)
+        for row in df.itertuples():
+            type = ApneaType[row.type].value
+            start = int(row.start * 10)
+            end = int(row.end * 10)
+            self._ground_truth[start:end] = type
