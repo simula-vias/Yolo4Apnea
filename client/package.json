@@ -19,7 +19,7 @@
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-plotly.js": "^2.5.0",
-    "react-scripts": "^3.4.3",
+    "react-scripts": "^5.0.1",
     "react-visjs-graph2d": "^1.0.1",
     "react-visjs-timeline": "^1.6.0",
     "vis": "^4.21.0-EOL",
